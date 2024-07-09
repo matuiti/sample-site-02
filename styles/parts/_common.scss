@@ -1,0 +1,23 @@
+@use "../globals" as *;
+
+html {font-size: 62.5%;}
+body {
+  font-family: 'Spartan', 'Noto Sans JP', sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  color: $black;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+li {list-style: none;}
+
+.wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 8px;
+}

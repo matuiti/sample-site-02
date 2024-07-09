@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>sample-site-02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Spartan:wght@100;200;300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/libs/mobile-menu.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div id="global-container">
+      <header class="header">
+        <div class="header__wrapper">
+          <h1 class="header__logo">
+            <img src="images/logo.svg" />
+          </h1>
+          <nav class="header__nav">
+            <ul class="header__ul">
+              <li class="header__li"><a href="#">about</a></li>
+              <li class="header__li"><a href="#">menu</a></li>
+              <li class="header__li"><a href="#">access</a></li>
+              <li class="header__li"><a href="#">online shop</a></li>
+              <li class="header__li header__li--instagram">
+                <a href="#"><img src="images/instagram_icon.svg" /></a>
+              </li>
+            </ul>
+          </nav>
+          <button class="mobile-menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__ul">
+          <li class="mobile-menu__li">
+            <a href="#">about</a>
+          </li>
+          <li class="mobile-menu__li">
+            <a href="#">menu</a>
+          </li>
+          <li class="mobile-menu__li">
+            <a href="#">access</a>
+          </li>
+          <li class="mobile-menu__li">
+            <a href="#">online shop</a>
+          </li>
+          <li class="mobile-menu__li mobile-menu__li--instagram">
+            <a href="#"><img src="images/instagram_icon.svg" /></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero"></div>
+      <main id="main-content">
+        <section id="notice">
+          <h2 class="section-title">お知らせ</h2>
+          <p class="notice__text">
+            緊急事態宣言解除に伴い、店舗営業を再開いたします！<br />
+            営業時間：毎週金曜・土曜<span class="notice__time">12:00~</span
+            ><br /><br />
+            また、オンラインショップでの販売も引き続き行っています。<br />
+            オンラインショップはこちらから<br />
+            （週末に販売スタート、翌週の水曜日以降に順次発送させていただいております。）<br /><br />
+            <span class="bold"
+              >タルトの作り方　オンラインクラス開講しました！</span
+            ><br />
+            <a class="notice__link" href="#">
+              『インスタで大人気タルト店から学ぶ‼️
+              "公園と、タルト"のタルト作りの秘密』
+            </a>
+          </p>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__copyright">&copy;matuiti</div>
+      </footer>
+    </div>
+  </body>
+</html>
