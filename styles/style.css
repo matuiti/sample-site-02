@@ -411,6 +411,35 @@ li {
 .menu {
   margin-top: 160px;
 }
+.menu__text {
+  width: 60%;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  letter-spacing: 0.3em;
+}
+@media screen and (max-width: 768px) {
+  .menu__text {
+    width: 100%;
+    text-align: left;
+    line-height: 1.8;
+    letter-spacing: normal;
+  }
+}
+@media screen and (max-width: 960px) {
+  .menu__text {
+    width: 82%;
+  }
+}
+.menu__text--01 {
+  padding-top: 20px;
+}
+.menu__loop {
+  display: flex;
+}
+.menu__loop > ul {
+  display: flex;
+}
 
 .access {
   margin-top: 160px;
