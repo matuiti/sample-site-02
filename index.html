@@ -7,7 +7,10 @@
     <title>sample-site-02</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Spartan:wght@100;200;300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Spartan:wght@100;200;300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/vendors/css-reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <script src="scripts/libs/mobile-menu.js" defer></script>
@@ -36,37 +39,63 @@
             <span></span>
             <span></span>
           </button>
+          <div class="mobile-menu-wrap">
+            <nav class="mobile-menu">
+              <ul class="mobile-menu__ul">
+                <li class="mobile-menu__li">
+                  <a href="#">about</a>
+                </li>
+                <li class="mobile-menu__li">
+                  <a href="#">menu</a>
+                </li>
+                <li class="mobile-menu__li">
+                  <a href="#">access</a>
+                </li>
+                <li class="mobile-menu__li">
+                  <a href="#">online shop</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--instagram">
+                  <a href="#"><img src="images/instagram_icon.svg" /></a>
+                </li>
+              </ul>
+            </nav>
+            <div class="overlay"></div>
+          </div>
         </div>
       </header>
-      <nav class="mobile-menu">
-        <ul class="mobile-menu__ul">
-          <li class="mobile-menu__li">
-            <a href="#">about</a>
-          </li>
-          <li class="mobile-menu__li">
-            <a href="#">menu</a>
-          </li>
-          <li class="mobile-menu__li">
-            <a href="#">access</a>
-          </li>
-          <li class="mobile-menu__li">
-            <a href="#">online shop</a>
-          </li>
-          <li class="mobile-menu__li mobile-menu__li--instagram">
-            <a href="#"><img src="images/instagram_icon.svg" /></a>
-          </li>
-        </ul>
-      </nav>
-      <div class="hero"></div>
-      <main id="main-content">
-        <section id="notice">
-          <h2 class="section-title">お知らせ</h2>
+      <main>
+        <section class="hero wrap">
+          <div class="hero__slider pc">
+            <img src="images/hero_spacer.jpg" />
+            <img src="images/hero_01.jpg" />
+            <img src="images/hero_02.jpg" />
+            <img src="images/hero_03.jpg" />
+            <img src="images/hero_04.jpg" />
+          </div>
+          <div class="hero__slider sp">
+            <img src="images/hero_sp_spacer.jpg" />
+            <img src="images/hero_sp_01.jpg" />
+            <img src="images/hero_sp_02.jpg" />
+            <img src="images/hero_sp_03.jpg" />
+            <img src="images/hero_sp_04.jpg" />
+          </div>
+          <p class="hero__catch">every day,quiche and tart.</p>
+          <p class="hero__title">PARK&amp;TART</p>
+        </section>
+
+        <section id="notice" class="wrap notice">
+          <h2 class="section-title">
+            <img src="images/frag.png" />
+            <br />
+            お知らせ
+          </h2>
           <p class="notice__text">
             緊急事態宣言解除に伴い、店舗営業を再開いたします！<br />
             営業時間：毎週金曜・土曜<span class="notice__time">12:00~</span
             ><br /><br />
             また、オンラインショップでの販売も引き続き行っています。<br />
-            オンラインショップはこちらから<br />
+            オンラインショップは<a class="notice__link" href="#">こちら</a
+            >から<br />
             （週末に販売スタート、翌週の水曜日以降に順次発送させていただいております。）<br /><br />
             <span class="bold"
               >タルトの作り方　オンラインクラス開講しました！</span
@@ -77,6 +106,63 @@
             </a>
           </p>
         </section>
+        <section id="about" class="wrap about">
+          <h2 class="section-title">
+            <img src="images/frag.png" />
+            <br />
+            About
+          </h2>
+          <div class="about__01 about__body">
+            <div class="about__01-img"><img src="images/img_01.jpg" /></div>
+            <p class="about__01-text">
+              「公園と、タルト」は、高槻市芥川町の静かな住宅街の中にある、タルトとキッシュ専門の小さなお店です。<br /><br />店名の「公園」はお店から５分ほどの場所にある、芥川桜堤公園の事で、春には桜が満開になる素敵な場所です。<br />天気の良い日には、外でも手軽に食べられるタルトやキッシュを持ち寄って家族や恋人、友人と穏やかで楽しい時間を過ごして欲しいという想いを込めました。<br />また、「公園」と「タルト」の間の読点は物語のように商品を通してお客様一人ひとりのストーリーが生まれる事を願って「公園と、タルト」と名付けました。
+            </p>
+          </div>
+          <div class="about__02 about__body">
+            <div class="about__02-img"><img src="images/img_02.jpg" /></div>
+            <p class="about__02-text">
+              オーナーシェフの平野智久がフレンチレストランや洋菓子店で培った技術を活かして毎日食べたいと思ってもらえるような商品づくりに取り組んでいます。<br />最高の状態で召し上がって頂きたいので全商品を毎朝焼き上げています。
+            </p>
+          </div>
+        </section>
+
+        <section id="menu" class="wrap menu">
+          <h2 class="section-title">
+            <img src="images/frag.png" />
+            <br />
+            Menu
+          </h2>
+          <div class="wrap menu__text menu__text--01">
+            <p>定番のチーズタルトや、季節のフルーツを使用したタルトやモンブランなど、<br class="pc">常時数十種類のタルトやキッシュをご用意してお待ちしています。</p>
+          </div>
+          <div class="menu__loop">
+            <ul>
+              <li><img src="images/menu_01.jpg"></li>
+              <li><img src="images/menu_02.jpg"></li>
+              <li><img src="images/menu_03.jpg"></li>
+              <li><img src="images/menu_04.jpg"></li>
+              <li><img src="images/menu_05.jpg"></li>
+              <li><img src="images/menu_06.jpg"></li>
+              <li><img src="images/menu_07.jpg"></li>
+              <li><img src="images/menu_08.jpg"></li>
+            </ul>
+            <ul>
+              <li><img src="images/menu_01.jpg"></li>
+              <li><img src="images/menu_02.jpg"></li>
+              <li><img src="images/menu_03.jpg"></li>
+              <li><img src="images/menu_04.jpg"></li>
+              <li><img src="images/menu_05.jpg"></li>
+              <li><img src="images/menu_06.jpg"></li>
+              <li><img src="images/menu_07.jpg"></li>
+              <li><img src="images/menu_08.jpg"></li>
+            </ul>
+          </div>
+          <div class="wrap menu__text">
+            <p>仕入れの状況などにより、メニューは日々変わります。<br>新商品の情報などはインスタグラムでお知らせしていますのでぜひご覧ください。<br>また、オンラインショップでの販売も行っています。こちらもあわせてご利用ください。</p>
+          </div>
+        </section>
+
+        <section id="access" class="wrap access"></section>
       </main>
       <footer class="footer">
         <div class="footer__copyright">&copy;matuiti</div>
