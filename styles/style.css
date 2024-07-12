@@ -114,7 +114,7 @@
   overflow: hidden;
   position: relative;
 }
-.hero__slider img {
+.hero__slider :is(img, source) {
   animation-name: show;
   animation-duration: 32s;
   animation-timing-function: ease;
@@ -128,19 +128,19 @@
   left: 0;
   top: 0;
 }
-.hero__slider img:nth-of-type(1) {
+.hero__slider picture:nth-child(1) :is(img, source) {
   position: relative;
 }
-.hero__slider img:nth-of-type(2) {
+.hero__slider picture:nth-child(2) :is(img, source) {
   animation-delay: 0s;
 }
-.hero__slider img:nth-of-type(3) {
+.hero__slider picture:nth-child(3) :is(img, source) {
   animation-delay: 8s;
 }
-.hero__slider img:nth-of-type(4) {
+.hero__slider picture:nth-child(4) :is(img, source) {
   animation-delay: 16s;
 }
-.hero__slider img:nth-of-type(5) {
+.hero__slider picture:nth-child(5) :is(img, source) {
   animation-delay: 24s;
 }
 .hero__catch {
