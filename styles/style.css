@@ -117,18 +117,18 @@
     top: 105px;
   }
 }
-.hero__slider {
+.hero-_slider {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   display: inline-block;
 }
 @media screen and (max-width: 767px) {
-  .hero__slider {
+  .hero-_slider {
     border-radius: 0;
   }
 }
-.hero__slider :is(img, source) {
+.hero-_slider :is(img, source) {
   width: 100%;
   animation-name: show;
   animation-duration: 32s;
@@ -143,22 +143,22 @@
   left: 0;
   top: 0;
 }
-.hero__slider picture:nth-child(1) :is(img, source) {
+.hero-_slider picture:nth-child(1) :is(img, source) {
   position: relative;
 }
-.hero__slider picture:nth-child(2) :is(img, source) {
+.hero-_slider picture:nth-child(2) :is(img, source) {
   animation-delay: 0s;
 }
-.hero__slider picture:nth-child(3) :is(img, source) {
+.hero-_slider picture:nth-child(3) :is(img, source) {
   animation-delay: 8s;
 }
-.hero__slider picture:nth-child(4) :is(img, source) {
+.hero-_slider picture:nth-child(4) :is(img, source) {
   animation-delay: 16s;
 }
-.hero__slider picture:nth-child(5) :is(img, source) {
+.hero-_slider picture:nth-child(5) :is(img, source) {
   animation-delay: 24s;
 }
-.hero__texts {
+.hero-_texts {
   position: absolute;
   bottom: 3%;
   height: 10em;
@@ -169,7 +169,7 @@
   border-radius: 72px 63px 67px 31px;
 }
 @media screen and (max-width: 767px) {
-  .hero__texts {
+  .hero-_texts {
     background: none;
     box-shadow: none;
     width: 21em;
@@ -178,7 +178,7 @@
     right: 2%;
   }
 }
-.hero__title {
+.hero-_title {
   color: #e91e1e;
   text-shadow: 2px 2px 2px rgba(244, 244, 244, 0.3882352941);
   position: absolute;
@@ -187,13 +187,13 @@
   font-size: 3rem;
 }
 @media screen and (max-width: 767px) {
-  .hero__title {
+  .hero-_title {
     right: 12%;
     top: 43%;
     font-size: 2.4rem;
   }
 }
-.hero__catch {
+.hero-_catch {
   position: absolute;
   top: 20%;
   right: 15%;
@@ -203,7 +203,7 @@
   text-shadow: 0 0 7px #222;
 }
 @media screen and (max-width: 767px) {
-  .hero__catch {
+  .hero-_catch {
     top: 28%;
     right: 15%;
     font-size: 1.2rem;
@@ -533,7 +533,7 @@ section {
 }
 .news__bg {
   width: 50%;
-  background-image: url(../../images/hero_01.jpg);
+  background-image: url(../../images/hero-01.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
