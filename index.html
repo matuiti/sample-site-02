@@ -1,298 +1,269 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>KUMANOPAN - sample_site</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/libs/mobile-menu.js" defer></script>
-    <script src="scripts/main.js" defer></script>
-  </head>
-  <body>
-    <div id="global-container">
-      <header class="header">
-        <div class="header__wrap">
-          <div class="header__logo-wrap">
-            <h1 class="header__logo">
-              <picture>
-                <source srcset="images/kumanopan-logo@2x.png 2x" />
-                <img
-                  src="images/kumanopan-logo.png"
-                  alt="サンプルサイト「クマのパン」のロゴ画像"
-                />
-              </picture>
-            </h1>
-          </div>
-          <nav class="header__nav">
 
-            <ul class="header__ul">
-              <li class="header__li"><a href="#about">about</a></li>
-              <li class="header__li"><a href="#news">news</a></li>
-              <li class="header__li"><a href="#">menu</a></li>
-              <li class="header__li"><a href="#">access</a></li>
-              <li class="header__li"><a href="#">online shop</a></li>
-              <li class="header__li header__li--instagram">
-                <a href="#"><img src="images/instagram_icon.svg" /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>KUMANOPAN - sample_site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/libs/mobile-menu.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <div id="global-container">
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__logo-wrap">
+          <h1 class="header__logo">
+            <img src="images/kumanopan-logo.svg" alt="サンプルサイト「クマのパン」のロゴ画像" />
+          </h1>
+        </div>
+        <nav class="header__nav">
+
+          <ul class="header__ul">
+            <li class="header__li"><a href="#">Home</a></li>
+            <li class="header__li"><a href="#story">Story</a></li>
+            <li class="header__li"><a href="#menu">Menu</a></li>
+            <li class="header__li"><a href="#news">News</a></li>
+            <li class="header__li"><a href="#access">Access</a></li>
+            <!-- <li class="header__li header__li--instagram">
+              <a href="#"><img src="images/instagram_icon.svg" /></a>
+            </li> -->
+          </ul>
+        </nav>
+        <button class="mobile-menu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="mobile-menu-wrap">
+          <nav class="mobile-menu">
+            <ul class="mobile-menu__ul">
+              <li class="mobile-menu__li">
+                <a href="#">Home</a>
               </li>
+              <li class="mobile-menu__li">
+                <a href="#story">Story</a>
+              </li>
+              <li class="mobile-menu__li">
+                <a href="#menu">Menu</a>
+              </li>
+              <li class="mobile-menu__li">
+                <a href="#news">News</a>
+              </li>
+              <li class="mobile-menu__li">
+                <a href="#access">access</a>
+              </li>
+              <!-- <li class="mobile-menu__li mobile-menu__li--instagram">
+                <a href="#"><img src="images/instagram_icon.svg" /></a>
+              </li> -->
             </ul>
           </nav>
-          <button class="mobile-menu__btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="mobile-menu-wrap">
-            <nav class="mobile-menu">
-              <ul class="mobile-menu__ul">
-                <li class="mobile-menu__li">
-                  <a href="#about">about</a>
-                </li>
-                <li class="mobile-menu__li">
-                  <a href="#news">news</a>
-                </li>
-                <li class="mobile-menu__li">
-                  <a href="#">menu</a>
-                </li>
-                <li class="mobile-menu__li">
-                  <a href="#">access</a>
-                </li>
-                <li class="mobile-menu__li">
-                  <a href="#">online shop</a>
-                </li>
-                <li class="mobile-menu__li mobile-menu__li--instagram">
-                  <a href="#"><img src="images/instagram_icon.svg" /></a>
-                </li>
-              </ul>
-            </nav>
-            <div class="overlay"></div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-wrap">
+          <div class="hero__slider">
+            <picture>
+              <source srcset="images/hero_spacer@2x.jpg 2x" />
+              <img src="images/hero_spacer.jpg" />
+            </picture>
+            <picture>
+              <source srcset="images/hero_01@2x.jpg 2x" />
+              <img src="images/hero_01.jpg" />
+            </picture>
+            <picture>
+              <source srcset="images/hero_02@2x.jpg 2x" />
+              <img src="images/hero_02.jpg" />
+            </picture>
+            <picture>
+              <source srcset="images/hero_03@2x.jpg 2x" />
+              <img src="images/hero_03.jpg" />
+            </picture>
+            <picture>
+              <source srcset="images/hero_04@2x.jpg 2x" />
+              <img src="images/hero_04.jpg" />
+            </picture>
+          </div>
+          <div class="hero__texts">
+            <p class="hero__title">kumanopan</p>
+            <p class="hero__catch">ふんわりな時間を</p>
           </div>
         </div>
-      </header>
-      <main>
-        <section class="hero">
-          <div class="hero-wrap">
-            <div class="hero__slider">
-              <picture>
-                <source srcset="images/hero_spacer@2x.jpg 2x" />
-                <img src="images/hero_spacer.jpg" />
-              </picture>
-              <picture>
-                <source srcset="images/hero_01@2x.jpg 2x" />
-                <img src="images/hero_01.jpg" />
-              </picture>
-              <picture>
-                <source srcset="images/hero_02@2x.jpg 2x" />
-                <img src="images/hero_02.jpg" />
-              </picture>
-              <picture>
-                <source srcset="images/hero_03@2x.jpg 2x" />
-                <img src="images/hero_03.jpg" />
-              </picture>
-              <picture>
-                <source srcset="images/hero_04@2x.jpg 2x" />
-                <img src="images/hero_04.jpg" />
-              </picture>
+      </section>
+      <section id="about" class="wrap about">
+        <h2 class="section-title">
+          <img src="images/bread-01.png" />
+          <br />
+          About
+        </h2>
+        <div class="about__01 about__body">
+          <!-- <div class="about__01-img"><img src="images/img_01.jpg" /></div> -->
+          <div class="about__img about__img01">
+            <img src="images/about-01.jpg" />
+          </div>
+          <p class="about__text">
+            <span class="bold">Kumanopan</span>は、<br /><br />町の静かな住宅街にある、小さな<span
+              class="marker-pan">パン</span>屋です。<br /><br />子供の頃にわたしの祖父から聞いた話です。<br />祖父はむかしお腹をすかせた<span
+              class="marker-kuma">子ぐま</span>を<br />助けたことがあるそうです。<br /><br />それから何年も月日が経ったある日。<br />とつぜん玄関の前に焼き立ての<span
+              class="marker-pan">パン</span>が<br />置かれていたのです。<br /><br />
+            祖父はしばらく迷ったあとで、<br />あまりに美味しそうなその<span class="marker-pan">パン</span>を<br />ひとくち食べてみました。<br /><br />その<span
+              class="marker-pan">パン</span>の美味しさに<br />祖父はとても驚きました。<br /><br />
+          </p>
+        </div>
+        <div class="about__02 about__body">
+          <!-- <div class="about__02-img"><img src="images/img_02.jpg" /></div> -->
+          <div class="about__img about__img02">
+            <img src="images/about-02.jpg" />
+          </div>
+          <p class="about__text">
+            翌日も、その次の日も、<br /><br />そのまた次の日も、、<br /><br />毎日かかさずに<br />玄関先に置かれる<br />焼き立ての<span
+              class="marker-pan">パン</span><br /><br />誰がいったいこんなことを？<br /><br />
+            風の噂では、<br /><span class="marker-pan">パン</span>をたいせつそうに抱えた<span
+              class="marker-kuma">クマ</span>を<br />近所で見たとかみないとか。<br /><br />
+            本当のことは誰にもわかりませんが、<br />わたしはこの話が大好きです。<br />そこで、お店の名前は、<br /><br /><span class="marker-kuma">クマ</span>と<span
+              class="marker-pan">パン</span>で<br /><span class="bold">Kumanopan</span>にしました。
+          </p>
+        </div>
+      </section>
+
+
+
+      <section id="menu" class="menu">
+        <h2 class="section-title">
+          <img src="images/bread-04.png" />
+          <br />
+          Menu
+        </h2>
+        <div class="wrap menu__text menu__text--01">
+          <p>
+            パンの香りに包まれながら、<br>毎日焼き上げる自慢のパンたちをご紹介します。<br><br>私たちのパンは、厳選された素材を使い、<br>一つひとつ心を込めて手作りしています。<br><br>季節ごとに変わる限定商品や、定番の人気商品など、<br>バラエティ豊かなラインナップをお楽しみください。
+          </p>
+
+
+          </p>
+        </div>
+        <div class="menu__loop">
+          <ul>
+            <li><img src="images/bread-01.png" /></li>
+            <li><img src="images/bread-02.png" /></li>
+            <li><img src="images/bread-03.png" /></li>
+            <li><img src="images/bread-04.png" /></li>
+            <li><img src="images/bread-05.png" /></li>
+            <li><img src="images/bread-01.png" /></li>
+            <li><img src="images/bread-02.png" /></li>
+            <li><img src="images/bread-03.png" /></li>
+          </ul>
+          <ul>
+            <li><img src="images/bread-01.png" /></li>
+            <li><img src="images/bread-02.png" /></li>
+            <li><img src="images/bread-03.png" /></li>
+            <li><img src="images/bread-04.png" /></li>
+            <li><img src="images/bread-05.png" /></li>
+            <li><img src="images/bread-01.png" /></li>
+            <li><img src="images/bread-02.png" /></li>
+            <li><img src="images/bread-03.png" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="news" class="wrap news">
+        <h2 class="section-title">
+          <img src="images/bread-03.png" />
+          <br />
+          お知らせ
+        </h2>
+        <div class="news__wrap">
+          <dl class="news__list">
+            <div class="news__item">
+              <dt class="news__date">2024.07.13</dt>
+              <dd class="news__link"><a href="#">新作パンのご紹介</a></dd>
             </div>
-            <div class="hero__texts">
-              <p class="hero__title">kumanopan</p>
-              <p class="hero__catch">ふんわりな時間を</p>
+            <div class="news__item">
+              <dt class="news__date">2024.07.10</dt>
+              <dd class="news__link">
+                <a href="#">夏季限定商品の販売開始</a>
+              </dd>
             </div>
-          </div>
-        </section>
-        <section id="about" class="wrap about">
-          <h2 class="section-title">
-            <img src="images/bread-01.png" />
-            <br />
-            About
-          </h2>
-          <div class="about__01 about__body">
-            <!-- <div class="about__01-img"><img src="images/img_01.jpg" /></div> -->
-            <div class="about__img about__img01">
-              <img src="images/about-01.jpg" />
+            <div class="news__item">
+              <dt class="news__date">2024.07.05</dt>
+              <dd class="news__link"><a href="#">臨時休業のお知らせ</a></dd>
             </div>
-            <p class="about__text">
-              <span class="bold">Kumanopan</span
-              >は、<br /><br />町の静かな住宅街にある、小さな<span
-                class="marker-pan"
-                >パン</span
-              >屋です。<br /><br />子供の頃にわたしの祖父から聞いた話です。<br />祖父はむかしお腹をすかせた<span
-                class="marker-kuma"
-                >子ぐま</span
-              >を<br />助けたことがあるそうです。<br /><br />それから何年も月日が経ったある日。<br />とつぜん玄関の前に焼き立ての<span
-                class="marker-pan"
-                >パン</span
-              >が<br />置かれていたのです。<br /><br />
-              祖父はしばらく迷ったあとで、<br />あまりに美味しそうなその<span
-                class="marker-pan"
-                >パン</span
-              >を<br />ひとくち食べてみました。<br /><br />その<span
-                class="marker-pan"
-                >パン</span
-              >の美味しさに<br />祖父はとても驚きました。<br /><br />
-            </p>
-          </div>
-          <div class="about__02 about__body">
-            <!-- <div class="about__02-img"><img src="images/img_02.jpg" /></div> -->
-            <div class="about__img about__img02">
-              <img src="images/about-02.jpg" />
+            <div class="news__item">
+              <dt class="news__date">2024.06.30</dt>
+              <dd class="news__link">
+                <a href="#">地域イベント「パン祭り2024」に出店決定!</a>
+              </dd>
             </div>
-            <p class="about__text">
-              翌日も、その次の日も、<br /><br />そのまた次の日も、、<br /><br />毎日かかさずに<br />玄関先に置かれる<br />焼き立ての<span
-                class="marker-pan"
-                >パン</span
-              ><br /><br />誰がいったいこんなことを？<br /><br />
-              風の噂では、<br /><span class="marker-pan">パン</span
-              >をたいせつそうに抱えた<span class="marker-kuma">クマ</span
-              >を<br />近所で見たとかみないとか。<br /><br />
-              本当のことは誰にもわかりませんが、<br />わたしはこの話が大好きです。<br />そこで、お店の名前は、<br /><br /><span
-                class="marker-kuma"
-                >クマ</span
-              >と<span class="marker-pan">パン</span>で<br /><span class="bold"
-                >Kumanopan</span
-              >にしました。
-            </p>
-          </div>
-        </section>
-
-        
-
-        <section id="menu" class="menu">
-          <h2 class="section-title">
-            <img src="images/bread-04.png" />
-            <br />
-            Menu
-          </h2>
-          <div class="wrap menu__text menu__text--01">
-            <p>
-              パンの香りに包まれながら、<br>毎日焼き上げる自慢のパンたちをご紹介します。<br><br>私たちのパンは、厳選された素材を使い、<br>一つひとつ心を込めて手作りしています。<br><br>季節ごとに変わる限定商品や、定番の人気商品など、<br>バラエティ豊かなラインナップをお楽しみください。</p>
-
-
-            </p>
-          </div>
-          <div class="menu__loop">
-            <ul>
-              <li><img src="images/bread-01.png" /></li>
-              <li><img src="images/bread-02.png" /></li>
-              <li><img src="images/bread-03.png" /></li>
-              <li><img src="images/bread-04.png" /></li>
-              <li><img src="images/bread-05.png" /></li>
-              <li><img src="images/bread-01.png" /></li>
-              <li><img src="images/bread-02.png" /></li>
-              <li><img src="images/bread-03.png" /></li>
-            </ul>
-            <ul>
-              <li><img src="images/bread-01.png" /></li>
-              <li><img src="images/bread-02.png" /></li>
-              <li><img src="images/bread-03.png" /></li>
-              <li><img src="images/bread-04.png" /></li>
-              <li><img src="images/bread-05.png" /></li>
-              <li><img src="images/bread-01.png" /></li>
-              <li><img src="images/bread-02.png" /></li>
-              <li><img src="images/bread-03.png" /></li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="news" class="wrap news">
-          <h2 class="section-title">
-            <img src="images/bread-03.png" />
-            <br />
-            お知らせ
-          </h2>
-          <div class="news__wrap">
-            <dl class="news__list">
-              <div class="news__item">
-                <dt class="news__date">2024.07.13</dt>
-                <dd class="news__link"><a href="#">新作パンのご紹介</a></dd>
-              </div>
-              <div class="news__item">
-                <dt class="news__date">2024.07.10</dt>
-                <dd class="news__link">
-                  <a href="#">夏季限定商品の販売開始</a>
-                </dd>
-              </div>
-              <div class="news__item">
-                <dt class="news__date">2024.07.05</dt>
-                <dd class="news__link"><a href="#">臨時休業のお知らせ</a></dd>
-              </div>
-              <div class="news__item">
-                <dt class="news__date">2024.06.30</dt>
-                <dd class="news__link">
-                  <a href="#">地域イベント「パン祭り2024」に出店決定!</a>
-                </dd>
-              </div>
-              <div class="news__item">
-                <dt class="news__date">2024.06.24</dt>
-                <dd class="news__link">
-                  <a href="#"
-                    >「どんなパン食べてみたい？」<br />アンケート結果を発表</a
-                  >
-                </dd>
-              </div>
-            </dl>
-            <div class="news__bg"></div>
-          </div>
-        </section>
-
-        <section id="access" class="wrap access">
-          <h2 class="section-title">
-            <img src="images/bread-02.png" />
-            <br />
-            Access
-          </h2>
-          <div class="access__wrap">
-            <div class="access__img">
-              <img src="images/access.jpg" />
+            <div class="news__item">
+              <dt class="news__date">2024.06.24</dt>
+              <dd class="news__link">
+                <a href="#">「どんなパン食べてみたい？」<br />アンケート結果を発表</a>
+              </dd>
             </div>
-            <table class="access__info">
-              <tr>
-                <th class="access__info-title" colspan="2">お店の情報</th>
-              </tr>
-              <tr>
-                <td>住所</td>
-                <td class="access__info-address">
-                  <span class="access__num">123-4567</span><br />パンの都町<span class="access__num">1-23-4</span>
-                </td>
-              </tr>
-              <tr>
-                <td>営業時間</td>
-                <td class="access__info-time">
-                  <span class="access__num">11:30 ~ 16:00</span> （売り切れ次第終了）<br />日・祝 定休日(その他不定休あり)
-                </td>
-              </tr>
-              <tr>
-                <td>注意事項</td>
-                <td class="access__info-caution">
-                  駐車場（<span class="access__num">4</span>台分）<br />駐輪スペースあり
-                </td>
-              </tr>
-            </table>
-            
+          </dl>
+          <div class="news__bg"></div>
+        </div>
+      </section>
+
+      <section id="access" class="wrap access">
+        <h2 class="section-title">
+          <img src="images/bread-02.png" />
+          <br />
+          Access
+        </h2>
+        <div class="access__wrap">
+          <div class="access__img">
+            <img src="images/access.jpg" />
           </div>
-          <div class="access__map map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747798841979!2d139.7428579763797!3d35.65858483121676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1720664107076!5m2!1sja!2sjp"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <small class="footer__copyright">&copy; Kumanopan _samplesite</small>
-      </footer>
-    </div>
-  </body>
+          <table class="access__info">
+            <tr>
+              <th class="access__info-title" colspan="2">お店の情報</th>
+            </tr>
+            <tr>
+              <td>住所</td>
+              <td class="access__info-address">
+                <span class="access__num">123-4567</span><br />パンの都町<span class="access__num">1-23-4</span>
+              </td>
+            </tr>
+            <tr>
+              <td>営業時間</td>
+              <td class="access__info-time">
+                <span class="access__num">11:30 ~ 16:00</span> （売り切れ次第終了）<br />日・祝 定休日(その他不定休あり)
+              </td>
+            </tr>
+            <tr>
+              <td>注意事項</td>
+              <td class="access__info-caution">
+                駐車場（<span class="access__num">4</span>台分）<br />駐輪スペースあり
+              </td>
+            </tr>
+          </table>
+
+        </div>
+        <div class="access__map map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747798841979!2d139.7428579763797!3d35.65858483121676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1720664107076!5m2!1sja!2sjp"
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <small class="footer__copyright">&copy; Kumanopan _samplesite</small>
+    </footer>
+  </div>
+</body>
+
 </html>
