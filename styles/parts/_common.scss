@@ -1,0 +1,81 @@
+@use "../globals" as *;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Kantumruy Pro", "Noto Sans JP", sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: $black;
+}
+a {
+  color: $black;
+  text-decoration: none;
+}
+img {
+  display: inline-block;
+  // width: 100%;
+}
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+section {
+  scroll-margin-top: 14em;
+}
+
+.wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 8px;
+
+  @include mq(md) {
+    padding: 0 20px;
+  }
+  @include mq(sm) {
+    padding: 0 10px;
+  }
+}
+.pc {
+  display: block;
+  @include mq(sm) {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+  @include mq(sm) {
+    display: block;
+  }
+}
+.section-title {
+  margin-bottom: 40px;
+  font-size: 3.1rem;
+  line-height: 2rem;
+  font-weight: 200;
+  text-align: center;
+  text-shadow: 4px 1px 0px #fff8f8a6;
+
+  & img {
+    width: 40px;
+    margin: 0 0 6px 16px;
+
+    @include mq(sm) {
+      margin: 0 0 6px 12px;
+    }
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.marker-pan {
+  background: linear-gradient(transparent 64%, #EEFAD2 0%);
+}
+.marker-kuma {
+  background: linear-gradient(transparent 64%, #b84f528a 0%);
+}
