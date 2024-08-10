@@ -117,18 +117,18 @@
     top: 105px;
   }
 }
-.hero-_slider {
+.hero__slider {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   display: inline-block;
 }
 @media screen and (max-width: 767px) {
-  .hero-_slider {
+  .hero__slider {
     border-radius: 0;
   }
 }
-.hero-_slider :is(img, source) {
+.hero__slider :is(img, source) {
   width: 100%;
   animation-name: show;
   animation-duration: 32s;
@@ -143,22 +143,22 @@
   left: 0;
   top: 0;
 }
-.hero-_slider picture:nth-child(1) :is(img, source) {
+.hero__slider picture:nth-child(1) :is(img, source) {
   position: relative;
 }
-.hero-_slider picture:nth-child(2) :is(img, source) {
+.hero__slider picture:nth-child(2) :is(img, source) {
   animation-delay: 0s;
 }
-.hero-_slider picture:nth-child(3) :is(img, source) {
+.hero__slider picture:nth-child(3) :is(img, source) {
   animation-delay: 8s;
 }
-.hero-_slider picture:nth-child(4) :is(img, source) {
+.hero__slider picture:nth-child(4) :is(img, source) {
   animation-delay: 16s;
 }
-.hero-_slider picture:nth-child(5) :is(img, source) {
+.hero__slider picture:nth-child(5) :is(img, source) {
   animation-delay: 24s;
 }
-.hero-_texts {
+.hero__texts {
   position: absolute;
   bottom: 3%;
   height: 10em;
@@ -169,7 +169,7 @@
   border-radius: 72px 63px 67px 31px;
 }
 @media screen and (max-width: 767px) {
-  .hero-_texts {
+  .hero__texts {
     background: none;
     box-shadow: none;
     width: 21em;
@@ -178,7 +178,7 @@
     right: 2%;
   }
 }
-.hero-_title {
+.hero__title {
   color: #e91e1e;
   text-shadow: 2px 2px 2px rgba(244, 244, 244, 0.3882352941);
   position: absolute;
@@ -187,13 +187,13 @@
   font-size: 3rem;
 }
 @media screen and (max-width: 767px) {
-  .hero-_title {
+  .hero__title {
     right: 12%;
     top: 43%;
     font-size: 2.4rem;
   }
 }
-.hero-_catch {
+.hero__catch {
   position: absolute;
   top: 20%;
   right: 15%;
@@ -203,7 +203,7 @@
   text-shadow: 0 0 7px #222;
 }
 @media screen and (max-width: 767px) {
-  .hero-_catch {
+  .hero__catch {
     top: 28%;
     right: 15%;
     font-size: 1.2rem;
