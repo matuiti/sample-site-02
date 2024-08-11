@@ -10,27 +10,21 @@
 //
 ///////////////////////////
 
-.mobile-menu-wrap {
+.mobile-menu {
   display: none;
   @include mq(sm) {
     display: block;
   }
-}
-.mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
   z-index: 3;
   width: 100%;
   height: 100%;
+  padding-top: 100px;
   background-color: rgba(251, 250, 248, 0.8);
   transform: translateX(763px);
   transition: all 0.5s;
-
-  & .logo {
-    padding: 0 40px;
-    font-size: 38px;
-  }
 
   &__btn {
     position: fixed;
@@ -71,16 +65,24 @@
   }
 
   &__ul {
-    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 4.5em 0 5.5em;
   }
+  &__sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    filter: invert(1);
+  }
+
   &__li {
-    padding: 20px 0 32px 24px;
+    // padding: 20px 0 32px 0;
     font-size: 2rem;
     line-height: 1;
-
-    &--instagram {
-      width: 50px;
-    }
   }
 }
 
