@@ -1,10 +1,12 @@
 @use "../globals/" as *;
+@use "../parts/button" as *;
+
 .hero {
   // margin-top: $header-h;
   position: relative;
   top: 120px;
   padding: 10em;
-  background-color: $bg-hero;
+  background-color: $bgc-hero;
 
   &-wrap {
     position: relative;
