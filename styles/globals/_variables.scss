@@ -11,23 +11,25 @@ $main1: #782b28;
 $accent: #e91e1e;
 
 
-$bg-body: $base01;
+$bgc-body: $base01;
+$bgc-btn:$accent;
+$color-btn:$white;
 
-$bg-header: $main1;
-$bg-logo: $white;
-$bg-header-texts: $white;
+$bgc-header: $main1;
+$bgc-logo: $white;
+$bgc-header-texts: $white;
 
-$bg-hero: $white;
+$bgc-hero: $white;
 
-$bg-about: $transparent;
+$bgc-about: $transparent;
 
-$bg-menu: $main1;
+$bgc-menu: $main1;
 
-$bg-news: $transparent;
+$bgc-news: $transparent;
 
-$bg-access: $transparent;
+$bgc-access: $transparent;
 
-$bg-footer: $accent;
+$bgc-footer: $accent;
 
 
 $header-h--sm: 105px;
