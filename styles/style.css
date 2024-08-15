@@ -386,7 +386,7 @@ section {
   display: flex;
   max-width: 1200px;
   width: 100%;
-  /* padding: 2rem 8px 1.6rem; */
+  padding: 1rem 1.6rem;
   /* margin: 8px auto; */
   align-items: center;
   justify-content: space-between;
@@ -414,6 +414,7 @@ section {
   align-items: center;
 }
 .header__nav {
+  display: flex;
   padding-top: 20px;
   line-height: 1.7;
   font-size: 1.8rem;
