@@ -77,6 +77,13 @@
     }
   }
 }
+
+main {
+  margin-top: $header-h;
+  @include mq(sm) {
+    margin-top: $header-h--sm;
+  }
+}
 .about {
   position: relative;
   z-index: 1;
