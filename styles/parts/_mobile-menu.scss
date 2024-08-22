@@ -27,9 +27,10 @@
   transition: all 0.5s;
 
   &__btn {
-    position: fixed;
-    top: 32px;
-    right: 12px;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
     z-index: 9999;
     display: none;
     background-color: unset;
@@ -41,14 +42,13 @@
 
     @include mq(sm) {
       display: block;
-      margin-right: 10px;
     }
 
     & > span {
       position: absolute;
       left: 0;
       width: 100%;
-      background-color: $black;
+      background-color: $white;
       height: 1px;
       transition: all 0.4s;
 

@@ -12,12 +12,11 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 120px;
-  // box-shadow: 1px 1px 3px 0px black;
+  height: $header-h;
   background-color: $bgc-header;
   align-items: center;
   justify-content: space-evenly;
-  // box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.1);
 
   @include mq(sm) {
     height: $header-h--sm;
@@ -27,53 +26,74 @@
     display: flex;
     max-width: 1200px;
     width: 100%;
-    padding: 1rem 1.6rem;
-    /* margin: 8px auto; */
+    padding: 0 4rem;
     align-items: center;
     justify-content: space-between;
 
     @include mq(sm) {
-      padding: 1.6rem 8px 1.6rem;
-      margin: 0 auto 8px;
+      padding: 0 2rem;
     }
   }
 
   &__logo {
-    width: 78px;
-    @include mq(sm) {
-      margin-left: 14px;
+    svg {
+      width: 100%;
     }
   }
 
   &__logo-wrap {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
-    background-color: $bgc-logo;
     align-items: center;
+
+    @include mq(sm) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &__nav {
     display: flex;
-    padding-top: 20px;
     line-height: 1.7;
     font-size: 1.8rem;
+    gap: 2.8rem;
+
     @include mq(sm) {
       display: none;
     }
   }
   &__ul {
     display: flex;
-    gap: 4vw;
+    gap: 2.4rem;
   }
   &__li {
-    & a {
-      color: $bgc-header-texts;
+    &.active a {
+      border-bottom: 2px solid $accent;
     }
-    &--instagram {
-      width: 2.5rem;
-      margin-top: 0.4rem;
+    & a {
+      display: block;
+      height: 31px;
+      color: $bgc-header-texts;
+      transition: color 0.4s;
+      &:hover {
+        color: rgba(255, 255, 255, 0.3);
+        border-bottom: 2px solid $accent;
+      }
+    }
+  }
+  &__sns {
+    display: flex;
+    gap: 2rem;
+
+    & a {
+      display: block;
+      height: 31px;
+      transition: opacity 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.2;
+      }
     }
   }
 }
