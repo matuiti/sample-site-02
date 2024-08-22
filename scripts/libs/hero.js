@@ -1,6 +1,5 @@
 class Hero {
     constructor() {
-        this.DOM = {};
         this.#init();
     }
     #init() {
@@ -9,12 +8,12 @@ class Hero {
         window.addEventListener('resize', this.#resize.bind(this));
     }
     #getScreenSize() {
-        this.DOM.screenWidth = window.innerWidth;
-        this.DOM.screenHeight = window.innerHeight;
+        this.screenWidth = window.innerWidth;
+        this.screenHeight = window.innerHeight;
     }
     #setProperty() {
-        document.documentElement.style.setProperty('--screen-width', `${this.DOM.screenWidth}px`);
-        document.documentElement.style.setProperty('--screen-height', `${this.DOM.screenHeight}px`);
+        document.documentElement.style.setProperty('--screen-width', `${this.screenWidth}px`);
+        document.documentElement.style.setProperty('--screen-height', `${this.screenHeight}px`);
     }
     #resize() {
         this.#getScreenSize();

@@ -17,9 +17,10 @@
   }
 }
 .mobile-menu__btn {
-  position: fixed;
-  top: 32px;
-  right: 12px;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
   z-index: 9999;
   display: none;
   background-color: unset;
@@ -32,14 +33,13 @@
 @media screen and (max-width: 767px) {
   .mobile-menu__btn {
     display: block;
-    margin-right: 10px;
   }
 }
 .mobile-menu__btn > span {
   position: absolute;
   left: 0;
   width: 100%;
-  background-color: #222;
+  background-color: white;
   height: 1px;
   transition: all 0.4s;
 }
@@ -128,13 +128,14 @@
 
 @media screen and (max-width: 767px) {
   .hero {
-    top: 105px;
+    top: 80px;
   }
 }
 .hero-wrap {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  position: relative;
 }
 .hero__slider {
   position: relative;
@@ -145,7 +146,7 @@
 }
 .hero__slider :is(img, source) {
   width: var(--screen-width);
-  height: calc(var(--screen-height) - 120px);
+  height: calc(var(--screen-height) - 100px);
   opacity: 0;
   position: absolute;
   left: 0;
@@ -162,7 +163,7 @@
 }
 @media screen and (max-width: 767px) {
   .hero__slider :is(img, source) {
-    height: calc(var(--screen-height) - 105px);
+    height: calc(var(--screen-height) - 80px);
   }
 }
 .hero__slider picture:nth-child(1) :is(img, source) {
@@ -188,18 +189,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  gap: 40px;
+  gap: 24px;
 }
 .hero__copy {
   font-family: "Noto Serif JP";
   font-size: 2.4rem;
   letter-spacing: 0.3em;
   color: white;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 767px) {
   .hero__copy {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
   }
 }
 .hero__logo-wrap {
@@ -209,11 +211,11 @@
 }
 .hero__logo {
   width: 140px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
 }
 @media screen and (max-width: 767px) {
   .hero__logo {
-    font-size: 2.4rem;
+    width: 100px;
   }
 }
 
@@ -345,52 +347,51 @@ section {
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 120px;
+  height: 100px;
   background-color: #782b28;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 767px) {
   .header {
-    height: 105px;
+    height: 80px;
   }
 }
 .header__wrap {
   display: flex;
   max-width: 1200px;
   width: 100%;
-  padding: 1rem 1.6rem;
-  /* margin: 8px auto; */
+  padding: 0 4rem;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
   .header__wrap {
-    padding: 1.6rem 8px 1.6rem;
-    margin: 0 auto 8px;
+    padding: 0 2rem;
   }
 }
-.header__logo {
-  width: 78px;
-}
-@media screen and (max-width: 767px) {
-  .header__logo {
-    margin-left: 14px;
-  }
+.header__logo svg {
+  width: 100%;
 }
 .header__logo-wrap {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
-  background-color: white;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header__logo-wrap {
+    width: 60px;
+    height: 60px;
+  }
 }
 .header__nav {
   display: flex;
-  padding-top: 20px;
   line-height: 1.7;
   font-size: 1.8rem;
+  gap: 2.8rem;
 }
 @media screen and (max-width: 767px) {
   .header__nav {
@@ -399,22 +400,40 @@ section {
 }
 .header__ul {
   display: flex;
-  gap: 4vw;
+  gap: 2.4rem;
+}
+.header__li.active a {
+  border-bottom: 2px solid #e91e1e;
 }
 .header__li a {
+  display: block;
+  height: 31px;
   color: white;
+  transition: color 0.4s;
 }
-.header__li--instagram {
-  width: 2.5rem;
-  margin-top: 0.4rem;
+.header__li a:hover {
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid #e91e1e;
+}
+.header__sns {
+  display: flex;
+  gap: 2rem;
+}
+.header__sns a {
+  display: block;
+  height: 31px;
+  transition: opacity 0.2s ease-in-out;
+}
+.header__sns a:hover {
+  opacity: 0.2;
 }
 
 main {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 @media screen and (max-width: 767px) {
   main {
-    margin-top: 105px;
+    margin-top: 80px;
   }
 }
 
