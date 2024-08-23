@@ -104,12 +104,15 @@
     &__btn {
       & > span {
         &:nth-child(1) {
+          background-color: $black;
           transform: translateY(13px) rotate(-45deg);
         }
         &:nth-child(2) {
+          background-color: $black;
           opacity: 0;
         }
         &:nth-child(3) {
+          background-color: $black;
           transform: translateY(-13px) rotate(45deg);
         }
       }

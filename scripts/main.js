@@ -3,7 +3,7 @@ class Main {
         this.#init()
     }
     #init() {
-        // new Hero
+        new Hero
         new MobileMenu
     }
 }
