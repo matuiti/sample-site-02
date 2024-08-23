@@ -16,7 +16,11 @@ $bgc-btn:$accent;
 $color-btn:$white;
 
 $bgc-header: $main1;
-$bgc-header-texts: $white;
+$color-header-texts: $white;
+
+$bgc-footer: $main1;
+$color-footer-texts: $white;
+$color-footer-copyright: rgba(255,255,255,0.6);
 
 $bgc-hero: $white;
 
@@ -27,8 +31,6 @@ $bgc-menu: $main1;
 $bgc-news: $transparent;
 
 $bgc-access: $transparent;
-
-$bgc-footer: $accent;
 
 
 $header-h--sm: 80px;
