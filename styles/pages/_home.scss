@@ -75,7 +75,7 @@
     & a {
       display: block;
       height: 31px;
-      color: $bgc-header-texts;
+      color: $color-header-texts;
       transition: color 0.4s;
       &:hover {
         color: rgba(255, 255, 255, 0.3);
@@ -95,6 +95,87 @@
         opacity: 0.2;
       }
     }
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $bgc-footer;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+
+  }
+
+  &__logo {
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__logo-wrap {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(sm) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+    font-size: 1.8rem;
+    gap: 2.8rem;
+  }
+  &__ul {
+    display: flex;
+    gap: 2.4rem;
+  }
+  &__li {
+    &.active a {
+      border-bottom: 2px solid $accent;
+    }
+    & a {
+      display: block;
+      height: 31px;
+      color: $color-header-texts;
+      transition: color 0.4s;
+      &:hover {
+        color: rgba(255, 255, 255, 0.3);
+        border-bottom: 2px solid $accent;
+      }
+    }
+  }
+  &__sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & a {
+      display: block;
+      height: 31px;
+      transition: opacity 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.2;
+      }
+    }
+  }
+  &__copyright {
+    color: $color-footer-copyright;
   }
 }
 
