@@ -148,6 +148,11 @@
   overflow: hidden;
   margin-top: 100px;
 }
+@media screen and (max-width: 959px) {
+  .hero__slider {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 767px) {
   .hero__slider {
     margin-top: 0;
@@ -167,6 +172,14 @@
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: forwards;
+}
+@media screen and (max-width: 959px) {
+  .hero__slider :is(img, source) {
+    width: var(--screen-width);
+    height: calc(var(--screen-height) - 80px);
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 @media screen and (max-width: 767px) {
   .hero__slider :is(img, source) {
@@ -201,6 +214,11 @@
   z-index: 10;
   gap: 4rem;
 }
+@media screen and (max-width: 959px) {
+  .hero__texts {
+    transform: translate(-50%, -50%);
+  }
+}
 @media screen and (max-width: 767px) {
   .hero__texts {
     gap: 2.6rem;
@@ -213,6 +231,12 @@
   font-weight: bold;
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 959px) {
+  .hero__copy {
+    font-size: 2.8rem;
+    letter-spacing: 0.2em;
+  }
 }
 @media screen and (max-width: 767px) {
   .hero__copy {
@@ -228,6 +252,11 @@
 .hero__logo {
   width: 20rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 959px) {
+  .hero__logo {
+    width: 15rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .hero__logo {
