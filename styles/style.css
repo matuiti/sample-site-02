@@ -815,7 +815,7 @@ main {
 @media screen and (max-width: 767px) {
   .about__text {
     width: 90%;
-    margin: 2rem auto 0;
+    margin: 2rem auto;
     font-size: 1.4rem;
     padding: 3.2rem 1.4rem;
     letter-spacing: 0.2em;
