@@ -38,9 +38,9 @@
 
   &__logo {
     transition: opacity 0.2s ease-in-out;
-      &:hover {
-        opacity: 0.8;
-      }
+    &:hover {
+      opacity: 0.8;
+    }
     svg {
       width: 100%;
     }
@@ -131,9 +131,9 @@
 
   &__logo {
     transition: opacity 0.2s ease-in-out;
-      &:hover {
-        opacity: 0.8;
-      }
+    &:hover {
+      opacity: 0.8;
+    }
     svg {
       width: 100%;
     }
@@ -170,7 +170,7 @@
     line-height: 1.7;
     @include mq(sm) {
       line-height: 1;
-    font-size: 1.8rem;
+      font-size: 1.8rem;
     }
     &.active a {
       border-bottom: 0.2rem solid $accent;
@@ -225,7 +225,7 @@
       & img {
         @include mq(sm) {
           height: 2rem;
-        } 
+        }
       }
     }
   }
@@ -251,83 +251,110 @@ main {
   }
 }
 .about {
-  position: relative;
-  z-index: 1;
-  margin-top: 23em;
-  padding-top: 10em;
-  padding-bottom: 10em;
-  overflow: hidden;
-  background-color: $bgc-about;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50em;
+  margin-bottom: 20rem;
 
   @include mq(sm) {
     margin-top: 10em;
     border: none;
   }
 
-  &__body {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: $max-width--about;
+    width: 100%;
+    gap: 15rem;
+  }
+
+  &__boxs {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+  }
+
+  &__box {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    // align-items: center;
+    justify-content: flex-end;
     text-align: center;
-    gap: 0.5em;
+    width: 100%;
+    height: auto;
 
     @include mq(sm) {
       flex-direction: column !important;
+    }
+
+    &--01 {
+      flex-direction: row-reverse;
+    }
+    &--02 {
+      margin-top: 10em;
+      @include mq(sm) {
+        margin-top: 60px;
+      }
     }
   }
 
   &__img {
     position: absolute;
-    z-index: -1;
+    // z-index: -1;
     width: 100%;
-    height: 100%;
+    max-width: 700px;
+    height: auto;
+    opacity: 0.8;
+    // @include mq(sm) {
+    //   width: 100%;
+    //   height: 200px;
+    //   margin-bottom: 24px;
+    // }
+    &--01 {
+      top: -27em;
+      left: 38em;
+      @include mq(sm) {
+        top: -2em;
+        right: -12em;
+      }
+    }
+    &--02 {
+      top: -27em;
+      right: 38em;
+    }
     @include mq(sm) {
-      width: 100%;
-      height: 200px;
-      margin-bottom: 24px;
-    }
-    &01 {
-      top: -11em;
-      right: -22em;
-      opacity: 0.7;
-      @include mq(sm) {
-        top: -2em;
-        right: -12em;
-      }
-    }
-    &02 {
-      top: -11em;
-      left: -22em;
-      opacity: 0.7;
-      @include mq(sm) {
-        top: -2em;
-        right: -12em;
-      }
+      top: -2em;
+      right: -12em;
     }
   }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 700 / 290;
+    object-fit: cover;
+  }
   &__text {
-    background-color: #ffffffde;
-    padding: 3em;
-    font-size: 1.4rem;
-    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    background-color: $base02;
+    width: 60rem;
+    padding: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 2;
     letter-spacing: 0.3em;
     @include mq(sm) {
       width: 100%;
       padding: 2em;
     }
-  }
-
-  &__01 {
-    flex-direction: row-reverse;
-  }
-
-  &__02 {
-    margin-top: 10em;
-    @include mq(sm) {
-      margin-top: 60px;
-    }
+    // &--01 {
+    //   margin-right: auto;
+    // }
+    // &--02 {
+    //   margin-left: auto;
+    // }
   }
 }
 .news {
@@ -401,8 +428,6 @@ main {
 }
 
 .menu {
-  margin-top: 10em;
-  padding-top: 5em;
   padding-bottom: 5em;
   position: relative;
   z-index: 1;
