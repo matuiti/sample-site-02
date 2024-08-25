@@ -115,6 +115,7 @@
   color: white;
   width: -moz-max-content;
   width: max-content;
+  min-width: 24rem;
   padding: 1.2em 2.6em 1.2em 2.4em;
   border: none;
   line-height: 0.95;
@@ -373,7 +374,7 @@ section {
 }
 @media screen and (max-width: 767px) {
   .section-title-box {
-    margin-top: 4.2rem;
+    padding-top: 4.2rem;
   }
 }
 
@@ -848,7 +849,12 @@ main {
   position: relative;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.6);
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
+}
+@media screen and (max-width: 959px) {
+  .menu {
+    margin-top: 5rem;
+  }
 }
 .menu__text-box {
   margin-top: calc(8rem - 0.5em);
@@ -943,20 +949,34 @@ main {
 
 .news {
   margin-top: 15rem;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   background-color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width: 767px) {
+  .news {
+    background-color: transparent;
+    margin-top: 0;
+  }
 }
 .news__box {
   padding: 0 5rem;
-  margin-top: 6rem;
+  margin-top: 10rem;
   display: flex;
   max-width: 920px;
   margin-inline: auto;
   gap: 3rem;
 }
+@media screen and (max-width: 959px) {
+  .news__box {
+    padding: 0 4rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .news__box {
     flex-direction: column-reverse;
+    max-width: 560px;
+    padding: 0 2rem;
+    margin-top: 6rem;
   }
 }
 .news__list {
@@ -968,18 +988,20 @@ main {
   font-size: 1.4rem;
   line-height: 1.4;
   letter-spacing: 0.2em;
-  padding: 1.5em 1.2em 1.8em;
+  padding: 2.8rem;
   background-color: rgba(248, 248, 255, 0.631372549);
 }
 @media screen and (max-width: 767px) {
   .news__list {
     width: 100%;
+    padding: 2.4rem;
+    max-width: 42rem;
+    margin-inline: auto;
   }
 }
 .news__item {
   display: flex;
   gap: 2em;
-  border-bottom: 1px solid black;
   padding-bottom: 0.4em;
 }
 .news__item-date {
@@ -994,9 +1016,15 @@ main {
   }
 }
 .news__item-link {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   letter-spacing: 0.6em;
   line-height: 1;
+  border-bottom: 1px solid black;
+}
+@media screen and (max-width: 767px) {
+  .news__item-link {
+    letter-spacing: 0.14em;
+  }
 }
 .news__bg-img {
   width: 50%;
@@ -1008,9 +1036,9 @@ main {
 }
 @media screen and (max-width: 767px) {
   .news__bg-img {
+    display: none;
     height: 120px;
     width: 100%;
-    margin-bottom: 2em;
     background-position: center;
   }
 }
@@ -1024,7 +1052,7 @@ main {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .news .btn-box {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 @keyframes loop {
@@ -1051,6 +1079,9 @@ main {
   background-color: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width: 767px) {
+  .access {
+    margin-top: 0;
+  }
   .access::after {
     height: 274px;
   }
