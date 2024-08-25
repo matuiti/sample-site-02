@@ -767,7 +767,7 @@ main {
   width: 100%;
   max-width: 700px;
   height: auto;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 @media screen and (max-width: 959px) {
   .about__img {
@@ -952,6 +952,7 @@ main {
   display: flex;
   max-width: 920px;
   margin-inline: auto;
+  gap: 3rem;
 }
 @media screen and (max-width: 767px) {
   .news__box {
@@ -978,19 +979,32 @@ main {
 .news__item {
   display: flex;
   gap: 2em;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.4em;
 }
 .news__item-date {
   font-family: "Noto Sans JP";
-  font-size: 0.8em;
-  letter-spacing: 3px;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .news__item-date {
+    font-size: 1.2rem;
+  }
+}
+.news__item-link {
+  font-size: 1.6rem;
+  letter-spacing: 0.6em;
+  line-height: 1;
 }
 .news__bg-img {
   width: 50%;
-  background-image: url(../../images/hero-01.jpg);
+  background-image: url(../../images/about-01.jpg);
   background-repeat: no-repeat;
-  background-position: bottom;
   background-size: cover;
   position: relative;
+  opacity: 0.9;
 }
 @media screen and (max-width: 767px) {
   .news__bg-img {
