@@ -393,14 +393,17 @@ main {
   position: relative;
   overflow: hidden;
   background-color: $bgc-menu;
-  padding-bottom: 15rem;
-
-&__text-box {
-  margin-top: calc(8rem - 0.5em);
-  @include mq(sm) {
+  padding-bottom: 10rem;
+  @include mq(md) {
     margin-top: 5rem;
   }
-}
+
+  &__text-box {
+    margin-top: calc(8rem - 0.5em);
+    @include mq(sm) {
+      margin-top: 5rem;
+    }
+  }
   &__text {
     color: $black;
     padding: 0 2rem;
@@ -476,19 +479,29 @@ main {
 }
 .news {
   margin-top: 15rem;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   background-color: $bgc-news;
+  @include mq(sm) {
+    background-color: $bgc-news--sp;
+    margin-top: 0;
+  }
   &__box {
     padding: 0 5rem;
-    margin-top: 6rem;
+    margin-top: 10rem;
     display: flex;
     max-width: 920px;
     margin-inline: auto;
     gap: 3rem;
     // border: 2px dashed #eab075;
 
+    @include mq(md) {
+      padding: 0 4rem;
+    }
     @include mq(sm) {
       flex-direction: column-reverse;
+      max-width: 560px;
+      padding: 0 2rem;
+      margin-top: 6rem;
     }
   }
 
@@ -501,19 +514,21 @@ main {
     font-size: 1.4rem;
     line-height: 1.4;
     letter-spacing: 0.2em;
-    padding: 1.5em 1.2em 1.8em;
+    padding: 2.8rem;
     background-color: #f8f8ffa1;
     // background-color: rgb(185, 148, 74);
-
+    
     @include mq(sm) {
       width: 100%;
+      padding: 2.4rem;
+      max-width: 42rem;
+      margin-inline: auto;
     }
   }
   &__item {
     display: flex;
     gap: 2em;
-    border-bottom: 1px solid black;
-  padding-bottom: 0.4em;
+    padding-bottom: 0.4em;
   }
   &__item-date {
     font-family: "Noto Sans JP";
@@ -525,9 +540,13 @@ main {
     }
   }
   &__item-link {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 0.6em;
     line-height: 1;
+    border-bottom: 1px solid $black;
+    @include mq(sm) {
+      letter-spacing: 0.14em;
+    }
   }
 
   &__bg-img {
@@ -539,9 +558,9 @@ main {
     opacity: 0.9;
 
     @include mq(sm) {
+      display: none;
       height: 120px;
       width: 100%;
-      margin-bottom: 2em;
       background-position: center;
     }
 
@@ -556,10 +575,9 @@ main {
     }
   }
   & .btn-box {
-    margin-top: 6rem;
+    margin-top: 10rem;
   }
 }
-
 
 @keyframes loop {
   from {
@@ -586,6 +604,7 @@ main {
   background-color: $bgc-access;
 
   @include mq(sm) {
+    margin-top: 0;
     &::after {
       height: 274px;
     }

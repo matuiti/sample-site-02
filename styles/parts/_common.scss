@@ -58,7 +58,7 @@ section {
   z-index: 1;
   text-align: center;
   @include mq(sm) {
-    margin-top: 4.2rem;
+    padding-top: 4.2rem;
   }
 }
 .section-title {
