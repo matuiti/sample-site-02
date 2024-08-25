@@ -54,19 +54,21 @@ section {
   }
 }
 .section-title {
-  margin-bottom: 40px;
-  font-size: 3.1rem;
-  line-height: 2rem;
-  font-weight: 200;
+  font-size: 3.2rem;
+  line-height: 0.7;
+  letter-spacing: 0.2em;
+  font-weight: normal;
   text-align: center;
-  text-shadow: 4px 1px 0px #fff8f8a6;
-
-  & img {
-    width: 40px;
-    margin: 0 0 6px 16px;
-
+  @include mq(sm) {
+    font-size: 2.4rem;
+  }
+  &-icon {
+    height: $icon-title-h;
+    margin-bottom: 1.8rem;
     @include mq(sm) {
-      margin: 0 0 6px 12px;
+      height: $icon-title-h--sm;
+      margin-bottom: 0.5rem;
+
     }
   }
 }
