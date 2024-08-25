@@ -335,22 +335,6 @@ section {
   scroll-margin-top: 14em;
 }
 
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 8px;
-}
-@media screen and (max-width: 959px) {
-  .wrap {
-    padding: 0 20px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .wrap {
-    padding: 0 10px;
-  }
-}
-
 .pc {
   display: block;
 }
@@ -366,6 +350,30 @@ section {
 @media screen and (max-width: 767px) {
   .sp {
     display: block;
+  }
+}
+
+.dummy-square::before {
+  content: "";
+  height: 20px;
+  width: 100%;
+  background-color: #FFF3B8;
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .dummy-square::before {
+    content: none;
+  }
+}
+
+.section-title-box {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .section-title-box {
+    margin-top: 4.2rem;
   }
 }
 
@@ -836,101 +844,11 @@ main {
   }
 }
 
-.news {
-  margin-top: 10em;
-  padding-top: 6em;
-  padding-bottom: 13em;
-  background-color: transparent;
-}
-.news__wrap {
-  display: flex;
-  max-width: 900px;
-  margin-inline: auto;
-}
-@media screen and (max-width: 767px) {
-  .news__wrap {
-    flex-direction: column-reverse;
-  }
-}
-.news__list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  flex-basis: 50%;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  letter-spacing: 0.2em;
-  padding: 1.5em 1.2em 1.8em;
-  background-color: rgba(248, 248, 255, 0.631372549);
-}
-@media screen and (max-width: 767px) {
-  .news__list {
-    width: 100%;
-  }
-}
-.news__item {
-  display: flex;
-  gap: 2em;
-}
-.news__date {
-  font-family: "Noto Sans JP";
-  font-size: 0.8em;
-  letter-spacing: 3px;
-}
-.news__bg {
-  width: 50%;
-  background-image: url(../../images/hero-01.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  .news__bg {
-    height: 120px;
-    width: 100%;
-    margin-bottom: 2em;
-    background-position: center;
-  }
-}
-.news__bg::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 .menu {
   position: relative;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.6);
   padding-bottom: 15rem;
-}
-.menu::before {
-  content: "";
-  height: 20px;
-  width: 100%;
-  background-color: #FFF3B8;
-  position: absolute;
-}
-@media screen and (max-width: 767px) {
-  .menu::before {
-    content: none;
-  }
-}
-.menu__section-title-box {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-@media screen and (max-width: 767px) {
-  .menu__section-title-box {
-    margin-top: 4.2rem;
-  }
 }
 .menu__text-box {
   margin-top: calc(8rem - 0.5em);
@@ -1023,6 +941,78 @@ main {
   }
 }
 
+.news {
+  margin-top: 15rem;
+  padding-bottom: 6rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.news__box {
+  padding: 0 5rem;
+  margin-top: 6rem;
+  display: flex;
+  max-width: 920px;
+  margin-inline: auto;
+}
+@media screen and (max-width: 767px) {
+  .news__box {
+    flex-direction: column-reverse;
+  }
+}
+.news__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-basis: 50%;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  padding: 1.5em 1.2em 1.8em;
+  background-color: rgba(248, 248, 255, 0.631372549);
+}
+@media screen and (max-width: 767px) {
+  .news__list {
+    width: 100%;
+  }
+}
+.news__item {
+  display: flex;
+  gap: 2em;
+}
+.news__item-date {
+  font-family: "Noto Sans JP";
+  font-size: 0.8em;
+  letter-spacing: 3px;
+}
+.news__bg-img {
+  width: 50%;
+  background-image: url(../../images/hero-01.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .news__bg-img {
+    height: 120px;
+    width: 100%;
+    margin-bottom: 2em;
+    background-position: center;
+  }
+}
+.news__bg-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.news .btn-box {
+  margin-top: 6rem;
+}
+
 @keyframes loop {
   from {
     transform: translateX(100%);
@@ -1040,21 +1030,11 @@ main {
   }
 }
 .access {
-  margin-top: 10em;
-  padding-top: 5em;
+  margin-top: 15rem;
   padding-bottom: 5em;
   position: relative;
   z-index: 1;
-}
-.access::after {
-  content: "";
-  position: absolute;
-  bottom: 74em;
-  left: 0;
-  width: 100%;
-  height: 515px;
-  background-color: transparent;
-  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width: 767px) {
   .access::after {
