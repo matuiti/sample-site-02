@@ -3,13 +3,10 @@ $black: black;
 $gray:#BFB7A8;
 $transparent:transparent;
 
-
 $base01: #FFF3B8;
 $base02: rgba(255,255,255,0.6);
 $main1: #782b28;
-// $main2: #C0C080;
 $accent: #e91e1e;
-
 
 $bgc-body: $base01;
 $bgc-btn:$accent;
@@ -23,19 +20,15 @@ $color-footer-texts: $white;
 $color-footer-copyright: rgba(255,255,255,0.6);
 
 $bgc-hero: $white;
-
-// $bgc-about: $transparent;
-
 $bgc-menu: $base02;
-
-$bgc-news: $transparent;
-
-$bgc-access: $transparent;
-
+$bgc-news: $base02;
+$bgc-access: $base02;
 
 $header-h--sm: 80px;
 $header-h: 100px;
+
 $max-width: 1200px;
 $max-width--about: 1080px;
+
 $icon-title-h:40px;
 $icon-title-h--sm:24px;

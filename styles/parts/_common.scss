@@ -29,18 +29,6 @@ section {
   scroll-margin-top: 14em;
 }
 
-.wrap {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 8px;
-
-  @include mq(md) {
-    padding: 0 20px;
-  }
-  @include mq(sm) {
-    padding: 0 10px;
-  }
-}
 .pc {
   display: block;
   @include mq(sm) {
@@ -51,6 +39,26 @@ section {
   display: none;
   @include mq(sm) {
     display: block;
+  }
+}
+.dummy-square {
+  &::before {
+    content: "";
+    height: calc($icon-title-h / 2);
+    width: 100%;
+    background-color: $base01;
+    position: absolute;
+    @include mq(sm) {
+      content: none;
+    }
+  }
+}
+.section-title-box {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  @include mq(sm) {
+    margin-top: 4.2rem;
   }
 }
 .section-title {
