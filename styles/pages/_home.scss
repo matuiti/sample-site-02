@@ -22,22 +22,18 @@
   justify-content: space-evenly;
   box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.1);
   padding: 0 4rem;
-
+  
   @include mq(sm) {
     height: $header-h--sm;
+    padding: 0 2rem;
   }
 
   &__wrap {
     display: flex;
     max-width: 1200px;
     width: 100%;
-    // padding: 0 4rem;
     align-items: center;
     justify-content: space-between;
-
-    @include mq(sm) {
-      padding: 0 2rem;
-    }
   }
 
   &__logo {
@@ -113,6 +109,13 @@
   align-items: center;
   width: 100%;
   background-color: $bgc-footer;
+  margin-top: 20rem;
+  @include mq(md) {
+    margin-top: 0;
+  }
+  @include mq(sm) {
+    margin-top: 0;
+  }
 
   &__wrap {
     display: flex;
@@ -484,6 +487,8 @@ main {
 .news {
   margin-top: 15rem;
   padding-bottom: 10rem;
+  max-width: 92rem;
+  margin-inline: auto;
   background-color: $bgc-news;
   @include mq(sm) {
     background-color: $bgc-news--sp;
@@ -607,25 +612,23 @@ main {
 
 .access {
   margin-top: 15rem;
-  padding-bottom: 5em;
   position: relative;
   z-index: 1;
   background-color: $bgc-access;
+  max-width: 92rem;
+    padding: 0 5rem 5rem;
+    margin-inline: auto;
 
-  @include mq(sm) {
-    margin-top: 0;
-    &::after {
-      height: 274px;
-    }
-  }
+    @include mq(md) {
+      padding: 0 4rem 10rem;    }
+    @include mq(sm) {
+      padding: 0 2rem 6rem;    }
 
   &__wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 92rem;
-    padding: 0 5rem;
-    margin-inline: auto;
+    
   }
 
   &__img-box {
@@ -645,14 +648,58 @@ main {
     display: flex;
     justify-content: center;
     gap: 3rem;
+    margin-top: 6rem;
+    @include mq(md) {
+      margin-top: 4rem;
+    }
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    & h3 {
+      position: relative;
+      font-size: 2rem;
+      letter-spacing: 0.16em;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 1.4rem;
+      padding-left: 1.8rem;
+      @include mq(md) {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        padding-left: 1.4rem;
+      }
+      @include mq(sm) {
+        font-size: 1.6rem;
+        padding-left: 1.4rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0.1rem;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 0.4rem;
+        height: 1.2em;
+        background-color: $accent;
+      }
+    }
   }
-  // &__info-box {
-  //   flex-grow: 1;
-  // }
-  &__info {
-    border-collapse: collapse;
+  &__info-box {
     width: 100%;
     flex-grow: 1;
+    @include mq(sm) {
+      min-width: 30rem;
+      width: 80%;
+      max-width: 50rem;
+    }
+  }
+  &__info {
+    width: 100%;
+    border-collapse: collapse;
   
     th,
     td {
@@ -692,14 +739,23 @@ main {
       background-color: #f9f9f9;
     }
   }
+  &__calendar-box {
+    min-width: 30rem;
+    width: 80%;
+    max-width: 50rem;
+  }
   
   &__map-box {
     position: relative;
     width: 100%;
-    margin-bottom: 240px;
+    margin-top: 6rem;
     padding-top: 37.5%;
+    @include mq(md) {
+      margin-top: 4rem;
+      padding-top: 70%;
+    }
     @include mq(sm) {
-      margin-bottom: 160px;
+      margin-top: 3rem;
       padding-top: 70%;
     }
   
