@@ -1071,10 +1071,9 @@ main {
   }
 }
 .news__item-link {
-  font-size: 1.4rem;
-  letter-spacing: 0.6em;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
   line-height: 1.1;
-  border-bottom: 1px solid black;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1229,46 +1228,69 @@ main {
 @media screen and (max-width: 767px) {
   .access__info-box {
     min-width: 30rem;
-    width: 80%;
     max-width: 50rem;
   }
 }
 .access__info {
-  width: 100%;
+  display: block;
   border-collapse: collapse;
+  font-family: "Noto Sans JP";
+  background-color: white;
+  width: 100%;
+  padding: 3rem;
 }
-.access__info th,
-.access__info td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+.access__info tr {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px dashed #888;
+  gap: 2.4rem;
+}
+.access__info tr + tr {
+  padding-top: 2.4rem;
+}
+@media screen and (max-width: 959px) {
+  .access__info tr + tr {
+    padding-top: 1.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access__info tr + tr {
+    padding-top: 2.4rem;
+  }
 }
 .access__info th {
-  text-align: center;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.6rem;
+  min-width: 8em;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+@media screen and (max-width: 767px) {
+  .access__info th {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+  }
 }
 .access__info td {
-  background: white;
-  padding: 1em 2em;
+  text-align: left;
+  flex-grow: 1;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
 }
-.access__info td:nth-child(1) {
-  font-size: 1.1em;
+@media screen and (max-width: 767px) {
+  .access__info td {
+    letter-spacing: 0.14em;
+  }
 }
-.access__info-title {
-  background-color: #ccc;
-  font-weight: bold;
-  text-align: center;
-}
-.access__info__num {
-  font-family: "Noto Sans JP";
-  font-size: 1.4rem;
-  line-height: 1.8;
-}
-.access__info-address, .access__info-time, .access__info-caution {
-  background-color: #f9f9f9;
+.access__info-email {
+  font-family: "Kantumruy Pro", "Noto Sans JP", sans-serif;
 }
 .access__calendar-box {
   min-width: 30rem;
-  width: 80%;
+  width: 100%;
   max-width: 50rem;
 }
 .access__map-box {
