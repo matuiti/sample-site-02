@@ -41,21 +41,11 @@ section {
     display: block;
   }
 }
-.dummy-square {
-  &::before {
-    content: "";
-    height: calc($icon-title-h / 2);
-    width: 100%;
-    background-color: $base01;
-    position: absolute;
-    @include mq(sm) {
-      content: none;
-    }
-  }
-}
 .section-title-box {
   position: relative;
   z-index: 1;
+  top: -(calc($icon-title-h / 2));
+  margin-bottom: -(calc($icon-title-h / 2));
   text-align: center;
   @include mq(sm) {
     padding-top: 4.2rem;
