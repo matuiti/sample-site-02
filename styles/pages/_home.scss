@@ -1,6 +1,7 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 @use "../parts/button" as *;
+@use "../parts/calendar" as *;
 
 #global-container {
   background-color: $bgc-body;
@@ -517,7 +518,7 @@ main {
     padding: 2.8rem;
     background-color: #f8f8ffa1;
     // background-color: rgb(185, 148, 74);
-    
+
     @include mq(sm) {
       width: 100%;
       padding: 2.4rem;
@@ -542,8 +543,13 @@ main {
   &__item-link {
     font-size: 1.4rem;
     letter-spacing: 0.6em;
-    line-height: 1;
+    line-height: 1.1;
     border-bottom: 1px solid $black;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
     @include mq(sm) {
       letter-spacing: 0.14em;
     }
@@ -610,19 +616,8 @@ main {
     }
   }
 
-  &__wrap {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    gap: 1em;
-    margin-bottom: 60px;
 
-    @include mq(sm) {
-      flex-direction: column;
-    }
-  }
-
-  &__img {
+  &__img-box {
     width: 40%;
   }
 
@@ -669,7 +664,7 @@ main {
     }
   }
 
-  &__map {
+  &__map-box {
     position: relative;
     width: 100%;
     margin-bottom: 240px;

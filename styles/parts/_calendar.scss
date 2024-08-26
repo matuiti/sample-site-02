@@ -1,0 +1,64 @@
+@use "../globals" as *;
+
+.calendar {
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffc107;
+    border-radius: 8px 8px 0 0;
+  }
+  &-header button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &-table th,
+  &-table td {
+    width: 14.28%;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &-table td:hover {
+    background-color: #f0f0f0;
+  }
+
+  &-table .active {
+    background-color: #ffc107;
+    color: $black;
+    border-radius: 50%;
+  }
+  & #calendar-body {
+      & .grayed-out {
+        color: #d3d3d3;
+      }
+      & .saturday {
+        color: $saturday; /* 土曜日の列の色 */
+      }
+      & .sunday {
+        color: $sunday; /* 日曜日の列の色 */
+      }
+      & .grayed-out {
+        color: #d3d3d3; /* グレーアウトされた日付 */
+      }
+      & .active {
+        font-weight: bold; /* 今日の日付を強調表示 */
+        background-color: yellow; /* 今日の日付の背景色を設定（任意） */
+      }
+  }
+}
