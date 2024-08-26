@@ -5,6 +5,9 @@
 
 #global-container {
   background-color: $bgc-body;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .header {
   position: fixed;
@@ -392,7 +395,6 @@ main {
 }
 .menu {
   position: relative;
-  overflow: hidden;
   background-color: $bgc-menu;
   padding-bottom: 10rem;
   @include mq(md) {
@@ -423,6 +425,7 @@ main {
     margin-top: calc(9rem - 0.5em);
     width: 100vw;
     max-width: $max-width;
+    overflow: hidden;
 
     @include mq(md) {
       margin-top: calc(8rem - 0.5em);
@@ -616,54 +619,80 @@ main {
     }
   }
 
-
-  &__img-box {
-    width: 40%;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 92rem;
+    padding: 0 5rem;
+    margin-inline: auto;
   }
 
-  &__info {
-    width: 70%;
-    border-collapse: collapse;
+  &__img-box {
+    margin-top: 8rem;
 
+    @include mq(md) {
+      margin-top: 8rem;
+    }
+    @include mq(sm) {
+      margin-top: 6rem;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+  &__flex-box {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  // &__info-box {
+  //   flex-grow: 1;
+  // }
+  &__info {
+    border-collapse: collapse;
+    width: 100%;
+    flex-grow: 1;
+  
     th,
     td {
       border: 1px solid #ddd;
       padding: 8px;
       text-align: left;
     }
-
+  
     th {
       text-align: center;
     }
-
+  
     td {
       background: $white;
       padding: 1em 2em;
-
+  
       &:nth-child(1) {
         font-size: 1.1em;
       }
     }
-
+  
     &-title {
       background-color: #ccc;
       font-weight: bold;
       text-align: center;
     }
-
+  
     &__num {
       font-family: "Noto Sans JP";
       font-size: 1.4rem;
       line-height: 1.8;
     }
-
+  
     &-address,
     &-time,
     &-caution {
       background-color: #f9f9f9;
     }
   }
-
+  
   &__map-box {
     position: relative;
     width: 100%;
@@ -673,7 +702,7 @@ main {
       margin-bottom: 160px;
       padding-top: 70%;
     }
-
+  
     & > iframe {
       // border: 0;
       filter: saturate(0.5);

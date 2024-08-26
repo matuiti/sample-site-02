@@ -255,7 +255,7 @@
 
 
 
-      <section id="menu" class="menu dummy-square">
+      <section id="menu" class="menu">
         <div class="section-title-box">
           <img class="section-title-icon" src="images/bread-05.png" />
           <h2 class="section-title">
@@ -297,7 +297,7 @@
         <div class="btn-box"><a class="btn" href="#menu">メニューを詳しく見る</a></div>
       </section>
 
-      <section id="news" class="news dummy-square">
+      <section id="news" class="news">
         <div class="section-title-box">
           <img class="section-title-icon" src="images/bread-02.png" />
           <h2 class="section-title">
@@ -338,73 +338,75 @@
         <div class="btn-box"><a class="btn" href="#news">もっと見る</a></div>
       </section>
 
-      <section id="access" class="access dummy-square">
-        <div class="section-title-box">
-          <img class="section-title-icon" src="images/bread-03.png" />
-          <h2 class="section-title">
-            Access
-          </h2>
-        </div>
+      <section id="access" class="access">
+        <div class="access__wrap">
+          <div class="section-title-box">
+            <img class="section-title-icon" src="images/bread-03.png" />
+            <h2 class="section-title">
+              Access
+            </h2>
+          </div>
           <div class="access__img-box">
             <img src="images/access.jpg" />
           </div>
-          <div class="access__info-box">
-            <table class="access__info">
-              <tr>
-                <th class="access__info-title" colspan="2">お店の情報</th>
-              </tr>
-              <tr>
-                <td>住所</td>
-                <td class="access__info-address">
-                  <span class="access__num">123-4567</span><br />パンの都町<span class="access__num">1-23-4</span>
-                </td>
-              </tr>
-              <tr>
-                <td>営業時間</td>
-                <td class="access__info-time">
-                  <span class="access__num">11:30 ~ 16:00</span> （売り切れ次第終了）<br />日・祝 定休日(その他不定休あり)
-                </td>
-              </tr>
-              <tr>
-                <td>注意事項</td>
-                <td class="access__info-caution">
-                  駐車場（<span class="access__num">4</span>台分）<br />駐輪スペースあり
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="access__calendar-box">
-            <div class="calendar">
-              <div class="calendar-header">
+          <div class="access__flex-box">
+              <table class="access__info">
+                <tr>
+                  <th class="access__info-title" colspan="2">お店の情報</th>
+                </tr>
+                <tr>
+                  <td>住所</td>
+                  <td class="access__info-address">
+                    <span class="access__num">123-4567</span><br />パンの都町<span class="access__num">1-23-4</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>営業時間</td>
+                  <td class="access__info-time">
+                    <span class="access__num">11:30 ~ 16:00</span> （売り切れ次第終了）<br />日・祝 定休日(その他不定休あり)
+                  </td>
+                </tr>
+                <tr>
+                  <td>注意事項</td>
+                  <td class="access__info-caution">
+                    駐車場（<span class="access__num">4</span>台分）<br />駐輪スペースあり
+                  </td>
+                </tr>
+              </table>
+            <div class="access__calendar-box">
+              <div class="calendar">
+                <div class="calendar-header">
                   <button id="prev-month">&lt;</button>
                   <div id="month-year"></div>
                   <button id="next-month">&gt;</button>
-              </div>
-              <table class="calendar-table">
+                </div>
+                <table class="calendar-table">
                   <thead>
-                      <tr>
-                          <th>月</th>
-                          <th>火</th>
-                          <th>水</th>
-                          <th>木</th>
-                          <th>金</th>
-                          <th>土</th>
-                          <th>日</th>
-                      </tr>
+                    <tr>
+                      <th>月</th>
+                      <th>火</th>
+                      <th>水</th>
+                      <th>木</th>
+                      <th>金</th>
+                      <th>土</th>
+                      <th>日</th>
+                    </tr>
                   </thead>
                   <tbody id="calendar-body">
-                      <!-- JavaScriptで生成されるカレンダーの日付 -->
+                    <!-- JavaScriptで生成されるカレンダーの日付 -->
                   </tbody>
-              </table>
+                </table>
+              </div>
+            </div>
           </div>
+          <div class="access__map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747798841979!2d139.7428579763797!3d35.65858483121676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1720664107076!5m2!1sja!2sjp"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-
-        <div class="access__map-box">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747798841979!2d139.7428579763797!3d35.65858483121676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1720664107076!5m2!1sja!2sjp"
-            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
       </section>
     </main>
     <footer class="footer">
