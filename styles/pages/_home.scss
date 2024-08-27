@@ -383,16 +383,18 @@ main {
     font-size: 1.6rem;
     line-height: 2;
     letter-spacing: 0.3em;
+    box-shadow: $box-shadow;
     @include mq(md) {
       width: 46.8rem;
     }
     @include mq(sm) {
-      width: 90%;
-      margin: 2rem auto;
+      width: 100%;
+      margin: 0 auto;
       font-size: 1.4rem;
       padding: 3.2rem 1.4rem;
       letter-spacing: 0.2em;
       line-height: 2.6;
+      box-shadow: none;
     }
   }
 }
@@ -526,6 +528,8 @@ main {
     padding: 2.8rem;
     background-color: #f8f8ffa1;
     // background-color: rgb(185, 148, 74);
+    box-shadow: $box-shadow;
+
 
     @include mq(sm) {
       width: 100%;
@@ -640,6 +644,9 @@ main {
     }
     @include mq(sm) {
       margin-top: 6rem;
+      min-width: 30rem;
+      max-width: 50rem;
+      margin-inline: auto;
     }
     & img {
       width: 100%;
@@ -701,25 +708,24 @@ main {
     display: block;
     border-collapse: collapse;
     font-family: "Noto Sans JP";
-    background-color: $white;
+    background-color: $base02;
     width: 100%;
     padding: 3rem;
+    box-shadow: $box-shadow;
+
 
     tr {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 2.4rem;
-      border-bottom: 1px dashed #888;
-      gap: 2.4rem;
+      gap: 2rem;
+      &:not(:last-child) {
+        padding-bottom: 2rem;
+        
+      }
     }
     tr + tr {
-      padding-top: 2.4rem;
-      @include mq(md) {
-        padding-top: 1.2rem;
-      }
-      @include mq(sm) {
-        padding-top: 2.4rem;
-      }
+      border-top: 1px dotted #888;
+      padding-top: 2rem;
     }
 
     th {
@@ -741,6 +747,7 @@ main {
       font-size: 1.6rem;
       letter-spacing: 0.1em;
       line-height: 1.5;
+      margin-top: -0.4em;
       @include mq(sm) {
         letter-spacing: 0.14em;
       }
@@ -762,12 +769,14 @@ main {
     width: 100%;
     margin-top: 6rem;
     padding-top: 37.5%;
+    box-shadow: $box-shadow;
+
     @include mq(md) {
       margin-top: 4rem;
       padding-top: 70%;
     }
     @include mq(sm) {
-      margin-top: 3rem;
+      margin-top: 8rem;
       padding-top: 70%;
     }
 

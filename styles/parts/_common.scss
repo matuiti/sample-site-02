@@ -9,6 +9,7 @@ body {
   font-feature-settings: "palt";
   letter-spacing: 0.1em;
   line-height: 1;
+  font-weight: 500;
   color: $black;
 }
 a {
@@ -52,17 +53,18 @@ section {
   }
 }
 .section-title {
+  color: $main1;
   font-size: 3.2rem;
   line-height: 0.7;
-  letter-spacing: 0.2em;
-  font-weight: normal;
+  letter-spacing: 0.1em;
+  font-weight: 600;
   text-align: center;
   @include mq(sm) {
     font-size: 2.4rem;
   }
   &-icon {
     height: $icon-title-h;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.6rem;
     @include mq(sm) {
       height: $icon-title-h--sm;
       margin-bottom: 0.5rem;
