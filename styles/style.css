@@ -313,6 +313,7 @@ body {
   font-feature-settings: "palt";
   letter-spacing: 0.1em;
   line-height: 1;
+  font-weight: 500;
   color: black;
 }
 
@@ -369,10 +370,11 @@ section {
 }
 
 .section-title {
+  color: #782b28;
   font-size: 3.2rem;
   line-height: 0.7;
-  letter-spacing: 0.2em;
-  font-weight: normal;
+  letter-spacing: 0.1em;
+  font-weight: 600;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -382,7 +384,7 @@ section {
 }
 .section-title-icon {
   height: 40px;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
 }
 @media screen and (max-width: 767px) {
   .section-title-icon {
@@ -404,9 +406,9 @@ section {
 }
 
 .calendar {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 .calendar-header {
   display: flex;
@@ -881,6 +883,7 @@ main {
   font-size: 1.6rem;
   line-height: 2;
   letter-spacing: 0.3em;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 959px) {
   .about__text {
@@ -889,12 +892,13 @@ main {
 }
 @media screen and (max-width: 767px) {
   .about__text {
-    width: 90%;
-    margin: 2rem auto;
+    width: 100%;
+    margin: 0 auto;
     font-size: 1.4rem;
     padding: 3.2rem 1.4rem;
     letter-spacing: 0.2em;
     line-height: 2.6;
+    box-shadow: none;
   }
 }
 
@@ -1045,6 +1049,7 @@ main {
   letter-spacing: 0.2em;
   padding: 2.8rem;
   background-color: rgba(248, 248, 255, 0.631372549);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 767px) {
   .news__list {
@@ -1165,6 +1170,9 @@ main {
 @media screen and (max-width: 767px) {
   .access__img-box {
     margin-top: 6rem;
+    min-width: 30rem;
+    max-width: 50rem;
+    margin-inline: auto;
   }
 }
 .access__img-box img {
@@ -1235,29 +1243,22 @@ main {
   display: block;
   border-collapse: collapse;
   font-family: "Noto Sans JP";
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
   padding: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 .access__info tr {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2.4rem;
-  border-bottom: 1px dashed #888;
-  gap: 2.4rem;
+  gap: 2rem;
+}
+.access__info tr:not(:last-child) {
+  padding-bottom: 2rem;
 }
 .access__info tr + tr {
-  padding-top: 2.4rem;
-}
-@media screen and (max-width: 959px) {
-  .access__info tr + tr {
-    padding-top: 1.2rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .access__info tr + tr {
-    padding-top: 2.4rem;
-  }
+  border-top: 1px dotted #888;
+  padding-top: 2rem;
 }
 .access__info th {
   text-align: left;
@@ -1279,6 +1280,7 @@ main {
   font-size: 1.6rem;
   letter-spacing: 0.1em;
   line-height: 1.5;
+  margin-top: -0.4em;
 }
 @media screen and (max-width: 767px) {
   .access__info td {
@@ -1298,6 +1300,7 @@ main {
   width: 100%;
   margin-top: 6rem;
   padding-top: 37.5%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 959px) {
   .access__map-box {
@@ -1307,7 +1310,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access__map-box {
-    margin-top: 3rem;
+    margin-top: 8rem;
     padding-top: 70%;
   }
 }
