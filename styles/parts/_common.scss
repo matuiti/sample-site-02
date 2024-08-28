@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Kantumruy Pro", "Noto Sans JP", sans-serif;
+  font-family: "Lato", "Noto Sans JP", sans-serif;
   font-feature-settings: "palt";
   letter-spacing: 0.1em;
   line-height: 1;
@@ -57,27 +57,45 @@ section {
   font-size: 3.2rem;
   line-height: 0.7;
   letter-spacing: 0.1em;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 400;
   text-align: center;
   @include mq(sm) {
     font-size: 2.4rem;
   }
   &-icon {
     height: $icon-title-h;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
     @include mq(sm) {
       height: $icon-title-h--sm;
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
 
     }
   }
+  &-sub {
+    color: $gray;
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+    @include mq(sm) {
+      font-size: 1rem;
+    }
+  }
 }
-.bold {
-  font-weight: bold;
+.font-en {
+  font-weight: 800;
+  font-style: italic;
+  color: $main1;
+  padding: 0 0.2em;
 }
 .marker-pan {
   background: linear-gradient(transparent 64%, #EEFAD2 0%);
 }
 .marker-kuma {
   background: linear-gradient(transparent 64%, #b84f528a 0%);
+}
+.kome {
+  font-size: 0.8em;
 }

@@ -63,7 +63,7 @@
     display: flex;
     line-height: 1.7;
     font-size: 1.8rem;
-    gap: 2.8rem;
+    gap: 5rem;
 
     @include mq(sm) {
       display: none;
@@ -82,6 +82,7 @@
       height: 31px;
       color: $color-header-texts;
       transition: color 0.4s;
+      font-style: italic;
       &:hover {
         color: rgba(255, 255, 255, 0.3);
         border-bottom: 2px solid $accent;
@@ -333,7 +334,7 @@ main {
     position: absolute;
     // z-index: -1;
     width: 100%;
-    max-width: 700px;
+    max-width: 60rem;
     height: auto;
     opacity: 0.9;
     @include mq(md) {
@@ -344,7 +345,7 @@ main {
       max-width: 100%;
     }
     &--01 {
-      top: -27em;
+      top: -22em;
       right: 0;
       @include mq(md) {
         top: -21em;
@@ -356,7 +357,7 @@ main {
       }
     }
     &--02 {
-      top: -27em;
+      top: -22em;
       left: 0;
       @include mq(md) {
         top: -21em;
@@ -401,13 +402,13 @@ main {
 .menu {
   position: relative;
   background-color: $bgc-menu;
-  padding-bottom: 10rem;
+  padding-bottom: 14rem;
   @include mq(md) {
     margin-top: 5rem;
   }
 
   &__text-box {
-    margin-top: calc(8rem - 0.5em);
+    margin-top: calc(12rem - 0.5em);
     @include mq(sm) {
       margin-top: 5rem;
     }
@@ -421,20 +422,18 @@ main {
     letter-spacing: 0.3em;
     @include mq(sm) {
       font-size: 1.4rem;
-      letter-spacing: 0.2em;
-      line-height: 2.6;
     }
   }
   &__loop-box {
     display: flex;
-    margin-top: calc(9rem - 0.5em);
+    margin-top: calc(10rem - 0.5em);
     width: 100vw;
     max-width: $max-width;
     overflow: hidden;
 
-    @include mq(md) {
-      margin-top: calc(8rem - 0.5em);
-    }
+    // @include mq(md) {
+    //   margin-top: calc(8rem - 0.5em);
+    // }
     @include mq(sm) {
       margin-top: calc(6rem - 0.5em);
     }
@@ -462,7 +461,7 @@ main {
       }
 
       & li {
-        width: 16rem;
+        width: 14rem;
         margin-right: 2rem;
         transform: scale(0.95);
         transition: all 0.5s;
@@ -471,16 +470,16 @@ main {
           width: 12rem;
         }
         @include mq(sm) {
-          width: 6rem;
+          width: 8rem;
         }
       }
     }
   }
   & .btn-box {
     margin-top: 12rem;
-    @include mq(md) {
-      margin-top: 11rem;
-    }
+    // @include mq(md) {
+    //   margin-top: 11rem;
+    // }
     @include mq(sm) {
       margin-top: 8rem;
     }
@@ -713,7 +712,7 @@ main {
     padding: 3rem;
     box-shadow: $box-shadow;
 
-
+    tbody {display: block;}
     tr {
       display: flex;
       justify-content: space-between;
@@ -752,9 +751,15 @@ main {
         letter-spacing: 0.14em;
       }
     }
-
-    &-email {
-      font-family: "Kantumruy Pro", "Noto Sans JP", sans-serif;
+    // & tr:has(&-email,&-tell) {
+    //   background-color: $white;
+    // }
+    &-address a {color: blue;}
+    &-email, &-tell {
+      font-weight: 900!important;
+      color: $main1!important;
+      font-size: 2rem!important;
+      text-decoration: underline!important;
     }
   }
 
