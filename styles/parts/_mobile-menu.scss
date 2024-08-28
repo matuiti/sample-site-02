@@ -68,8 +68,8 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 3em;
-    padding: 4.5em 0 5.5em;
+    gap: 3.4em;
+    padding: 2.4em 0 7.6em;
   }
   &__sns {
     display: flex;
@@ -83,6 +83,11 @@
     // padding: 20px 0 32px 0;
     font-size: 2rem;
     line-height: 1;
+    font-style: italic;
+    font-weight: 600;
+  }
+  & .section-title-sub {
+    letter-spacing: 0.2em;
   }
 }
 
