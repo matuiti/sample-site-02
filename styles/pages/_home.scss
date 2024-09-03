@@ -397,8 +397,8 @@ main {
   &__loop-box {
     display: flex;
     margin-top: calc(10rem - 0.5em);
-    width: 100vw;
-    max-width: $max-width;
+    max-width: calc(100vw - 20px);
+    // max-width: $max-width;
     overflow: hidden;
 
     // @include mq(md) {
@@ -619,8 +619,34 @@ main {
   max-width: 92rem;
   margin-inline: auto;
   background-color: $bgc-blog;
+  display: flex;
+  flex-direction: column;
   @include mq(sm) {
     margin-top: 0;
+  }
+  &__text-box {
+    
+  }
+  &__text {
+
+  }
+  &__article-box {
+    display: flex;
+  }
+  &__article {
+    
+    &-img {
+
+    }
+    &-text-box {
+
+    }
+    &-title {
+
+    }
+    &-date{
+
+    }
   }
 }
 
