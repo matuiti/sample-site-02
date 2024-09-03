@@ -252,10 +252,223 @@
   }
 }
 
+
 main {
   margin-top: $header-h;
   @include mq(sm) {
     margin-top: $header-h--sm;
+  }
+}
+.news {
+  margin-top: 15rem;
+  padding-bottom: 10rem;
+  max-width: 92rem;
+  margin-inline: auto;
+  background-color: $bgc-news;
+  @include mq(sm) {
+    background-color: $bgc-news--sp;
+    margin-top: 0;
+  }
+  &__box {
+    padding: 0 5rem;
+    margin-top: 10rem;
+    display: flex;
+    max-width: 920px;
+    margin-inline: auto;
+    gap: 3rem;
+    // border: 2px dashed #eab075;
+
+    @include mq(md) {
+      padding: 0 4rem;
+    }
+    @include mq(sm) {
+      flex-direction: column-reverse;
+      max-width: 560px;
+      padding: 0 2rem;
+      margin-top: 6rem;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-basis: 50%;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    padding: 2.8rem;
+    background-color: #f8f8ffa1;
+    // background-color: rgb(185, 148, 74);
+    box-shadow: $box-shadow;
+
+
+    @include mq(sm) {
+      width: 100%;
+      padding: 2.4rem;
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 2em;
+    padding-bottom: 0.4em;
+  }
+  &__item-date {
+    font-family: "Noto Sans JP";
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    @include mq(sm) {
+      font-size: 1.2rem;
+    }
+  }
+  &__item-link {
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+    // border-bottom: 1px solid $black;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    @include mq(sm) {
+      letter-spacing: 0.14em;
+    }
+  }
+
+  &__bg-img {
+    width: 50%;
+    background-image: url(../../images/about-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+
+    @include mq(sm) {
+      display: none;
+      height: 120px;
+      width: 100%;
+      background-position: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  & .btn-box {
+    margin-top: 10rem;
+  }
+}
+.menu {
+  position: relative;
+  background-color: $bgc-menu;
+  padding-bottom: 14rem;
+  @include mq(md) {
+    margin-top: 5rem;
+  }
+
+  &__text-box {
+    margin-top: calc(12rem - 0.5em);
+    @include mq(sm) {
+      margin-top: 5rem;
+    }
+  }
+  &__text {
+    color: $black;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 0.3em;
+    @include mq(sm) {
+      font-size: 1.4rem;
+    }
+  }
+  &__loop-box {
+    display: flex;
+    margin-top: calc(10rem - 0.5em);
+    width: 100vw;
+    max-width: $max-width;
+    overflow: hidden;
+
+    // @include mq(md) {
+    //   margin-top: calc(8rem - 0.5em);
+    // }
+    @include mq(sm) {
+      margin-top: calc(6rem - 0.5em);
+    }
+
+    & > ul {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(1) {
+        @include animation(
+          $name: loop,
+          $duration: 70s,
+          $delay: -35s,
+          $timing-function: linear,
+          $iteration-count: infinite
+        );
+      }
+      &:nth-child(2) {
+        @include animation(
+          $name: loop2,
+          $duration: 70s,
+          $timing-function: linear,
+          $iteration-count: infinite
+        );
+      }
+
+      & li {
+        width: 14rem;
+        margin-right: 2rem;
+        transform: scale(0.95);
+        transition: all 0.5s;
+
+        @include mq(md) {
+          width: 12rem;
+        }
+        @include mq(sm) {
+          width: 8rem;
+        }
+      }
+    }
+  }
+  & .btn-box {
+    margin-top: 12rem;
+    // @include mq(md) {
+    //   margin-top: 11rem;
+    // }
+    @include mq(sm) {
+      margin-top: 8rem;
+    }
+  }
+}
+@keyframes loop {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
   }
 }
 .about {
@@ -399,219 +612,21 @@ main {
     }
   }
 }
-.menu {
-  position: relative;
-  background-color: $bgc-menu;
-  padding-bottom: 14rem;
-  @include mq(md) {
-    margin-top: 5rem;
-  }
 
-  &__text-box {
-    margin-top: calc(12rem - 0.5em);
-    @include mq(sm) {
-      margin-top: 5rem;
-    }
-  }
-  &__text {
-    color: $black;
-    padding: 0 2rem;
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 2;
-    letter-spacing: 0.3em;
-    @include mq(sm) {
-      font-size: 1.4rem;
-    }
-  }
-  &__loop-box {
-    display: flex;
-    margin-top: calc(10rem - 0.5em);
-    width: 100vw;
-    max-width: $max-width;
-    overflow: hidden;
-
-    // @include mq(md) {
-    //   margin-top: calc(8rem - 0.5em);
-    // }
-    @include mq(sm) {
-      margin-top: calc(6rem - 0.5em);
-    }
-
-    & > ul {
-      display: flex;
-      align-items: center;
-
-      &:nth-child(1) {
-        @include animation(
-          $name: loop,
-          $duration: 70s,
-          $delay: -35s,
-          $timing-function: linear,
-          $iteration-count: infinite
-        );
-      }
-      &:nth-child(2) {
-        @include animation(
-          $name: loop2,
-          $duration: 70s,
-          $timing-function: linear,
-          $iteration-count: infinite
-        );
-      }
-
-      & li {
-        width: 14rem;
-        margin-right: 2rem;
-        transform: scale(0.95);
-        transition: all 0.5s;
-
-        @include mq(md) {
-          width: 12rem;
-        }
-        @include mq(sm) {
-          width: 8rem;
-        }
-      }
-    }
-  }
-  & .btn-box {
-    margin-top: 12rem;
-    // @include mq(md) {
-    //   margin-top: 11rem;
-    // }
-    @include mq(sm) {
-      margin-top: 8rem;
-    }
-  }
-}
-.news {
+.blog {
   margin-top: 15rem;
   padding-bottom: 10rem;
   max-width: 92rem;
   margin-inline: auto;
-  background-color: $bgc-news;
+  background-color: $bgc-blog;
   @include mq(sm) {
-    background-color: $bgc-news--sp;
     margin-top: 0;
   }
-  &__box {
-    padding: 0 5rem;
-    margin-top: 10rem;
-    display: flex;
-    max-width: 920px;
-    margin-inline: auto;
-    gap: 3rem;
-    // border: 2px dashed #eab075;
-
-    @include mq(md) {
-      padding: 0 4rem;
-    }
-    @include mq(sm) {
-      flex-direction: column-reverse;
-      max-width: 560px;
-      padding: 0 2rem;
-      margin-top: 6rem;
-    }
-  }
-
-  &__list {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    flex-basis: 50%;
-    font-size: 1.4rem;
-    line-height: 1.4;
-    letter-spacing: 0.2em;
-    padding: 2.8rem;
-    background-color: #f8f8ffa1;
-    // background-color: rgb(185, 148, 74);
-    box-shadow: $box-shadow;
-
-
-    @include mq(sm) {
-      width: 100%;
-      padding: 2.4rem;
-      max-width: 42rem;
-      margin-inline: auto;
-    }
-  }
-  &__item {
-    display: flex;
-    gap: 2em;
-    padding-bottom: 0.4em;
-  }
-  &__item-date {
-    font-family: "Noto Sans JP";
-    font-size: 1.4rem;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    @include mq(sm) {
-      font-size: 1.2rem;
-    }
-  }
-  &__item-link {
-    font-size: 1.6rem;
-    letter-spacing: 0.1em;
-    line-height: 1.1;
-    // border-bottom: 1px solid $black;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    @include mq(sm) {
-      letter-spacing: 0.14em;
-    }
-  }
-
-  &__bg-img {
-    width: 50%;
-    background-image: url(../../images/about-01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity: 0.9;
-
-    @include mq(sm) {
-      display: none;
-      height: 120px;
-      width: 100%;
-      background-position: center;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-  }
-  & .btn-box {
-    margin-top: 10rem;
-  }
 }
 
-@keyframes loop {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-@keyframes loop2 {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-200%);
-  }
-}
+
+
+
 
 .access {
   margin-top: 15rem;
