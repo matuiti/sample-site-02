@@ -255,6 +255,7 @@
 
 main {
   margin-top: $header-h;
+  max-width: 100%;
   @include mq(sm) {
     margin-top: $header-h--sm;
   }
@@ -397,8 +398,7 @@ main {
   &__loop-box {
     display: flex;
     margin-top: calc(10rem - 0.5em);
-    max-width: calc(100vw - 20px);
-    // max-width: $max-width;
+    max-width: $max-width;
     overflow: hidden;
 
     // @include mq(md) {
