@@ -49,7 +49,8 @@ section {
   margin-bottom: -(calc($icon-title-h / 2));
   text-align: center;
   @include mq(sm) {
-    padding-top: 4.2rem;
+    padding-top: 6rem;
+    top:0;
   }
 }
 .section-title {
@@ -69,7 +70,6 @@ section {
     @include mq(sm) {
       height: $icon-title-h--sm;
       margin-bottom: 2rem;
-
     }
   }
   &-sub {
@@ -84,14 +84,28 @@ section {
     }
   }
 }
+.text-message {
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-top: calc(8rem - 0.5em);
+    @include mq(sm) {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+    // padding: 3.2rem 1.4rem;
+    letter-spacing: 0.2em;
+  }
+}
 .font-en {
-  font-weight: 800;
+  font-weight: 700;
   font-style: italic;
-  color: $main1;
-  padding: 0 0.2em;
+  color: #782b28;
+  padding: 0 0.4em;
+  letter-spacing: 0.1em;
 }
 .marker-pan {
-  background: linear-gradient(transparent 64%, #EEFAD2 0%);
+  background: linear-gradient(transparent 64%, #eefad2 0%);
 }
 .marker-kuma {
   background: linear-gradient(transparent 64%, #b84f528a 0%);
