@@ -790,6 +790,7 @@ main {
   .news {
     background-color: transparent;
     margin-top: 0;
+    padding-bottom: 5rem;
   }
 }
 .news__box {
@@ -913,6 +914,7 @@ main {
 @media screen and (max-width: 767px) {
   .menu {
     margin-top: 0;
+    padding-bottom: 5rem;
   }
 }
 .menu__text-box {
@@ -1186,7 +1188,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog {
-    padding: 0 1rem 6rem;
+    padding: 0 1rem 5rem;
     margin-top: 0;
   }
 }
@@ -1285,7 +1287,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access {
-    padding: 0 1rem 6rem;
+    padding: 0 1rem 5rem;
   }
 }
 .access__wrap {
