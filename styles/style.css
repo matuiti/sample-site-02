@@ -1257,6 +1257,7 @@ main {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.6);
   line-height: 1.75;
+  letter-spacing: 0.2em;
 }
 @media screen and (max-width: 767px) {
   .blog__article-text-box {
@@ -1266,7 +1267,6 @@ main {
 }
 .blog__article-title {
   font-size: 1.4rem;
-  letter-spacing: 0.3em;
   font-weight: bold;
   overflow: hidden;
   display: -webkit-box;
@@ -1276,7 +1276,6 @@ main {
 }
 .blog__article-date {
   font-size: 1.2rem;
-  letter-spacing: 0.3em;
   font-weight: normal;
   color: #888;
 }

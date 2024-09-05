@@ -683,6 +683,7 @@ main {
       justify-content: space-between;
       background-color: $base02;
       line-height: 1.75;
+      letter-spacing: 0.2em;
       @include mq(sm) {
         padding: 1.8rem 1.8rem 1.2rem;
         line-height: 1.5;
@@ -690,7 +691,6 @@ main {
     }
     &-title {
       font-size: 1.4rem;
-      letter-spacing: 0.3em;
       font-weight: bold;
       overflow: hidden;
       display: -webkit-box;
@@ -700,7 +700,6 @@ main {
     }
     &-date {
       font-size: 1.2rem;
-      letter-spacing: 0.3em;
       font-weight: normal;
       color: $gray-border;
     }
