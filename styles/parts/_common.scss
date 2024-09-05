@@ -49,7 +49,7 @@ section {
   margin-bottom: -(calc($icon-title-h / 2));
   text-align: center;
   @include mq(sm) {
-    padding-top: 6rem;
+    padding-top: 5rem;
     top:0;
   }
 }
@@ -92,8 +92,7 @@ section {
   // margin-top: calc(8rem - 0.5em);
     @include mq(sm) {
       font-size: 1.4rem;
-      // margin-top: 2rem;
-    // padding: 3.2rem 1.4rem;
+      line-height: 1.75;
     letter-spacing: 0.2em;
   }
 }
