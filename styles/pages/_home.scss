@@ -487,7 +487,8 @@ main {
     margin-bottom: 20rem;
   }
   @include mq(sm) {
-    margin-top: 12rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   &__wrap {
@@ -497,7 +498,7 @@ main {
     width: 100%;
     gap: 15rem;
     @include mq(sm) {
-      gap: 8rem;
+      gap: 0;
     }
   }
 
@@ -609,6 +610,10 @@ main {
       box-shadow: none;
     }
   }
+  & .btn-box {
+    padding: 6em;
+    background-color: $base02;
+  }
 }
 
 .blog {
@@ -712,6 +717,7 @@ main {
   }
   @include mq(sm) {
     padding: 0 1rem 4rem;
+    margin-top: 6rem;
   }
 
   &__wrap {
