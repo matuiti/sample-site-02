@@ -790,7 +790,7 @@ main {
   .news {
     background-color: transparent;
     margin-top: 0;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
   }
 }
 .news__box {
@@ -902,7 +902,7 @@ main {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .news .btn-box {
-  margin-top: 10rem;
+  margin-top: 4.8rem;
 }
 
 .menu {
@@ -914,7 +914,7 @@ main {
 @media screen and (max-width: 767px) {
   .menu {
     margin-top: 0;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
   }
 }
 .menu__text-box {
@@ -1188,7 +1188,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog {
-    padding: 0 1rem 5rem;
+    padding: 0 1rem 6rem;
     margin-top: 0;
   }
 }
@@ -1197,7 +1197,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog__text-box {
-    margin-top: calc(8.8rem - 0.5em);
+    margin-top: calc(7.7rem - 0.5em);
   }
 }
 .blog__article-box {
@@ -1213,7 +1213,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog__article-box {
-    margin-top: calc(3.2rem - 0.5em);
+    margin-top: calc(4.2rem - 0.5em);
   }
 }
 .blog__article {
@@ -1287,7 +1287,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access {
-    padding: 0 1rem 5rem;
+    padding: 0 1rem 4rem;
   }
 }
 .access__wrap {
@@ -1488,7 +1488,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access__map-box {
-    margin-top: 8rem;
+    margin-top: 2.4rem;
     padding-top: 70%;
   }
 }
