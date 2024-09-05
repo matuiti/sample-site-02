@@ -399,7 +399,7 @@ section {
 @media screen and (max-width: 767px) {
   .section-title-icon {
     height: 24px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
   }
 }
 .section-title-sub {
@@ -412,7 +412,7 @@ section {
 }
 @media screen and (max-width: 767px) {
   .section-title-sub {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -902,7 +902,7 @@ main {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .news .btn-box {
-  margin-top: 4.8rem;
+  margin-top: 6rem;
 }
 
 .menu {
