@@ -1309,6 +1309,7 @@ main {
 @media screen and (max-width: 959px) {
   .access__flex-box {
     margin-top: 4rem;
+    gap: 2.4rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1330,14 +1331,15 @@ main {
 @media screen and (max-width: 959px) {
   .access__flex-box h3 {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
     padding-left: 1.4rem;
+    margin-bottom: 1.4rem;
   }
 }
 @media screen and (max-width: 767px) {
   .access__flex-box h3 {
     font-size: 1.6rem;
     padding-left: 1.4rem;
+    margin-bottom: 1.2rem;
   }
 }
 .access__flex-box h3::before {
@@ -1371,20 +1373,40 @@ main {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   word-break: break-all;
 }
+@media screen and (max-width: 959px) {
+  .access__info {
+    padding: 2.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access__info {
+    padding: 1.8rem;
+  }
+}
 .access__info tbody {
   display: block;
 }
 .access__info tr {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 .access__info tr:not(:last-child) {
   padding-bottom: 2rem;
 }
+@media screen and (max-width: 767px) {
+  .access__info tr:not(:last-child) {
+    padding-bottom: 1.4rem;
+  }
+}
 .access__info tr + tr {
   border-top: 1px dotted #888;
   padding-top: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .access__info tr + tr {
+    padding-top: 1.6rem;
+  }
 }
 .access__info th {
   text-align: left;
@@ -1410,7 +1432,10 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access__info td {
-    letter-spacing: 0.14em;
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    margin-top: -0.2em;
+    line-height: 1.4;
   }
 }
 .access__info-address a {
@@ -1419,8 +1444,15 @@ main {
 .access__info-email, .access__info-tell {
   font-weight: 900 !important;
   color: #782b28 !important;
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
   text-decoration: underline !important;
+}
+@media screen and (max-width: 767px) {
+  .access__info-email, .access__info-tell {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.12em !important;
+    margin-top: -0.24em !important;
+  }
 }
 .access__calendar-box {
   min-width: 30rem;
