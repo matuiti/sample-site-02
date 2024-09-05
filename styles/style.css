@@ -803,7 +803,7 @@ main {
 }
 @media screen and (max-width: 959px) {
   .news__box {
-    padding: 0 4rem;
+    padding: 0 3rem;
     gap: 2rem;
   }
 }
@@ -1174,7 +1174,12 @@ main {
 }
 .about .btn-box {
   padding: 6em;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+@media screen and (max-width: 767px) {
+  .about .btn-box {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .blog {
@@ -1188,7 +1193,7 @@ main {
 }
 @media screen and (max-width: 959px) {
   .blog {
-    padding: 0 4rem 10rem;
+    padding: 0 3rem 10rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1301,7 +1306,7 @@ main {
 }
 @media screen and (max-width: 959px) {
   .access {
-    padding: 0 4rem 10rem;
+    padding: 0 3rem 10rem;
   }
 }
 @media screen and (max-width: 767px) {
