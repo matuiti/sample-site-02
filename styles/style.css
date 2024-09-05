@@ -808,7 +808,7 @@ main {
   .news__box {
     flex-direction: column-reverse;
     max-width: 560px;
-    padding: 0 2rem;
+    padding: 0 1rem;
     margin-top: 6rem;
   }
 }
@@ -828,7 +828,7 @@ main {
 @media screen and (max-width: 767px) {
   .news__list {
     width: 100%;
-    padding: 2.4rem;
+    padding: 1.2rem;
     max-width: 42rem;
     margin-inline: auto;
   }
@@ -837,6 +837,11 @@ main {
   display: flex;
   gap: 2em;
   padding-bottom: 0.4em;
+}
+@media screen and (max-width: 767px) {
+  .news__item {
+    gap: 1em;
+  }
 }
 .news__item-date {
   font-family: "Noto Sans JP";
@@ -1174,7 +1179,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog {
-    padding: 0 2rem 6rem;
+    padding: 0 1rem 6rem;
     margin-top: 0;
   }
 }
@@ -1268,7 +1273,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access {
-    padding: 0 2rem 6rem;
+    padding: 0 1rem 6rem;
   }
 }
 .access__wrap {
