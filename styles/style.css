@@ -843,7 +843,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .news__item {
-    gap: 1em;
+    gap: 1.2em;
   }
 }
 .news__item-date {
@@ -869,12 +869,12 @@ main {
 }
 @media screen and (max-width: 767px) {
   .news__item-link {
-    letter-spacing: 0.14em;
+    letter-spacing: 0.2em;
+    font-size: 1.4rem;
   }
 }
 .news__item-link a {
   text-decoration: underline;
-  color: #782b28;
 }
 .news__bg-img {
   width: 50%;
