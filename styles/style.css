@@ -1230,7 +1230,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog__article {
-    height: 36rem;
+    height: 35rem;
   }
 }
 .blog__article-img img {
