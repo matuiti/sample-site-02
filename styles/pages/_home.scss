@@ -619,12 +619,12 @@ main {
     margin-top: 0;
   }
 
-  // &__text-box {
-  //   margin-top: calc(8rem - 0.5em);
-  //   @include mq(sm) {
-  //     margin-top: 2rem;
-  //   }
-  // }
+  &__text-box {
+    margin-top: calc(8rem - 0.5em);
+    // @include mq(sm) {
+    //   margin-top: 2rem;
+    // }
+  }
   &__text {
   }
   &__article-box {
@@ -791,6 +791,7 @@ main {
     width: 100%;
     padding: 3rem;
     box-shadow: $box-shadow;
+    word-break: break-all;
 
     tbody {
       display: block;
