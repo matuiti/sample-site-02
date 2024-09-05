@@ -1193,7 +1193,7 @@ main {
 }
 @media screen and (max-width: 959px) {
   .blog {
-    padding: 0 3rem 10rem;
+    padding: 0 1rem 10rem;
   }
 }
 @media screen and (max-width: 767px) {
