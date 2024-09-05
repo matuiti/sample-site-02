@@ -1231,7 +1231,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog__article {
-    height: 35rem;
+    height: 32rem;
   }
 }
 .blog__article-img img {
