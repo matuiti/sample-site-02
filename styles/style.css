@@ -420,12 +420,10 @@ section {
   line-height: 2;
   letter-spacing: 0.3em;
   text-align: center;
-  margin-top: calc(8rem - 0.5em);
 }
 @media screen and (max-width: 767px) {
   .text-message {
     font-size: 1.4rem;
-    margin-top: 2rem;
     letter-spacing: 0.2em;
   }
 }
@@ -1180,6 +1178,9 @@ main {
     margin-top: 0;
   }
 }
+.blog__text-box {
+  margin-top: calc(8rem - 0.5em);
+}
 .blog__article-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -1363,6 +1364,7 @@ main {
   width: 100%;
   padding: 3rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  word-break: break-all;
 }
 .access__info tbody {
   display: block;
