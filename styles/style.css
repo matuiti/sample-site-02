@@ -139,7 +139,8 @@
 @media screen and (max-width: 767px) {
   .btn {
     padding: 1em 2em;
-    min-width: 24rem;
+    min-width: 22rem;
+    font-size: 1.4rem;
   }
 }
 .btn::after {
@@ -372,7 +373,7 @@ section {
 }
 @media screen and (max-width: 767px) {
   .section-title-box {
-    padding-top: 6rem;
+    padding-top: 5rem;
     top: 0;
   }
 }
@@ -424,6 +425,7 @@ section {
 @media screen and (max-width: 767px) {
   .text-message {
     font-size: 1.4rem;
+    line-height: 1.75;
     letter-spacing: 0.2em;
   }
 }
@@ -916,6 +918,11 @@ main {
 .menu__text-box {
   margin-top: calc(8rem - 0.5em);
 }
+@media screen and (max-width: 767px) {
+  .menu__text-box {
+    margin-top: calc(7.7rem - 0.5em);
+  }
+}
 .menu__text {
   color: black;
   padding: 0 2rem;
@@ -933,7 +940,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .menu__loop-box {
-    margin-top: calc(6rem - 0.5em);
+    margin-top: calc(4.6rem - 0.5em);
   }
 }
 .menu__loop-box > ul {
@@ -979,7 +986,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .menu .btn-box {
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 }
 @keyframes loop {
@@ -1185,6 +1192,11 @@ main {
 }
 .blog__text-box {
   margin-top: calc(8rem - 0.5em);
+}
+@media screen and (max-width: 767px) {
+  .blog__text-box {
+    margin-top: calc(8.8rem - 0.5em);
+  }
 }
 .blog__article-box {
   display: grid;

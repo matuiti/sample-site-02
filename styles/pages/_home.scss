@@ -386,6 +386,9 @@ main {
 
   &__text-box {
     margin-top: calc(8rem - 0.5em);
+    @include mq(sm) {
+      margin-top: calc(7.7rem - 0.5em);
+    }
   }
   &__text {
     color: $black;
@@ -404,7 +407,7 @@ main {
     //   margin-top: calc(8rem - 0.5em);
     // }
     @include mq(sm) {
-      margin-top: calc(6rem - 0.5em);
+      margin-top: calc(4.6rem - 0.5em);
     }
 
     & > ul {
@@ -450,7 +453,7 @@ main {
     //   margin-top: 11rem;
     // }
     @include mq(sm) {
-      margin-top: 8rem;
+      margin-top: 5rem;
     }
   }
   @keyframes loop {
@@ -624,9 +627,9 @@ main {
 
   &__text-box {
     margin-top: calc(8rem - 0.5em);
-    // @include mq(sm) {
-    //   margin-top: 2rem;
-    // }
+    @include mq(sm) {
+      margin-top: calc(8.8rem - 0.5em);
+    }
   }
   &__text {
   }
