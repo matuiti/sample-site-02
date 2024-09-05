@@ -656,7 +656,8 @@ main {
     display: flex;
     flex-direction: column;
     height: 37rem;
-    border: 1px solid $main1;
+    // border: 1px solid $gray-border;
+    box-shadow: $box-shadow;
     &-img {
       & img {
         height: 24rem;
@@ -671,17 +672,22 @@ main {
       }
     }
     &-text-box {
-      padding: 2.2rem 2.4rem;
+      padding: 1.8rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      background-color: $base02;
+      line-height: 1.75;
+      @include mq(sm) {
+        padding: 1.8rem 1.8rem 1.2rem;
+        line-height: 1.5;
+      }
     }
     &-title {
       font-size: 1.4rem;
       letter-spacing: 0.3em;
       font-weight: bold;
-      line-height: 1.5;
       overflow: hidden;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -690,9 +696,9 @@ main {
     }
     &-date {
       font-size: 1.2rem;
-      line-height: 1;
       letter-spacing: 0.3em;
       font-weight: normal;
+      color: $gray-border;
     }
   }
   & .btn-box {
@@ -827,7 +833,7 @@ main {
       }
     }
     tr + tr {
-      border-top: 1px dotted #888;
+      border-top: 1px dotted $gray-border;
       padding-top: 2rem;
       @include mq(sm) {
         padding-top: 1.6rem;
