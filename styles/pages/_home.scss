@@ -280,7 +280,7 @@ main {
     // border: 2px dashed #eab075;
 
     @include mq(md) {
-      padding: 0 4rem;
+      padding: 0 3rem;
       gap: 2rem;
     }
     @include mq(sm) {
@@ -612,7 +612,10 @@ main {
   }
   & .btn-box {
     padding: 6em;
-    background-color: $base02;
+      background-color: transparent;
+    @include mq(sm) {
+      background-color: $base02;
+    }
   }
 }
 
@@ -625,7 +628,7 @@ main {
   display: flex;
   flex-direction: column;
   @include mq(md) {
-    padding: 0 4rem 10rem;
+    padding: 0 3rem 10rem;
   }
   @include mq(sm) {
     padding: 0 1rem 6rem;
@@ -724,7 +727,7 @@ main {
   margin-inline: auto;
 
   @include mq(md) {
-    padding: 0 4rem 10rem;
+    padding: 0 3rem 10rem;
   }
   @include mq(sm) {
     padding: 0 1rem 4rem;
