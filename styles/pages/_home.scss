@@ -268,6 +268,7 @@ main {
   @include mq(sm) {
     background-color: $bgc-news--sp;
     margin-top: 0;
+    padding-bottom: 5rem;
   }
   &__box {
     padding: 0 5rem;
@@ -382,6 +383,7 @@ main {
   padding-bottom: 14rem;
   @include mq(sm) {
     margin-top: 0;
+    padding-bottom: 5rem;
   }
 
   &__text-box {
@@ -621,7 +623,7 @@ main {
     padding: 0 4rem 10rem;
   }
   @include mq(sm) {
-    padding: 0 1rem 6rem;
+    padding: 0 1rem 5rem;
     margin-top: 0;
   }
 
@@ -709,7 +711,7 @@ main {
     padding: 0 4rem 10rem;
   }
   @include mq(sm) {
-    padding: 0 1rem 6rem;
+    padding: 0 1rem 5rem;
   }
 
   &__wrap {
