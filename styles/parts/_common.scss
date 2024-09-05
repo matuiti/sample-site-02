@@ -69,7 +69,7 @@ section {
     margin-bottom: 2.4rem;
     @include mq(sm) {
       height: $icon-title-h--sm;
-      margin-bottom: 2rem;
+      margin-bottom: 1.2rem;
     }
   }
   &-sub {
@@ -80,7 +80,7 @@ section {
     font-weight: 600;
     margin-bottom: 0.6em;
     @include mq(sm) {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 }
