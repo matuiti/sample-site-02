@@ -317,7 +317,7 @@ main {
     gap: 2em;
     padding-bottom: 0.4em;
     @include mq(sm) {
-      gap: 1em;
+      gap: 1.2em;
     }
   }
   &__item-date {
@@ -339,11 +339,11 @@ main {
     -webkit-line-clamp: 1;
     line-clamp: 1;
     @include mq(sm) {
-      letter-spacing: 0.14em;
+      letter-spacing: 0.2em;
+      font-size: 1.4rem;
     }
     & a {
       text-decoration: underline;
-      color: $main1;
     }
   }
 
