@@ -339,7 +339,7 @@ main {
     -webkit-line-clamp: 1;
     line-clamp: 1;
     @include mq(sm) {
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       font-size: 1.4rem;
     }
     & a {
@@ -659,6 +659,7 @@ main {
     // border: 1px solid $gray-border;
     box-shadow: $box-shadow;
     border-radius: 0.6rem;
+    overflow: hidden;
     @include mq(sm) {
       height: 35rem;
     }
@@ -671,7 +672,8 @@ main {
           height: 22rem;
         }
         @include mq(sm) {
-          height: 24rem;
+          aspect-ratio: 16 / 9;
+          height: auto;
         }
       }
     }

@@ -869,7 +869,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .news__item-link {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     font-size: 1.4rem;
   }
 }
@@ -1227,6 +1227,7 @@ main {
   height: 37rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.6rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .blog__article {
@@ -1246,7 +1247,8 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog__article-img img {
-    height: 24rem;
+    aspect-ratio: 16/9;
+    height: auto;
   }
 }
 .blog__article-text-box {
