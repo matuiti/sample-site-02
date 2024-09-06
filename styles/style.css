@@ -917,11 +917,11 @@ main {
     padding-bottom: 6rem;
   }
 }
-.menu__text-box {
+.menu__text-box, .instagram__text-box, .blog__text-box {
   margin-top: calc(8rem - 0.5em);
 }
 @media screen and (max-width: 767px) {
-  .menu__text-box {
+  .menu__text-box, .instagram__text-box, .blog__text-box {
     margin-top: calc(7.7rem - 0.5em);
   }
 }
@@ -1202,14 +1202,6 @@ main {
     margin-top: 0;
   }
 }
-.blog__text-box {
-  margin-top: calc(8rem - 0.5em);
-}
-@media screen and (max-width: 767px) {
-  .blog__text-box {
-    margin-top: calc(7.7rem - 0.5em);
-  }
-}
 .blog__article-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -1291,6 +1283,35 @@ main {
 }
 @media screen and (max-width: 767px) {
   .blog .btn-box {
+    margin-top: 8rem;
+  }
+}
+
+.instagram {
+  margin-top: 15rem;
+  padding: 0 5rem 10rem;
+  max-width: 92rem;
+  margin-inline: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 959px) {
+  .instagram {
+    padding: 0 3rem 10rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .instagram {
+    padding: 0 1rem 6rem;
+    margin-top: 0;
+  }
+}
+.instagram .btn-box {
+  margin-top: 12rem;
+}
+@media screen and (max-width: 767px) {
+  .instagram .btn-box {
     margin-top: 8rem;
   }
 }
