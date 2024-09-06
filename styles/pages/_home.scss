@@ -404,10 +404,6 @@ main {
     margin-top: calc(10rem - 0.5em);
     max-width: $max-width;
     overflow: hidden;
-
-    // @include mq(md) {
-    //   margin-top: calc(8rem - 0.5em);
-    // }
     @include mq(sm) {
       margin-top: calc(4.6rem - 0.5em);
     }
@@ -451,9 +447,6 @@ main {
   }
   & .btn-box {
     margin-top: 12rem;
-    // @include mq(md) {
-    //   margin-top: 11rem;
-    // }
     @include mq(sm) {
       margin-top: 5rem;
     }
@@ -636,13 +629,8 @@ main {
   }
 
   &__text-box {
-    margin-top: calc(8rem - 0.5em);
-    @include mq(sm) {
-      margin-top: calc(7.7rem - 0.5em);
+    @extend .menu__text-box;
     }
-  }
-  &__text {
-  }
   &__article-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -709,6 +697,36 @@ main {
       color: $gray-border;
     }
   }
+  & .btn-box {
+    margin-top: 12rem;
+    @include mq(sm) {
+      margin-top: 8rem;
+    }
+  }
+}
+.instagram {
+  margin-top: 15rem;
+  padding: 0 5rem 10rem;
+  max-width: 92rem;
+  margin-inline: auto;
+  background-color: $bgc-blog;
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    padding: 0 3rem 10rem;
+  }
+  @include mq(sm) {
+    padding: 0 1rem 6rem;
+    margin-top: 0;
+  }
+
+  &__text-box {
+    @extend .menu__text-box;
+  }
+
+
+
+
   & .btn-box {
     margin-top: 12rem;
     @include mq(sm) {
