@@ -30,11 +30,15 @@
   cursor: pointer;
   width: 36px;
   height: 28px;
+  outline: none;
 }
 @media screen and (max-width: 767px) {
   .mobile-menu__btn {
     display: block;
   }
+}
+.mobile-menu__btn:focus {
+  outline: none;
 }
 .mobile-menu__btn > span {
   position: absolute;
