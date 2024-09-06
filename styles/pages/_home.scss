@@ -200,6 +200,7 @@
       height: 3.1rem;
       color: $color-header-texts;
       transition: color 0.4s;
+      font-style: italic;
       @include mq(sm) {
         display: inline;
         height: auto;
