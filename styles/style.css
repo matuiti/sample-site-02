@@ -647,7 +647,7 @@ a:active, button:active, .btn:active {
   justify-content: space-between;
   max-width: 920px;
   width: 100%;
-  margin: 6rem auto;
+  margin: 4rem auto;
   gap: 6rem;
 }
 @media screen and (max-width: 959px) {
@@ -695,19 +695,17 @@ a:active, button:active, .btn:active {
 }
 .footer__ul {
   display: flex;
-  gap: 4.8rem;
+  gap: 3.2rem;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 767px) {
   .footer__ul {
     flex-direction: column;
-    /* align-items: center; */
     -moz-column-gap: 5.2rem;
          column-gap: 5.2rem;
     row-gap: 2.4rem;
     flex-wrap: wrap;
-    /* height: 0%; */
-    max-height: 200px;
+    max-height: 20rem;
   }
 }
 .footer__li {
