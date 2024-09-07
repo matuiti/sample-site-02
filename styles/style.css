@@ -1326,7 +1326,6 @@ main {
   gap: 1em;
   grid-template-columns: repeat(4, 1fr);
   margin-top: calc(4.8rem - 0.5em);
-  max-width: 42rem;
   margin-inline: auto;
 }
 @media screen and (max-width: 959px) {
@@ -1339,6 +1338,7 @@ main {
   .instagram__item-box {
     grid-template-columns: repeat(2, 1fr);
     margin-top: calc(4.2rem - 0.5em);
+    max-width: 42rem;
   }
 }
 .instagram__item-img img {
