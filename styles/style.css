@@ -30,20 +30,11 @@
   cursor: pointer;
   width: 36px;
   height: 28px;
-  outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 767px) {
   .mobile-menu__btn {
     display: block;
   }
-}
-.mobile-menu__btn:focus {
-  outline: none;
-}
-.mobile-menu__btn:active {
-  outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .mobile-menu__btn > span {
   position: absolute;
@@ -357,6 +348,18 @@ li {
 
 section {
   scroll-margin-top: 8rem;
+}
+
+a, button, .btn {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:focus, button:focus, .btn:focus {
+  outline: none;
+}
+a:active, button:active, .btn:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .pc {
