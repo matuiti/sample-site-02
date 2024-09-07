@@ -599,7 +599,7 @@ a:active, button:active, .btn:active {
 }
 .header__li a {
   display: block;
-  height: 31px;
+  height: 3.2rem;
   color: white;
   transition: color 0.4s;
   font-style: italic;
@@ -642,23 +642,23 @@ a:active, button:active, .btn:active {
 }
 .footer__wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 920px;
   width: 100%;
-  margin: 9rem auto 7rem;
+  margin: 6rem auto;
+  gap: 6rem;
 }
 @media screen and (max-width: 959px) {
   .footer__wrap {
-    flex-direction: column;
-    margin: 6rem auto;
-    gap: 6rem;
+    margin: 5rem auto 3rem;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__wrap {
-    margin: 6rem auto 4rem;
-    gap: 4rem;
+    margin: 4rem auto 2rem;
+    gap: 4.8rem;
   }
 }
 .footer__logo {
@@ -677,14 +677,20 @@ a:active, button:active, .btn:active {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .footer__logo-wrap {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+}
 .footer__nav {
   display: flex;
-  gap: 5.2rem;
+  flex-direction: column;
+  gap: 6rem;
 }
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 767px) {
   .footer__nav {
-    flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
   }
 }
 .footer__ul {
@@ -696,7 +702,7 @@ a:active, button:active, .btn:active {
   .footer__ul {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.6rem;
   }
 }
 .footer__li {
@@ -728,15 +734,14 @@ a:active, button:active, .btn:active {
 }
 .footer__li a {
   display: block;
-  height: 3.1rem;
+  height: 3.4rem;
   color: white;
   transition: color 0.4s;
   font-style: italic;
 }
 @media screen and (max-width: 767px) {
   .footer__li a {
-    display: inline;
-    height: auto;
+    height: 2.8rem;
   }
 }
 .footer__li a:hover {
