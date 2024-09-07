@@ -163,7 +163,7 @@
 
 @media screen and (max-width: 767px) {
   .hero {
-    top: 80px;
+    top: 8rem;
   }
 }
 .hero-wrap {
@@ -208,7 +208,7 @@
 @media screen and (max-width: 959px) {
   .hero__slider :is(img, source) {
     width: var(--screen-width);
-    height: calc(var(--screen-height) - 80px);
+    height: calc(var(--screen-height) - 8rem);
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -216,7 +216,7 @@
 @media screen and (max-width: 767px) {
   .hero__slider :is(img, source) {
     width: var(--screen-width);
-    height: calc(var(--screen-height) - 80px);
+    height: calc(var(--screen-height) - 8rem);
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -532,7 +532,7 @@ a:active, button:active, .btn:active {
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 100px;
+  height: 11rem;
   background-color: #782b28;
   align-items: center;
   justify-content: space-evenly;
@@ -541,7 +541,7 @@ a:active, button:active, .btn:active {
 }
 @media screen and (max-width: 767px) {
   .header {
-    height: 80px;
+    height: 8rem;
     padding: 0 2rem;
   }
 }
@@ -551,6 +551,7 @@ a:active, button:active, .btn:active {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  gap: 6vw;
 }
 .header__logo {
   transition: opacity 0.2s ease-in-out;
@@ -576,9 +577,9 @@ a:active, button:active, .btn:active {
 }
 .header__nav {
   display: flex;
+  align-items: center;
   line-height: 1.7;
   font-size: 1.8rem;
-  gap: 5rem;
 }
 @media screen and (max-width: 767px) {
   .header__nav {
@@ -587,7 +588,11 @@ a:active, button:active, .btn:active {
 }
 .header__ul {
   display: flex;
-  gap: 2.4rem;
+  -moz-column-gap: 2.4rem;
+       column-gap: 2.4rem;
+  row-gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .header__li.active a {
   border-bottom: 2px solid #e91e1e;
@@ -786,12 +791,12 @@ a:active, button:active, .btn:active {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 11rem;
   max-width: 100%;
 }
 @media screen and (max-width: 767px) {
   main {
-    margin-top: 80px;
+    margin-top: 8rem;
   }
 }
 
