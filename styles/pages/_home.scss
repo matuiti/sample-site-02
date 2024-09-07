@@ -177,8 +177,12 @@
     font-size: 1.8rem;
     @include mq(sm) {
       flex-direction: column;
-      align-items: center;
-      gap: 1.6rem;
+      /* align-items: center; */
+      column-gap: 5.2rem;
+      row-gap: 2.4rem;
+      flex-wrap: wrap;
+      /* height: 0%; */
+      max-height: 200px;
     }
   }
   &__li {
@@ -191,18 +195,18 @@
     &.active a {
       border-bottom: 0.2rem solid $accent;
     }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0.8rem;
-      left: -2.4rem;
-      width: 0.2rem;
-      height: 1.6rem;
-      background-color: gray;
-      @include mq(sm) {
-        content: none;
-      }
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0.8rem;
+    //   left: -2.4rem;
+    //   width: 0.2rem;
+    //   height: 1.6rem;
+    //   background-color: gray;
+    //   @include mq(sm) {
+    //     content: none;
+    //   }
+    // }
     & a {
       display: block;
       height: 3.4rem;

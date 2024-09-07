@@ -701,8 +701,13 @@ a:active, button:active, .btn:active {
 @media screen and (max-width: 767px) {
   .footer__ul {
     flex-direction: column;
-    align-items: center;
-    gap: 1.6rem;
+    /* align-items: center; */
+    -moz-column-gap: 5.2rem;
+         column-gap: 5.2rem;
+    row-gap: 2.4rem;
+    flex-wrap: wrap;
+    /* height: 0%; */
+    max-height: 200px;
   }
 }
 .footer__li {
@@ -717,20 +722,6 @@ a:active, button:active, .btn:active {
 }
 .footer__li.active a {
   border-bottom: 0.2rem solid #e91e1e;
-}
-.footer__li::before {
-  content: "";
-  position: absolute;
-  top: 0.8rem;
-  left: -2.4rem;
-  width: 0.2rem;
-  height: 1.6rem;
-  background-color: gray;
-}
-@media screen and (max-width: 767px) {
-  .footer__li::before {
-    content: none;
-  }
 }
 .footer__li a {
   display: block;
