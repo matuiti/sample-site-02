@@ -277,7 +277,7 @@ main {
   background-color: $bgc-news;
   @include mq(sm) {
     background-color: $bgc-news--sp;
-    margin-top: 0;
+    margin-top: 6rem;
     padding-bottom: 6rem;
   }
   &__box {
@@ -392,7 +392,7 @@ main {
   background-color: $bgc-menu;
   padding-bottom: 14rem;
   @include mq(sm) {
-    margin-top: 0;
+    margin-top: 6rem;
     padding-bottom: 6rem;
   }
 
@@ -635,7 +635,7 @@ main {
   }
   @include mq(sm) {
     padding: 0 1rem 6rem;
-    margin-top: 0;
+    margin-top: 6rem;
   }
 
   &__text-box {
@@ -726,7 +726,7 @@ main {
   }
   @include mq(sm) {
     padding: 0 1rem 6rem;
-    margin-top: 0;
+    margin-top: 6rem;
   }
 
   &__text-box {
@@ -775,7 +775,7 @@ main {
     padding: 0 3rem 10rem;
   }
   @include mq(sm) {
-    padding: 0 1rem 4rem;
+    padding: 0 1rem 5rem;
     margin-top: 6rem;
   }
 
@@ -814,37 +814,6 @@ main {
       flex-direction: column;
       align-items: center;
       margin-top: 3rem;
-    }
-    & h3 {
-      position: relative;
-      font-size: 2rem;
-      letter-spacing: 0.16em;
-      font-weight: bold;
-      line-height: 1;
-      margin-bottom: 1.4rem;
-      padding-left: 1.8rem;
-      @include mq(md) {
-        font-size: 1.8rem;
-        padding-left: 1.4rem;
-        margin-bottom: 1.4rem;
-      }
-      @include mq(sm) {
-        font-size: 1.6rem;
-        padding-left: 1.4rem;
-        margin-bottom: 1.2rem;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0.1rem;
-        transform: translateY(-50%);
-        display: inline-block;
-        width: 0.4rem;
-        height: 1.2em;
-        background-color: $accent;
-      }
     }
   }
   &__info-box {
@@ -942,19 +911,28 @@ main {
     width: 100%;
     max-width: 50rem;
   }
-
   &__map-box {
+    margin-top: 3rem;
+    @include mq(md) {
+      margin-top: 2.4rem;
+    }
+    @include mq(sm) {
+      margin-top: 3rem;
+    }
+    & h3 {
+      font-style: italic;
+      letter-spacing: 0.1em;
+    }
+  }
+  &__map {
     position: relative;
     width: 100%;
-    margin-top: 6rem;
     padding-top: 37.5%;
     box-shadow: $box-shadow;
     @include mq(md) {
-      margin-top: 4rem;
       padding-top: 70%;
     }
     @include mq(sm) {
-      margin-top: 2.4rem;
       padding-top: 70%;
     }
 

@@ -362,6 +362,41 @@ a:active, button:active, .btn:active {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+h3 {
+  position: relative;
+  font-size: 2rem;
+  letter-spacing: 0.16em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1.4rem;
+  padding-left: 1.8rem;
+}
+@media screen and (max-width: 959px) {
+  h3 {
+    font-size: 1.8rem;
+    padding-left: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 1.6rem;
+    padding-left: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+}
+h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.1rem;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 0.4rem;
+  height: 1.2em;
+  background-color: #e91e1e;
+}
+
 .pc {
   display: block;
 }
@@ -804,7 +839,7 @@ main {
 @media screen and (max-width: 767px) {
   .news {
     background-color: transparent;
-    margin-top: 0;
+    margin-top: 6rem;
     padding-bottom: 6rem;
   }
 }
@@ -928,7 +963,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .menu {
-    margin-top: 0;
+    margin-top: 6rem;
     padding-bottom: 6rem;
   }
 }
@@ -1214,7 +1249,7 @@ main {
 @media screen and (max-width: 767px) {
   .blog {
     padding: 0 1rem 6rem;
-    margin-top: 0;
+    margin-top: 6rem;
   }
 }
 .blog__article-box {
@@ -1318,7 +1353,7 @@ main {
 @media screen and (max-width: 767px) {
   .instagram {
     padding: 0 1rem 6rem;
-    margin-top: 0;
+    margin-top: 6rem;
   }
 }
 .instagram__item-box {
@@ -1372,7 +1407,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .access {
-    padding: 0 1rem 4rem;
+    padding: 0 1rem 5rem;
     margin-top: 6rem;
   }
 }
@@ -1418,40 +1453,6 @@ main {
     align-items: center;
     margin-top: 3rem;
   }
-}
-.access__flex-box h3 {
-  position: relative;
-  font-size: 2rem;
-  letter-spacing: 0.16em;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 1.4rem;
-  padding-left: 1.8rem;
-}
-@media screen and (max-width: 959px) {
-  .access__flex-box h3 {
-    font-size: 1.8rem;
-    padding-left: 1.4rem;
-    margin-bottom: 1.4rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .access__flex-box h3 {
-    font-size: 1.6rem;
-    padding-left: 1.4rem;
-    margin-bottom: 1.2rem;
-  }
-}
-.access__flex-box h3::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0.1rem;
-  transform: translateY(-50%);
-  display: inline-block;
-  width: 0.4rem;
-  height: 1.2em;
-  background-color: #e91e1e;
 }
 .access__info-box {
   width: 100%;
@@ -1560,25 +1561,39 @@ main {
   max-width: 50rem;
 }
 .access__map-box {
-  position: relative;
-  width: 100%;
-  margin-top: 6rem;
-  padding-top: 37.5%;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
 }
 @media screen and (max-width: 959px) {
   .access__map-box {
-    margin-top: 4rem;
-    padding-top: 70%;
+    margin-top: 2.4rem;
   }
 }
 @media screen and (max-width: 767px) {
   .access__map-box {
-    margin-top: 2.4rem;
+    margin-top: 3rem;
+  }
+}
+.access__map-box h3 {
+  font-style: italic;
+  letter-spacing: 0.1em;
+}
+.access__map {
+  position: relative;
+  width: 100%;
+  padding-top: 37.5%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 959px) {
+  .access__map {
     padding-top: 70%;
   }
 }
-.access__map-box > iframe {
+@media screen and (max-width: 767px) {
+  .access__map {
+    padding-top: 70%;
+  }
+}
+.access__map > iframe {
   filter: saturate(0.5);
   position: absolute;
   top: 0;
