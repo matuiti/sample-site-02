@@ -751,6 +751,7 @@ main {
   &__item-img img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    border-radius: 0.6rem;
   }
 
   & .btn-box {

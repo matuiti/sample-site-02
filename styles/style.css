@@ -1345,6 +1345,7 @@ main {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0.6rem;
 }
 .instagram .btn-box {
   margin-top: 12rem;
