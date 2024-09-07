@@ -557,7 +557,7 @@ a:active, button:active, .btn:active {
   transition: opacity 0.2s ease-in-out;
 }
 .header__logo:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .header__logo svg {
   width: 100%;
@@ -588,8 +588,8 @@ a:active, button:active, .btn:active {
 }
 .header__ul {
   display: flex;
-  -moz-column-gap: 2.4rem;
-       column-gap: 2.4rem;
+  -moz-column-gap: 3.2rem;
+       column-gap: 3.2rem;
   row-gap: 1.2rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -665,7 +665,7 @@ a:active, button:active, .btn:active {
   transition: opacity 0.2s ease-in-out;
 }
 .footer__logo:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .footer__logo svg {
   width: 100%;
