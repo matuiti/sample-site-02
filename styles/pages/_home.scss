@@ -737,7 +737,6 @@ main {
     gap: 1em;
     grid-template-columns: repeat(4, 1fr);
     margin-top: calc(4.8rem - 0.5em);
-    max-width: 42rem;
     margin-inline: auto;
     @include mq(md) {
       grid-template-columns: repeat(3, 1fr);
@@ -746,6 +745,7 @@ main {
     @include mq(sm) {
       grid-template-columns: repeat(2, 1fr);
       margin-top: calc(4.2rem - 0.5em);
+      max-width: 42rem;
     }
   }
   &__item-img img {
