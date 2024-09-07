@@ -39,19 +39,9 @@
     cursor: pointer;
     width: 36px;
     height: 28px;
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @include mq(sm) {
       display: block;
-    }
-
-    &:focus {
-      outline: none;
-    }
-    &:active {
-      outline: none;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
     & > span {
