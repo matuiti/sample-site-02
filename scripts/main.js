@@ -1,4 +1,5 @@
 class Main {
+    #observers = [];
     constructor() {
         this.#init()
     }

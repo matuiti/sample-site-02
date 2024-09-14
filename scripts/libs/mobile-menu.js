@@ -20,10 +20,8 @@ class MobileMenu {
   #handleLinkClick(e) {
     // タッチイベントが発生した場合、クリックイベントを無視
     if (this.isTouchCapable && e.type === 'click') return;
-    
     // メニューを閉じる
     this.#toggle();
-
     // リンク先に遷移させる
     const href = e.currentTarget.getAttribute('href');
     window.location.href = href;
