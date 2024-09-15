@@ -8,6 +8,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+
 }
 .header {
   position: fixed;
@@ -478,16 +480,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50rem;
-  margin-bottom: 20rem;
+  padding-top: 32rem;
 
   @include mq(md) {
-    margin-top: 30rem;
-    margin-bottom: 20rem;
+    padding-top: 30rem;
   }
   @include mq(sm) {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    padding-top: 6rem;
   }
 
   &__wrap {
@@ -498,13 +497,14 @@ main {
     gap: 15rem;
     @include mq(sm) {
       gap: 0;
+      overflow: hidden;
     }
   }
 
   &__boxs {
     display: flex;
     flex-direction: column;
-    gap: 35rem;
+    gap: 24rem;
     @include mq(md) {
       gap: 20rem;
     }
@@ -639,7 +639,7 @@ main {
   }
   &__article-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.4rem;
     margin-top: calc(4.8rem - 0.5em);
     @include mq(md) {
