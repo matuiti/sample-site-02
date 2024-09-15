@@ -217,11 +217,11 @@
 }
 
 .hero {
-  margin-top: 11rem;
+  margin-top: 110px;
 }
 @media screen and (max-width: 767px) {
   .hero {
-    margin-top: 8rem;
+    margin-top: 80px;
   }
 }
 .hero-wrap {
@@ -238,9 +238,10 @@
   overflow: hidden;
 }
 .hero__slider :is(img, source) {
+  transform: scale(1.2);
   will-change: width, height;
-  width: var(--screen-width);
-  height: calc(100svh - 11rem);
+  width: 100%;
+  height: calc(100svh - 110px);
   opacity: 0;
   position: absolute;
   left: 0;
@@ -257,16 +258,16 @@
 }
 @media screen and (max-width: 959px) {
   .hero__slider :is(img, source) {
-    width: var(--screen-width);
-    height: calc(100svh - 8rem);
+    width: 100%;
+    height: calc(100svh - 80px);
     -o-object-fit: cover;
        object-fit: cover;
   }
 }
 @media screen and (max-width: 767px) {
   .hero__slider :is(img, source) {
-    width: var(--screen-width);
-    height: calc(100svh - 8rem);
+    width: 100%;
+    height: calc(100svh - 80px);
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -292,14 +293,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%, -50%);
   z-index: 10;
   gap: 4rem;
-}
-@media screen and (max-width: 959px) {
-  .hero__texts {
-    transform: translate(-50%, -50%);
-  }
 }
 @media screen and (max-width: 767px) {
   .hero__texts {
@@ -358,7 +354,7 @@
   }
   37.5% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(1);
     z-index: 9;
   }
   100% {
@@ -617,7 +613,7 @@ h3::before {
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 11rem;
+  height: 110px;
   background-color: #782b28;
   align-items: center;
   justify-content: space-evenly;
@@ -626,7 +622,7 @@ h3::before {
 }
 @media screen and (max-width: 767px) {
   .header {
-    height: 8rem;
+    height: 80px;
     padding: 0 2rem;
   }
 }
