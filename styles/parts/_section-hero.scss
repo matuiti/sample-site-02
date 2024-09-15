@@ -29,8 +29,9 @@
     // }
 
     & :is(img, source) {
-      // width: var(--screen-width);
-      // height: calc( var(--screen-height) - #{$header-h});
+      will-change: width,height;
+      width: var(--screen-width);
+      height: calc( var(--screen-height) - #{$header-h});
       opacity: 0;
       position: absolute;
       left: 0;

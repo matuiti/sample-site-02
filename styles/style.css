@@ -238,6 +238,9 @@
   overflow: hidden;
 }
 .hero__slider :is(img, source) {
+  will-change: width, height;
+  width: var(--screen-width);
+  height: calc(var(--screen-height) - 11rem);
   opacity: 0;
   position: absolute;
   left: 0;
