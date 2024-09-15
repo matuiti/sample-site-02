@@ -29,9 +29,10 @@
     // }
 
     & :is(img, source) {
+      transform: scale(1.2);
       will-change: width,height;
-      width: var(--screen-width);
-      height: calc(  100svh - #{$header-h});
+      width: 100%;
+      height: calc(   100svh - #{$header-h});
       opacity: 0;
       position: absolute;
       left: 0;
@@ -45,15 +46,15 @@
       );
 
       @include mq(md) {
-        width: var(--screen-width);
+        width: 100%;
 
-        height: calc( 100svh - #{$header-h--sm});
+        height: calc(  100svh - #{$header-h--sm});
         object-fit: cover;
       }
       @include mq(sm) {
-        width: var(--screen-width);
+        width: 100%;
 
-        height: calc( 100svh - #{$header-h--sm});
+        height: calc(   100svh - #{$header-h--sm});
         object-fit: cover;
       }
     }
@@ -83,12 +84,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -50%);
     z-index: 10;
     gap: 4rem;
-    @include mq(md) {
-      transform: translate(-50%, -50%);
-    }
+    // @include mq(md) {
+    //   transform: translate(-50%, -50%);
+    // }
     @include mq(sm) {
       gap: 2.6rem;
     }
@@ -139,7 +140,7 @@
   }
   37.5% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(1);
     z-index: 9;
   }
   100% {
