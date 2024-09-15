@@ -31,7 +31,7 @@
     & :is(img, source) {
       will-change: width,height;
       width: var(--screen-width);
-      height: calc( var(--screen-height) - #{$header-h});
+      height: calc(  100svh - #{$header-h});
       opacity: 0;
       position: absolute;
       left: 0;
@@ -47,13 +47,13 @@
       @include mq(md) {
         width: var(--screen-width);
 
-        height: calc(var(--screen-height) - #{$header-h--sm});
+        height: calc( 100svh - #{$header-h--sm});
         object-fit: cover;
       }
       @include mq(sm) {
         width: var(--screen-width);
 
-        height: calc(var(--screen-height) - #{$header-h--sm});
+        height: calc( 100svh - #{$header-h--sm});
         object-fit: cover;
       }
     }
