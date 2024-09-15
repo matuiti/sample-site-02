@@ -1,16 +1,23 @@
 $pattern: (
-    //待機位置
-  "up": translateY(0.6rem),
-  "down": translateY(-0.6rem),
-  "left": translateX(4rem),
-  "right": translateX(-4rem),
+  "up": translateY(0.6rem),   //上へ
+  "down": translateY(-0.6rem),//下へ
+  "left": translateX(8rem),   //左へ
+  "right": translateX(-8rem), //右へ
 );
 
+//.appearに方向（クラス名up~right）を指定すると.itemの方向を一括指定
 @each $key, $value in $pattern {
   .appear.#{$key} {
     & .item {
       transform: $value;
     }
+  }
+}
+
+//.item個別に方向を指定可能
+@each $key, $value in $pattern {
+  .appear .item.#{$key} {
+      transform: #{$value};
   }
 }
 
