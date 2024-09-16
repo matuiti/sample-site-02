@@ -26,12 +26,12 @@ ul {
 li {
   list-style: none;
 }
-section {
-  scroll-margin-top: 14rem;
-  @include mq(sm) {
-    scroll-margin: 8rem;
-  }
-}
+// section {
+//   scroll-margin-top: 14rem;
+//   @include mq(sm) {
+//     scroll-margin: 8rem;
+//   }
+// }
 a,button,.btn {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
