@@ -3,6 +3,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow: visible;
 }
 body {
   font-family: "Lato", "Noto Sans JP", sans-serif;
@@ -27,6 +28,9 @@ li {
 }
 section {
   scroll-margin-top: 14rem;
+  @include mq(sm) {
+    scroll-margin: 8rem;
+  }
 }
 a,button,.btn {
   outline: none;
