@@ -30,7 +30,7 @@
 
     & :is(img, source) {
       transform: scale(1.2);
-      will-change: width,height;
+      // will-change: width,height;
       width: 100%;
       height: calc(   100svh - #{$header-h});
       opacity: 0;

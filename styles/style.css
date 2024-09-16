@@ -255,7 +255,6 @@
 }
 .hero__slider :is(img, source) {
   transform: scale(1.2);
-  will-change: width, height;
   width: 100%;
   height: calc(100svh - 110px);
   opacity: 0;
@@ -407,15 +406,6 @@ ul {
 
 li {
   list-style: none;
-}
-
-section {
-  scroll-margin-top: 14rem;
-}
-@media screen and (max-width: 767px) {
-  section {
-    scroll-margin: 8rem;
-  }
 }
 
 a, button, .btn {
