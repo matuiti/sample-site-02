@@ -5,7 +5,6 @@ class Main {
         this.#init()
     }
     #init() {
-        // new Hero
         new MobileMenu
         this.#scrollInit()
     }
