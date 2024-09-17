@@ -109,6 +109,7 @@
     @include mq(sm) {
       font-size: 1.6rem;
       letter-spacing: 0.2em;
+      text-shadow: none;
     }
   }
   &__logo-wrap {

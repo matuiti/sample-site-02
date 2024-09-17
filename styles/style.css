@@ -142,7 +142,7 @@
   font-size: 2rem;
   line-height: 1;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
 }
 .mobile-menu .section-title-sub {
   letter-spacing: 0.2em;
@@ -335,6 +335,7 @@
   .hero__copy {
     font-size: 1.6rem;
     letter-spacing: 0.2em;
+    text-shadow: none;
   }
 }
 .hero__logo-wrap {
@@ -375,6 +376,58 @@
   100% {
     opacity: 0;
   }
+}
+/* Lato Regular and Italic */
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+/* Lato Bold and Italic */
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+/* Noto Sans JP */
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+/* Noto Serif JP */
+@font-face {
+  font-family: "Noto Serif JP";
+  src: url("../fonts/NotoSerifJP-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 html {
   font-size: 62.5%;
