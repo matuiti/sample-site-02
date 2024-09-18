@@ -6,11 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>KUMANOPAN - sample-site</title>
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@700&display=swap"
-    rel="stylesheet"> -->
+
+  <!-- fontを事前に読み込む -->
+  <link rel="preload" href="fonts/Lato-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-BoldItalic.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-Italic.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSansJP-Black.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSansJP-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSansJP-ExtraBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSansJP-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSansJP-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSansJP-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/NotoSerifJP-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- スマホ用Hero画像（スペーサー）を事前に読み込む -->
+  <link rel="preload" href="images/hero-spacer-sp.jpg" as="image" media="(max-width: 767px)" />
+  <link rel="preload" href="images/hero-spacer-sp@2x.jpg" as="image" media="(max-width: 767px)" />
+  <!-- スマホ以外用Hero画像（スペーサー）を事前に読み込む -->
+  <link rel="preload" href="images/hero-spacer.jpg" as="image" media="(min-width: 768px)" />
+
   <link rel="stylesheet" href="styles/vendors/css-reset.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <script src="scripts/libs/mobile-menu.js" defer></script>
