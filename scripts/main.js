@@ -12,7 +12,6 @@ class Main {
         this.#observers.push(
             new ScrollObserver('.appear', this.#inviewAnimation)
         )
-        console.log(this.#observers);
     }
 
     #inviewAnimation(el, inview) {
