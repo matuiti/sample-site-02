@@ -1,35 +1,69 @@
 //HTMLを整える下準備クラス
 class TextAnimation {
     constructor(el) {
-        this.DOM = {}//DOM用のオブジェクトを初期化
-        this.DOM.el = el instanceof HTMLElement ? el : document.querySelector(el)//DOMを代入
-        this.DOM.chars = this.DOM.el.innerHTML.trim().split("")//前後の空白を削除、1文字に分割して配列として代入
-        this.DOM.el.innerHTML = this.#splitText()//htmlを成形し、連結したもので書き換える
+        this.DOM = {};
+        this.DOM.el = el instanceof HTMLElement ? el : document.querySelector(el); // DOMを取得
+        this.chars = []; // 各テキストノードの文字を格納する配列
+        this.#splitText(this.DOM.el); // テキストノードの文字を分割し、spanで囲む
     }
-    #splitText() {
-        return this.chars.reduce((acc, curr) => {
-            curr = curr.replace(/\s+/, '&nbsp;')//空白を半角スペースに置換
-            return `${acc}<span class="char">${curr}</span>`//配列の文字を加工⇒連結するループ文
-        }, "")//ループ1回目のaccに""を代入、2回目からは戻り値が入る
+
+    #splitText(el) {
+        // ノードを走査する関数
+        const traverseNodes = (node) => {
+            if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== "") {
+                // テキストノードの場合
+                const text = node.nodeValue.trim();
+                const fragment = document.createDocumentFragment(); // フラグメントに分割後のノードを一時的に格納
+                text.split("").forEach(char => {
+                    const span = document.createElement('span');
+                    span.classList.add('char');
+                    span.innerHTML = char === " " ? "&nbsp;" : char; // 空白は &nbsp; に変換
+                    fragment.appendChild(span);
+                });
+                node.parentNode.replaceChild(fragment, node); // 元のテキストノードを置き換える
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                // 子ノードがある場合は再帰的に処理
+                Array.from(node.childNodes).forEach(child => traverseNodes(child));
+            }
+        };
+        traverseNodes(el); // DOMを走査開始
     }
 }
+
 
 //実際にアニメーションを付与するクラス
 class TweenTextAnimation extends TextAnimation {
     constructor(el) {
-        super(el)//htmlを成形
-        this.DOM.chars = this.DOM.el.querySelectorAll('.char')//整形後の子要素を全て取得
+        super(el); // htmlを成形
+        this.DOM.chars = this.DOM.el.querySelectorAll('.char'); // 整形後の子要素を全て取得
     }
+
     animate() {
-        this.DOM.el.classList.add('inview')//親要素に設定
-        this.DOM.chars.forEach((c, i) => { //子要素に設定
-            gsap.to(c, .6, {
+        // 親要素に inview クラスを追加
+        this.DOM.el.classList.add('inview');
+
+        // CSSで最適化をサポートする
+        this.DOM.chars.forEach((c) => {
+            gsap.set(c, {
+                opacity: 0,
+                display: 'inline-block',
+                willChange: 'transform, opacity', // 変更が予測されるプロパティ
+                transform: 'translateY(-1em)' // transformで移動させる
+            });
+        });
+
+        // アニメーションの適用
+        this.DOM.chars.forEach((c, i) => {
+            gsap.to(c, 1, {
                 ease: Back.easeOut,
-                delay: i * 0.05,
-                startAt: { y: '-50%', opacity: 0},
-                y: '0%', opacity: 1
+                delay: i * 0.06, // 各文字に遅延を与える
+                opacity: 1,
+                transform: 'translateY(0px)', // transformで移動
+                onComplete: () => {
+                    c.style.willChange = 'auto'; // アニメーション完了後に解除
+                }
             });
         });
     }
-
 }
+
