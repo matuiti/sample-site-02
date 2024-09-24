@@ -7,13 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>KUMANOPAN - sample-site</title>
 
-  <!-- スマホ用Hero画像（スペーサー）を事前に読み込む -->
-  <!-- <link rel="preload" href="images/hero-spacer-sp.jpg" as="image" media="(max-width: 767px)" />
-  <link rel="preload" href="images/hero-spacer-sp@2x.jpg" as="image" media="(max-width: 767px)" /> -->
-  <!-- スマホ以外用Hero画像（スペーサー）を事前に読み込む -->
-  <!-- <link rel="preload" href="images/hero-spacer.jpg" as="image" media="(min-width: 768px)" /> -->
+  <!-- スマホ用Hero画像（スペーサー~2枚目）を事前に読み込む -->
+  <link rel="preload" href="images/hero-spacer-sp.jpg" as="image" media="(max-width: 767px)" />
+  <link rel="preload" href="images/hero-spacer-sp@2x.jpg" as="image" media="(max-width: 767px)" />
+  <link rel="preload" href="images/hero-01-sp.jpg" as="image" media="(max-width: 767px)" />
+  <link rel="preload" href="images/hero-01-sp@2x.jpg" as="image" media="(max-width: 767px)" />
+  <!-- スマホ以外用Hero画像（スペーサー~2枚目）を事前に読み込む -->
+  <link rel="preload" href="images/hero-spacer.jpg" as="image" media="(min-width: 768px)" />
+  <link rel="preload" href="images/hero-spacer@2x.jpg" as="image" media="(min-width: 768px)" />
+  <link rel="preload" href="images/hero-01.jpg" as="image" media="(min-width: 768px)" />
+  <link rel="preload" href="images/hero-01@2x.jpg" as="image" media="(min-width: 768px)" />
+  <!-- reset.css -->
+  <style>*,::after,::before{box-sizing:border-box}*{margin:0}body,html{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}#__next,#root{isolation:isolate}</style>
 
-  <link rel="stylesheet" href="styles/vendors/css-reset.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <script src="scripts/libs/mobile-menu.js" defer></script>
   <script src="scripts/libs/calendar.js" defer></script>
@@ -167,17 +173,17 @@
             <picture>
               <source srcset="images/hero-02-sp.jpg, images/hero-02-sp@2x.jpg 2x" media="(max-width: 767px)" />
               <source srcset="images/hero-02@2x.jpg 2x" />
-              <img src="images/hero-02.jpg" alt="Hero 02" />
+              <img loading="lazy" src="images/hero-02.jpg" alt="Hero 02" />
             </picture>
             <picture>
               <source srcset="images/hero-03-sp.jpg, images/hero-03-sp@2x.jpg 2x" media="(max-width: 767px)" />
               <source srcset="images/hero-03@2x.jpg 2x" />
-              <img src="images/hero-03.jpg" alt="Hero 03" />
+              <img loading="lazy" src="images/hero-03.jpg" alt="Hero 03" />
             </picture>
             <picture>
               <source srcset="images/hero-04-sp.jpg, images/hero-04-sp@2x.jpg 2x" media="(max-width: 767px)" />
               <source srcset="images/hero-04@2x.jpg 2x" />
-              <img src="images/hero-04.jpg" alt="Hero 04" />
+              <img loading="lazy" src="images/hero-04.jpg" alt="Hero 04" />
             </picture>
           </div>
           <div class="hero__texts">
