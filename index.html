@@ -21,10 +21,13 @@
   <style>*,::after,::before{box-sizing:border-box}*{margin:0}body,html{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}#__next,#root{isolation:isolate}</style>
 
   <link rel="stylesheet" href="styles/style.css" />
+
+  <script src="scripts/vendors/gsap.min.js" defer></script>
   <script src="scripts/libs/mobile-menu.js" defer></script>
-  <script src="scripts/libs/calendar.js" defer></script>
   <script src="scripts/vendors/scroll-polyfill.js" defer></script>
   <script src="scripts/libs/scroll.js" defer></script>
+  <script src="scripts/libs/calendar.js" defer></script>
+  <script src="scripts/libs/text-animation.js" defer></script>
   <script src="scripts/main.js" defer></script>
 </head>
 
@@ -242,7 +245,7 @@
         <div class="section-title-box item">
           <img loading="lazy" class="section-title-icon item" src="images/bread-01.png" />
           <p class="section-title-sub item">最新のお知らせ</p>
-          <h2 class="section-title item">
+          <h2 class="section-title item textAnimation">
             News
           </h2>
         </div>
@@ -283,7 +286,7 @@
         <div class="section-title-box item">
           <img loading="lazy" class="section-title-icon" src="images/bread-02.png" />
           <p class="section-title-sub">メニュー</p>
-          <h2 class="section-title">
+          <h2 class="section-title textAnimation">
             Menu
           </h2>
         </div>
@@ -326,7 +329,7 @@
                 <source srcset="images/hero-04@2x.jpg 2x" />
                 <img loading="lazy" src="images/hero-04.jpg" />
               </picture>
-              <p class="about__text about__text--01 text-message item up">
+              <p class="about__text about__text--01 text-message item up textAnimation">
                 ようこそ、<span class="font-en">Kumanopan</span>へ。<br>
 
                 私たちは、地域の皆さんに愛されるパンを<br>提供することに誇りを持っている、<br>
@@ -339,7 +342,7 @@
                 <source srcset="images/hero-02@2x.jpg 2x" />
                 <img loading="lazy" src="images/hero-02.jpg" />
               </picture>
-              <p class="about__text about__text--02 text-message item up">
+              <p class="about__text about__text--02 text-message item up textAnimation">
                 厳選された素材と伝統技術でパンを作り、<br>
                 小麦粉やバターにこだわった<br>
                 愛情たっぷりのパンを提供しています。<br><br>
@@ -360,7 +363,7 @@
         <div class="section-title-box item">
           <img loading="lazy" class="section-title-icon" src="images/bread-03.png" />
           <p class="section-title-sub">ブログ</p>
-          <h2 class="section-title">
+          <h2 class="section-title textAnimation">
             Blog
           </h2>
         </div>
@@ -401,7 +404,7 @@
         <div class="section-title-box item">
           <img loading="lazy" class="section-title-icon" src="images/bread-04.png" />
           <p class="section-title-sub">インスタグラム</p>
-          <h2 class="section-title">
+          <h2 class="section-title textAnimation">
             Instagram
           </h2>
         </div>
@@ -445,7 +448,7 @@
           <div class="section-title-box item">
             <img loading="lazy" class="section-title-icon" src="images/bread-05.png" />
             <p class="section-title-sub">アクセス</p>
-            <h2 class="section-title">
+            <h2 class="section-title textAnimation">
               Access
             </h2>
           </div>

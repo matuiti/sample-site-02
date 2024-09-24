@@ -10,7 +10,8 @@ class Main {
     }
     #scrollInit() {
         this.#observers.push(
-            new ScrollObserver('.appear', this.#inviewAnimation)
+            new ScrollObserver('.appear', this.#inviewAnimation),
+            new ScrollObserver('.textAnimation', this.#textAnimation)
         )
     }
 
@@ -19,6 +20,12 @@ class Main {
             el.classList.add('inview')
         } else {
             el.classList.remove('inview')
+        }
+    }
+    #textAnimation(el, inview) {
+        if(inview) {
+            const ta = new TweenTextAnimation(el)
+            ta.animate()//アニメーション開始
         }
     }
 }
