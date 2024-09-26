@@ -59,6 +59,9 @@ class TweenTextAnimation extends TextAnimation {
                 delay: i * 0.06, // 各文字に遅延を与える
                 opacity: 1,
                 transform: 'translateY(0px)', // transformで移動
+                onStart: () => {
+                    c.style.opacity = '0'; // アニメーション開始時に透明度を設定
+                },
                 onComplete: () => {
                     c.style.willChange = 'auto'; // アニメーション完了後に解除
                 }
