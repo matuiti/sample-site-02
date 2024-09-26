@@ -23,7 +23,7 @@ $pattern: (
 
 .appear {
   & .item {
-    transition: all 1.2s;
+    transition: all 1s;
     opacity: 0;
   }
   &.inview {
@@ -33,7 +33,7 @@ $pattern: (
 
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
-          transition-delay: $i * 0.1s;
+          transition-delay: $i * 0.3s;
         }
       }
     }
