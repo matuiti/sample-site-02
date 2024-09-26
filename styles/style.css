@@ -1326,6 +1326,7 @@ main {
   width: 60rem;
   padding: 3.2rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 @media screen and (max-width: 959px) {
   .about__text {
@@ -1352,6 +1353,7 @@ main {
   background-repeat: no-repeat;
   width: 6rem;
   height: 6rem;
+  opacity: 0;
 }
 .about__text--02::after {
   content: "";
@@ -1365,6 +1367,7 @@ main {
   background-repeat: no-repeat;
   width: 6rem;
   height: 6rem;
+  opacity: 0;
 }
 .about .btn-box {
   padding: 6em;

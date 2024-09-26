@@ -598,6 +598,7 @@ main {
     width: 60rem;
     padding: 3.2rem;
     box-shadow: $box-shadow;
+    opacity: 0;
     @include mq(md) {
       width: 46.8rem;
     }
@@ -621,6 +622,7 @@ main {
         background-repeat: no-repeat;
         width: 6rem;
         height: 6rem;
+        opacity: 0;
       }
     }
     &--02 {
@@ -636,6 +638,7 @@ main {
         background-repeat: no-repeat;
         width: 6rem;
         height: 6rem;
+        opacity: 0;
       }
     }
   }
