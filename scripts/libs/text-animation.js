@@ -48,7 +48,7 @@ class TweenTextAnimation extends TextAnimation {
                 opacity: 0,
                 display: 'inline-block',
                 willChange: 'transform, opacity', // 変更が予測されるプロパティ
-                transform: 'translateY(-1em)' // transformで移動させる
+                transform: 'translateY(-1em)',
             });
         });
 
