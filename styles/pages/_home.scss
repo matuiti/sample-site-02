@@ -606,7 +606,37 @@ main {
       margin: 0 auto;
       padding: 3.2rem 1.4rem;
       line-height: 2.2 !important;
-      box-shadow: none;
+      box-shadow: inset 0 0px 13px 2px #782b28;
+    }
+    &--01 {
+      &::after {
+          content: "";
+          position: absolute;
+          top: 34%;
+          left: 25%;
+          transform: rotate(-45deg);
+          opacity: 0.4;
+          background-image: url("../../images/bread-01.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 4rem;
+          height: 4rem;
+      }
+    }
+    &--02 {
+      &::after {
+          content: "";
+          position: absolute;
+          top: 40%;
+          right: 25%;
+          transform: rotate(-45deg);
+          opacity: 0.4;
+          background-image: url("../../images/bread-03.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 4rem;
+          height: 4rem;
+      }
     }
   }
   & .btn-box {
