@@ -1326,6 +1326,11 @@ main {
     box-shadow: none;
   }
 }
+.about__text .char {
+  opacity: 0;
+  transform: translateY(-1em);
+  display: inline-block;
+}
 .about .btn-box {
   padding: 6em;
   background-color: transparent;
