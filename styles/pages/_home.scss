@@ -653,12 +653,16 @@ main {
     display: flex;
     flex-direction: column;
     height: 37rem;
-    // border: 1px solid $gray-border;
     box-shadow: $box-shadow;
     border-radius: 0.6rem;
     overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.6s!important;
     @include mq(sm) {
       height: 26rem;
+    }
+    &:hover {
+      opacity: 0.6!important;
     }
     &-img {
       & img {
