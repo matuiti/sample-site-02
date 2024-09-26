@@ -45,10 +45,8 @@ class TweenTextAnimation extends TextAnimation {
         // CSSで最適化をサポートする
         this.DOM.chars.forEach((c) => {
             gsap.set(c, {
-                opacity: 0,
                 display: 'inline-block',
                 willChange: 'transform, opacity', // 変更が予測されるプロパティ
-                transform: 'translateY(-1em)',
             });
         });
 
@@ -59,9 +57,6 @@ class TweenTextAnimation extends TextAnimation {
                 delay: i * 0.06, // 各文字に遅延を与える
                 opacity: 1,
                 transform: 'translateY(0px)', // transformで移動
-                onStart: () => {
-                    c.style.opacity = '0'; // アニメーション開始時に透明度を設定
-                },
                 onComplete: () => {
                     c.style.willChange = 'auto'; // アニメーション完了後に解除
                 }
