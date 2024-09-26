@@ -1307,7 +1307,7 @@ main {
     left: 0;
   }
 }
-.about img {
+.about__img img {
   width: 100%;
   height: 100%;
   aspect-ratio: 700/290;
@@ -1315,11 +1315,11 @@ main {
      object-fit: cover;
 }
 @media screen and (max-width: 959px) {
-  .about img {
+  .about__img img {
     aspect-ratio: 400/235;
   }
 }
-.about__text {
+.about__text-box {
   position: relative;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.6);
@@ -1329,45 +1329,38 @@ main {
   opacity: 0;
 }
 @media screen and (max-width: 959px) {
-  .about__text {
+  .about__text-box {
     width: 46.8rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .about__text {
+  .about__text-box {
     width: 100%;
     margin: 0 auto;
     padding: 3.2rem 1.4rem;
     line-height: 2.2 !important;
   }
 }
-.about__text--01::after {
-  content: "";
+.about__img--mini {
   position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.about__box--01 .about__img--mini {
   top: 16%;
   left: 4%;
   transform: rotate(-36deg);
-  opacity: 0.4;
-  background-image: url("../../images/bread-01.png");
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 6rem;
   height: 6rem;
-  opacity: 0;
+  opacity: 0.6;
 }
-.about__text--02::after {
-  content: "";
-  position: absolute;
+.about__box--02.inview .about__img--mini {
   top: 46%;
   right: 2%;
   transform: rotate(-36deg);
-  opacity: 0.4;
-  background-image: url("../../images/bread-03.png");
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 6rem;
   height: 6rem;
-  opacity: 0;
+  opacity: 0.6;
 }
 .about .btn-box {
   padding: 6em;

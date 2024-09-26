@@ -580,18 +580,18 @@ main {
         left: 0;
       }
     }
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 700 / 290;
-    object-fit: cover;
-    @include mq(md) {
-      aspect-ratio: 400 / 235;
+    & img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 700 / 290;
+      object-fit: cover;
+      @include mq(md) {
+        aspect-ratio: 400 / 235;
+      }
     }
   }
-  &__text {
+
+  &__text-box {
     position: relative;
     z-index: 1;
     background-color: $base02;
@@ -609,38 +609,27 @@ main {
       line-height: 2.2 !important;
       // box-shadow: inset 0 0px 13px 2px #782b28;
     }
-    &--01 {
-      &::after {
-        content: "";
-        position: absolute;
+  }
+  &__img--mini {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  &__box--01 .about__img--mini {
         top: 16%;
         left: 4%;
         transform: rotate(-36deg);
-        opacity: 0.4;
-        background-image: url("../../images/bread-01.png");
-        background-size: contain;
-        background-repeat: no-repeat;
         width: 6rem;
         height: 6rem;
-        opacity: 0;
-      }
-    }
-    &--02 {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 46%;
-        right: 2%;
-        transform: rotate(-36deg);
-        opacity: 0.4;
-        background-image: url("../../images/bread-03.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 6rem;
-        height: 6rem;
-        opacity: 0;
-      }
-    }
+        opacity: 0.6;
+  }
+  &__box--02.inview .about__img--mini {
+    top: 46%;
+    right: 2%;
+    transform: rotate(-36deg);
+    width: 6rem;
+    height: 6rem;
+    opacity: 0.6;
   }
   & .btn-box {
     padding: 6em;
