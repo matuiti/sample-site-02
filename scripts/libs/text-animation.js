@@ -52,9 +52,9 @@ class TweenTextAnimation extends TextAnimation {
 
         // アニメーションの適用
         this.DOM.chars.forEach((c, i) => {
-            gsap.to(c, 1, {
+            gsap.to(c, 0.9, {
                 ease: Back.easeOut,
-                delay: i * 0.06, // 各文字に遅延を与える
+                delay: i * 0.08, // 各文字に遅延を与える
                 opacity: 1,
                 transform: 'translateY(0px)', // transformで移動
                 onComplete: () => {
