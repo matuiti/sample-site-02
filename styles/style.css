@@ -1344,11 +1344,11 @@ main {
 .about__text--01::after {
   content: "";
   position: absolute;
-  top: 25%;
-  left: 7%;
+  top: 16%;
+  left: 4%;
   transform: rotate(-36deg);
   opacity: 0.4;
-  background-image: url("../../images/bread-03.png");
+  background-image: url("../../images/bread-01.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 6rem;
@@ -1361,7 +1361,7 @@ main {
   right: 2%;
   transform: rotate(-36deg);
   opacity: 0.4;
-  background-image: url("../../images/bread-04.png");
+  background-image: url("../../images/bread-03.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 6rem;
