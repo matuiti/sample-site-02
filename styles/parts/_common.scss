@@ -220,3 +220,10 @@ h3 {
 .kome {
   font-size: 0.8em;
 }
+
+.char {
+  opacity: 0;
+  transform: translateY(-1em);
+  display: inline-block;
+}
+
