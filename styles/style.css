@@ -1344,28 +1344,28 @@ main {
 .about__text--01::after {
   content: "";
   position: absolute;
-  top: 34%;
-  left: 25%;
-  transform: rotate(-45deg);
-  opacity: 0.4;
-  background-image: url("../../images/bread-01.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 4rem;
-  height: 4rem;
-}
-.about__text--02::after {
-  content: "";
-  position: absolute;
-  top: 40%;
-  right: 25%;
-  transform: rotate(-45deg);
+  top: 25%;
+  left: 7%;
+  transform: rotate(-36deg);
   opacity: 0.4;
   background-image: url("../../images/bread-03.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
+}
+.about__text--02::after {
+  content: "";
+  position: absolute;
+  top: 46%;
+  right: 2%;
+  transform: rotate(-36deg);
+  opacity: 0.4;
+  background-image: url("../../images/bread-04.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6rem;
+  height: 6rem;
 }
 .about .btn-box {
   padding: 6em;
