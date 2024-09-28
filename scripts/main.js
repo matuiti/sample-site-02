@@ -11,6 +11,7 @@ class Main {
     #scrollInit() {
         this.#observers.push(
             new ScrollObserver('.appear', this.#inviewAnimation),
+            new ScrollObserver('.appear-slow', this.#inviewAnimation),
             new ScrollObserver('.textAnimation', this.#textAnimation)
         )
     }
