@@ -1,72 +1,143 @@
 @charset "UTF-8";
-.appear.up .item {
+.appear.up > .item {
   transform: translateY(0.6rem);
 }
 
-.appear.down .item {
+.appear.down > .item {
   transform: translateY(-0.6rem);
 }
 
-.appear.left .item {
+.appear.left > .item {
   transform: translateX(8rem);
 }
 
-.appear.right .item {
+.appear.right > .item {
   transform: translateX(-8rem);
 }
 
-.appear .item.up {
+.appear > .item.up {
   transform: translateY(0.6rem);
 }
 
-.appear .item.down {
+.appear > .item.down {
   transform: translateY(-0.6rem);
 }
 
-.appear .item.left {
+.appear > .item.left {
   transform: translateX(8rem);
 }
 
-.appear .item.right {
+.appear > .item.right {
   transform: translateX(-8rem);
 }
 
-.appear .item {
-  transition: all 1s;
+.appear > .item {
+  transition: all 0.8s;
   opacity: 0;
 }
-.appear.inview .item {
+.appear.inview > .item {
   opacity: 1;
   transform: none;
 }
-.appear.inview .item:nth-child(1) {
-  transition-delay: 0.3s;
+.appear.inview > .item:nth-child(1) {
+  transition-delay: 0.2s;
 }
-.appear.inview .item:nth-child(2) {
+.appear.inview > .item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.appear.inview > .item:nth-child(3) {
   transition-delay: 0.6s;
 }
-.appear.inview .item:nth-child(3) {
-  transition-delay: 0.9s;
+.appear.inview > .item:nth-child(4) {
+  transition-delay: 0.8s;
 }
-.appear.inview .item:nth-child(4) {
+.appear.inview > .item:nth-child(5) {
+  transition-delay: 1s;
+}
+.appear.inview > .item:nth-child(6) {
   transition-delay: 1.2s;
 }
-.appear.inview .item:nth-child(5) {
-  transition-delay: 1.5s;
+.appear.inview > .item:nth-child(7) {
+  transition-delay: 1.4s;
 }
-.appear.inview .item:nth-child(6) {
+.appear.inview > .item:nth-child(8) {
+  transition-delay: 1.6s;
+}
+.appear.inview > .item:nth-child(9) {
   transition-delay: 1.8s;
 }
-.appear.inview .item:nth-child(7) {
+.appear.inview > .item:nth-child(10) {
+  transition-delay: 2s;
+}
+
+.appear-slow.up > .item {
+  transform: translateY(0.6rem);
+}
+
+.appear-slow.down > .item {
+  transform: translateY(-0.6rem);
+}
+
+.appear-slow.left > .item {
+  transform: translateX(8rem);
+}
+
+.appear-slow.right > .item {
+  transform: translateX(-8rem);
+}
+
+.appear-slow > .item.up {
+  transform: translateY(0.6rem);
+}
+
+.appear-slow > .item.down {
+  transform: translateY(-0.6rem);
+}
+
+.appear-slow > .item.left {
+  transform: translateX(8rem);
+}
+
+.appear-slow > .item.right {
+  transform: translateX(-8rem);
+}
+
+.appear-slow > .item {
+  transition: all 0.6s;
+  opacity: 0;
+}
+.appear-slow.inview > .item {
+  opacity: 1;
+  transform: none;
+}
+.appear-slow.inview > .item:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.appear-slow.inview > .item:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.appear-slow.inview > .item:nth-child(3) {
+  transition-delay: 0.9s;
+}
+.appear-slow.inview > .item:nth-child(4) {
+  transition-delay: 1.2s;
+}
+.appear-slow.inview > .item:nth-child(5) {
+  transition-delay: 1.5s;
+}
+.appear-slow.inview > .item:nth-child(6) {
+  transition-delay: 1.8s;
+}
+.appear-slow.inview > .item:nth-child(7) {
   transition-delay: 2.1s;
 }
-.appear.inview .item:nth-child(8) {
+.appear-slow.inview > .item:nth-child(8) {
   transition-delay: 2.4s;
 }
-.appear.inview .item:nth-child(9) {
+.appear-slow.inview > .item:nth-child(9) {
   transition-delay: 2.7s;
 }
-.appear.inview .item:nth-child(10) {
+.appear-slow.inview > .item:nth-child(10) {
   transition-delay: 3s;
 }
 
@@ -451,6 +522,15 @@ body {
   line-height: 1;
   font-weight: 500;
   color: black;
+}
+
+section {
+  scroll-margin-top: 14em;
+}
+@media screen and (max-width: 767px) {
+  section {
+    scroll-margin-top: 6em;
+  }
 }
 
 a {
@@ -1343,16 +1423,14 @@ main {
 }
 .about__img--mini {
   position: absolute;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
-.about__box--01 .about__img--mini {
+.about__box--01.inview .about__img--mini {
   top: 16%;
   left: 4%;
   transform: rotate(-36deg);
   width: 6rem;
   height: 6rem;
-  opacity: 0.6;
+  opacity: 0.6 !important;
 }
 .about__box--02.inview .about__img--mini {
   top: 46%;
@@ -1360,7 +1438,7 @@ main {
   transform: rotate(-36deg);
   width: 6rem;
   height: 6rem;
-  opacity: 0.6;
+  opacity: 0.6 !important;
 }
 .about .btn-box {
   padding: 6em;
@@ -1416,7 +1494,6 @@ main {
   border-radius: 0.6rem;
   overflow: hidden;
   cursor: pointer;
-  transition: opacity 0.6s !important;
 }
 @media screen and (max-width: 767px) {
   .blog__article {

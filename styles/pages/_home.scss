@@ -612,16 +612,16 @@ main {
   }
   &__img--mini {
     position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s;
+    // opacity: 0;
+    // transition: opacity 0.3s;
   }
-  &__box--01 .about__img--mini {
+  &__box--01.inview .about__img--mini {
         top: 16%;
         left: 4%;
         transform: rotate(-36deg);
         width: 6rem;
         height: 6rem;
-        opacity: 0.6;
+        opacity: 0.6!important;
   }
   &__box--02.inview .about__img--mini {
     top: 46%;
@@ -629,7 +629,7 @@ main {
     transform: rotate(-36deg);
     width: 6rem;
     height: 6rem;
-    opacity: 0.6;
+    opacity: 0.6!important;
   }
   & .btn-box {
     padding: 6em;
@@ -679,7 +679,6 @@ main {
     border-radius: 0.6rem;
     overflow: hidden;
     cursor: pointer;
-    transition: opacity 0.6s!important;
     @include mq(sm) {
       height: 26rem;
     }
