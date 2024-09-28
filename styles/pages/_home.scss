@@ -612,8 +612,8 @@ main {
   }
   &__img--mini {
     position: absolute;
-    // opacity: 0;
-    // transition: opacity 0.3s;
+    opacity: 0;
+    transition: opacity 1.2s!important;
   }
   &__box--01.inview .about__img--mini {
         top: 16%;

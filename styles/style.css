@@ -1423,6 +1423,8 @@ main {
 }
 .about__img--mini {
   position: absolute;
+  opacity: 0;
+  transition: opacity 1.2s !important;
 }
 .about__box--01.inview .about__img--mini {
   top: 16%;
