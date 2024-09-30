@@ -9,9 +9,6 @@ class Main {
     #init() {
         new MobileMenu
         this.#scrollInit()
-        // const observer = new IntersectionObserver(this.#callback.bind(this));
-        // observer.observe(this.target);
-
     }
     #scrollInit() {
         this.#observers.push(
