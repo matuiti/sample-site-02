@@ -17,11 +17,8 @@ class ScrollObserver {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     this.cb(entry.target, true)
-                    if(this.once) {
-                        observer.unobserve(entry.target)
-                    } else {
-                        this.cb(entry.target, false)
-                    }
+                }else {
+                    this.cb(entry.target, false)
                 }
             })
         }
