@@ -1,5 +1,7 @@
 @use "../globals" as *;
-.btn-box {text-align: center;}
+.btn-box {
+  text-align: center;
+}
 .btn {
   position: relative;
   display: inline-block;
@@ -7,7 +9,7 @@
   color: $color-btn;
   width: max-content;
   min-width: 32rem;
-  padding:1.2em 2.6em 1.2em 2.4em;
+  padding: 1.2em 2.6em 1.2em 2.4em;
   border: none;
   line-height: 0.95;
   font-size: 2rem;
@@ -20,10 +22,9 @@
     font-size: 1.6rem;
   }
   @include mq(sm) {
-    padding:1em 2em;
+    padding: 1em 2em;
     min-width: 22rem;
     font-size: 1.4rem;
-
   }
 
   &::after {
@@ -55,45 +56,54 @@
 
 //トップへ戻るボタン
 .top-button {
+  visibility: hidden;
   opacity: 0;
   position: fixed;
-  bottom: 20px; /* 画面下から20pxの位置 */
-  right: 20px;  /* 画面右から20pxの位置 */
+  bottom: 20px;
+  right: 20px;
   width: 50px;
   height: 50px;
-  background-color: $main1; /* ボタンの背景色 */
-  border-radius: 10px; /* 角丸 */
+  background-color: $main1;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 浮いているように見える影 */
-  z-index: 1000; /* 他の要素の上に表示するためのz-index */
-  transition: background-color 0.6s, opacity 0.6s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.6s;
+
+  touch-action: manipulation; /* タッチイベントを操作可能にする */
+  -webkit-tap-highlight-color: transparent; /* タップ時のハイライトを透明にする（iOS Safari対策） */
 
   &.active {
+    visibility: visible;
     opacity: 1;
   }
-}
-.top-button:hover {
-  background-color: $base02; /* ホバー時の背景色 */
-}
 
-.top-button::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 15px solid white; /* 三角形の色 */
-  position: absolute;
-  pointer-events: none;
-  transition: border-bottom-color 0.6s;
-}
-.top-button:hover::before {
-  border-bottom-color: $main1; /* ホバー時の三角形の色 */
-}
+  //hoverが利用できるデバイスへの指定
+  @include hover {
+    background-color: $base02;
+  }
 
-
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid white; /* 三角形の色 */
+    position: absolute;
+    pointer-events: none;
+    transition: border-bottom-color 0.6s;
+  }
+  
+  //hoverが利用できるデバイスへの指定
+  @include hover {
+    &::before {
+      border-bottom-color: $main1;
+    }
+  }
+}

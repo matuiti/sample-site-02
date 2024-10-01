@@ -17,3 +17,13 @@
     fill-mode: $fill-mode;
   }
 }
+
+//hover可能　かつ　マウスなどのポインターデバイスを使用している時の命令
+@mixin hover {
+  @media (hover: hover) and (pointer: fine)  {
+    &:hover {
+      @content;
+    }
+  }
+}
+
