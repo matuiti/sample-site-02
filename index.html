@@ -34,7 +34,7 @@
 <body>
   <div id="global-container">
     <header class="header">
-      <div class="header__wrap appear-slow up">
+      <div class="header__wrap appear up">
         <div class="header__logo-wrap item">
           <h1 class="header__logo">
             <a href="#">
@@ -97,14 +97,14 @@
           </h1>
         </div>
         <nav class="header__nav item">
-          <ul class="header__ul appear up">
-            <li class="header__li item active"><a href="#">Home</a></li>
-            <li class="header__li item"><a href="#news">News</a></li>
-            <li class="header__li item"><a href="#menu">Menu</a></li>
-            <li class="header__li item"><a href="#about">About</a></li>
-            <li class="header__li item"><a href="#blog">Blog</a></li>
-            <li class="header__li item"><a href="#instagram">Instagram</a></li>
-            <li class="header__li item"><a href="#access">Access</a></li>
+          <ul class="header__ul">
+            <li class="header__li active"><a href="#">Home</a></li>
+            <li class="header__li"><a href="#news">News</a></li>
+            <li class="header__li"><a href="#menu">Menu</a></li>
+            <li class="header__li"><a href="#about">About</a></li>
+            <li class="header__li"><a href="#blog">Blog</a></li>
+            <li class="header__li"><a href="#instagram">Instagram</a></li>
+            <li class="header__li"><a href="#access">Access</a></li>
           </ul>
         </nav>
         <nav class="header__nav item">
@@ -190,7 +190,7 @@
             </picture>
           </div>
           <div class="hero__texts appear-slow up">
-            <p class="hero__copy item">ふんわりな時間を</p>
+            <p class="hero__copy item textAnimation">ふんわりな時間を</p>
             <div class="hero__logo-wrap item">
               <h1 class="hero__logo">
                 <svg id="_レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468.66 447.72">
@@ -322,8 +322,8 @@
       </section>
       <section id="about" class="about">
         <div class="about__wrap">
-          <div class="about__boxs appear-slow up">
-            <div class="about__box about__box--01 appear item">
+          <div class="about__boxs">
+            <div class="about__box about__box--01 appear-slow">
               <picture class="about__img about__img--01 item left">
                 <source srcset="images/hero-04@2x.jpg 2x" />
                 <img loading="lazy" src="images/hero-04.jpg" />
@@ -342,7 +342,7 @@
               </div>
             </div>
 
-            <div class="about__box about__box--02 appear item">
+            <div class="about__box about__box--02 appear-slow">
               <picture class="about__img about__img--02 item right">
                 <source srcset="images/hero-02@2x.jpg 2x" />
                 <img loading="lazy" src="images/hero-02.jpg" />
@@ -364,13 +364,13 @@
             </div>
           </div>
 
-          <div class="btn-box"><a class="btn" href="#about">こだわりについて</a></div>
+          <div class="btn-box appear-slow"><a class="btn item" href="#about">こだわりについて</a></div>
 
         </div>
 
       </section>
 
-      <section id="blog" class="blog appear-slow up">
+      <section id="blog" class="blog">
         <div class="section-title-box item appear up">
           <img loading="lazy" class="section-title-icon item" src="images/bread-03.png" />
           <p class="section-title-sub item">ブログ</p>
@@ -378,16 +378,16 @@
             Blog
           </h2>
         </div>
-        <div class="blog__text-box text-message item">
-          <p class="blog__text">
+        <div class="blog__text-box text-message appear up">
+          <p class="blog__text item">
             私たちのパン作りの裏側や<br>
             季節のおすすめ商品、
             <span style="display:inline-block;">スタッフのストーリーなど、</span><br>
             心温まるエピソードをお届けします。
           </p>
         </div>
-        <div class="blog__article-box item appear-slow">
-          <a href="#blog" class="blog__article item up">
+        <div class="blog__article-box appear-slow up">
+          <a href="#blog" class="blog__article item">
             <div class="blog__article-img"><img loading="lazy" src="images/hero-01.jpg"></div>
             <div class="blog__article-text-box">
               <p class="blog__article-title">秋の味覚を楽しむ！新作パン3選</p>
@@ -409,9 +409,9 @@
             </div>
           </a>
         </div>
-        <div class="btn-box item"><a class="btn" href="#blog">記事一覧を見る</a></div>
+        <div class="btn-box appear up"><a class="btn item" href="#blog">記事一覧を見る</a></div>
       </section>
-      <section id="instagram" class="instagram appear-slow up">
+      <section id="instagram" class="instagram">
         <div class="section-title-box item appear up">
           <img loading="lazy" class="section-title-icon item" src="images/bread-04.png" />
           <p class="section-title-sub item">インスタグラム</p>
@@ -419,10 +419,10 @@
             Instagram
           </h2>
         </div>
-        <div class="instagram__text-box text-message item">
-          <p class="instagram__text">
-            私たちのInstagramでは、<br>
-            毎日のおいしいパンやスイーツの写真、店内の様子、<br>
+        <div class="instagram__text-box text-message appear up">
+          <p class="instagram__text item">
+            インスタグラムでは、<br>
+            おいしいパンの写真、ふだんの店内の様子や<br>
             イベント情報をお届けしています。
           </p>
         </div>
@@ -452,21 +452,21 @@
             <div class="instagram__item-img"><img loading="lazy" src="images/hero-01.jpg"></div>
           </div>
         </div>
-        <div class="btn-box item"><a class="btn btn--en" href="#instagram">Instagram</a></div>
+        <div class="btn-box appear-slow up"><a class="btn btn--en item" href="#instagram">Instagram</a></div>
       </section>
       <section id="access" class="access">
-        <div class="access__wrap appear-slow up">
-          <div class="section-title-box item appear up">
+        <div class="access__wrap">
+          <div class="section-title-box appear up">
             <img loading="lazy" class="section-title-icon item" src="images/bread-05.png" />
             <p class="section-title-sub item">アクセス</p>
             <h2 class="section-title textAnimation item">
               Access
             </h2>
           </div>
-          <div class="access__img-box item">
-            <img loading="lazy" src="images/access.jpg" />
+          <div class="access__img-box appear up">
+            <img class="item" loading="lazy" src="images/access.jpg" />
           </div>
-          <div class="access__flex-box item appear up">
+          <div class="access__flex-box appear up">
             <div class="access__info-box item">
               <h3>店舗情報</h3>
               <table class="access__info">
@@ -531,9 +531,9 @@
               </div>
             </div>
           </div>
-          <div id="map" class="access__map-box item">
-            <h3>Google Map</h3>
-            <div class="access__map">
+          <div id="map" class="access__map-box appear up">
+            <h3 class="item">Google Map</h3>
+            <div class="access__map item">
               <iframe
                 loading="lazy"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747798841979!2d139.7428579763797!3d35.65858483121676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1720664107076!5m2!1sja!2sjp"
@@ -609,7 +609,7 @@
           </h1>
         </div>
         <nav class="footer__nav item">
-          <ul class="footer__ul">
+          <ul class="footer__ul appear up">
             <li class="footer__li item active"><a href="#">Home</a></li>
             <li class="footer__li item"><a href="#news">News</a></li>
             <li class="footer__li item"><a href="#menu">Menu</a></li>
@@ -618,14 +618,14 @@
             <li class="footer__li item"><a href="#instagram">Instagram</a></li>
             <li class="footer__li item"><a href="#access">Access</a></li>
           </ul>
-          <ul class="footer__sns item appear up">
+          <ul class="footer__sns item appear">
             <li class="item"><a href="#"><img loading="lazy" src="images/icon-instagram.svg" alt="instagramのアイコン"></a></li>
             <li class="item"><a href="#"><img loading="lazy" src="images/icon-facebook.svg" alt="facebookのアイコン"></a></li>
             <li class="item"><a href="#"><img loading="lazy" src="images/icon-x.svg" alt="xのアイコン"></a></li>
           </ul>
         </nav>
+        <small class="footer__copyright item">Copyright 2024 KUMANOPAN All Rights Reserved.</small>
       </div>
-      <small class="footer__copyright item">Copyright 2024 KUMANOPAN All Rights Reserved.</small>
     </footer>
     <a href="#" class="top-button"></a>
   </div>

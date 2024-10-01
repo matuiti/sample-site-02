@@ -54,9 +54,9 @@ class TweenTextAnimation extends TextAnimation {
         this.DOM.chars.forEach((c, i) => {
             gsap.to(c, 0.9, {
                 ease: Back.easeOut,
-                delay: i * 0.08, // 各文字に遅延を与える
+                delay: i * 0.24,
                 opacity: 1,
-                transform: 'translateY(0px)', // transformで移動
+                transform: 'translateY(0px)',
                 onComplete: () => {
                     c.style.willChange = 'auto'; // アニメーション完了後に解除
                 }

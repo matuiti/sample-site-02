@@ -103,7 +103,7 @@
 }
 
 .appear-slow > .item {
-  transition: all 0.6s;
+  transition: all 1.2s;
   opacity: 0;
 }
 .appear-slow.inview > .item {
@@ -111,34 +111,34 @@
   transform: none;
 }
 .appear-slow.inview > .item:nth-child(1) {
-  transition-delay: 0.3s;
+  transition-delay: 0.4s;
 }
 .appear-slow.inview > .item:nth-child(2) {
-  transition-delay: 0.6s;
+  transition-delay: 0.8s;
 }
 .appear-slow.inview > .item:nth-child(3) {
-  transition-delay: 0.9s;
-}
-.appear-slow.inview > .item:nth-child(4) {
   transition-delay: 1.2s;
 }
+.appear-slow.inview > .item:nth-child(4) {
+  transition-delay: 1.6s;
+}
 .appear-slow.inview > .item:nth-child(5) {
-  transition-delay: 1.5s;
+  transition-delay: 2s;
 }
 .appear-slow.inview > .item:nth-child(6) {
-  transition-delay: 1.8s;
-}
-.appear-slow.inview > .item:nth-child(7) {
-  transition-delay: 2.1s;
-}
-.appear-slow.inview > .item:nth-child(8) {
   transition-delay: 2.4s;
 }
+.appear-slow.inview > .item:nth-child(7) {
+  transition-delay: 2.8s;
+}
+.appear-slow.inview > .item:nth-child(8) {
+  transition-delay: 3.2s;
+}
 .appear-slow.inview > .item:nth-child(9) {
-  transition-delay: 2.7s;
+  transition-delay: 3.6s;
 }
 .appear-slow.inview > .item:nth-child(10) {
-  transition-delay: 3s;
+  transition-delay: 4s;
 }
 
 .mobile-menu {
