@@ -391,13 +391,6 @@
   top: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  animation-name: show;
-  animation-duration: 32s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
 }
 @media screen and (max-width: 959px) {
   .hero__slider :is(img, source) {
@@ -414,6 +407,15 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.hero__slider.inview :is(img, source) {
+  animation-name: show;
+  animation-duration: 32s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 .hero__slider picture:nth-child(1) :is(img, source) {
   position: relative;
