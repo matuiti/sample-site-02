@@ -8,15 +8,24 @@ class Main {
     }
     #init() {
         new MobileMenu
-        this.#scrollInit()
+        Pace.on('done', this.#scrollInit.bind(this));
     }
     #scrollInit() {
         this.#observers.push(
+            new ScrollObserver('.hero__slider', this.#toggleSlideAnimation.bind(this)),
             new ScrollObserver('.appear', this.#inviewAnimation),
             new ScrollObserver('.appear-slow', this.#inviewAnimation),
             new ScrollObserver('.textAnimation', this.#textAnimation),
             new ScrollObserver('.hero', this.#appearPageTopBtn.bind(this))
         )
+    }
+
+    #toggleSlideAnimation(el, inview) {
+        if(inview) {
+            el.classList.add('inview')
+        } else {
+            el.classList.remove('inview')
+        }
     }
 
     #inviewAnimation(el, inview) {
