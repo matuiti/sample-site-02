@@ -7,7 +7,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>KUMANOPAN - sample-site</title>
   <script src="scripts/vendors/pace.js"></script>
+  <style>
+    /* 以下、ローディング画面に必要なスタイル */
+    /* Lato Regular and Italic */
+    @font-face {
+      font-family: 'Lato';
+      src: url('../fonts/Lato-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      src: url('../fonts/Lato-Italic.ttf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    /* Lato Bold and Italic */
+    @font-face {
+      font-family: 'Lato';
+      src: url('../fonts/Lato-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      src: url('../fonts/Lato-BoldItalic.ttf') format('truetype');
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    /* Noto Sans JP */
+    @font-face {
+      font-family: 'Noto Sans JP';
+      src: url('../fonts/NotoSansJP-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Noto Sans JP';
+      src: url('../fonts/NotoSansJP-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Noto Sans JP';
+      src: url('../fonts/NotoSansJP-Black.ttf') format('truetype');
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    /* Noto Serif JP */
+    @font-face {
+      font-family: 'Noto Serif JP';
+      src: url('../fonts/NotoSerifJP-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      overflow: visible;
+    }
+
+    body {
+      font-family: "Lato", "Noto Sans JP", sans-serif;
+      font-feature-settings: "palt";
+      letter-spacing: 0.1em;
+      line-height: 1;
+      font-weight: 500;
+      color: black;
+    }
+  </style>
   <link rel="stylesheet" href="/styles/loader.css">
+
   <!-- スマホ用Hero画像（スペーサー~2枚目）を事前に読み込む -->
   <link rel="preload" href="images/hero-spacer-sp.jpg" as="image" media="(max-width: 767px)" />
   <link rel="preload" href="images/hero-spacer-sp@2x.jpg" as="image" media="(max-width: 767px)" />
@@ -19,7 +97,58 @@
   <link rel="preload" href="images/hero-01.jpg" as="image" media="(min-width: 768px)" />
   <link rel="preload" href="images/hero-01@2x.jpg" as="image" media="(min-width: 768px)" />
   <!-- reset.css -->
-  <style>*,::after,::before{box-sizing:border-box}*{margin:0}body,html{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}#__next,#root{isolation:isolate}</style>
+  <style>
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box
+    }
+
+    * {
+      margin: 0
+    }
+
+    body,
+    html {
+      height: 100%
+    }
+
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased
+    }
+
+    canvas,
+    img,
+    picture,
+    svg,
+    video {
+      display: block;
+      max-width: 100%
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      overflow-wrap: break-word
+    }
+
+    #__next,
+    #root {
+      isolation: isolate
+    }
+  </style>
 
   <link rel="stylesheet" href="styles/style.css" />
 
@@ -353,7 +482,7 @@
                   厳選された素材と伝統技術でパンを作り、<br>
                   小麦粉やバターにこだわった<br>
                   愛情たっぷりのパンを提供しています。<br><br>
-  
+
                   また、季節限定のパンやケーキで<br>
                   日常を少し特別に彩っています。
                 </p>
@@ -535,8 +664,7 @@
           <div id="map" class="access__map-box appear up">
             <h3 class="item">Google Map</h3>
             <div class="access__map item">
-              <iframe
-                loading="lazy"
+              <iframe loading="lazy"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747798841979!2d139.7428579763797!3d35.65858483121676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1720664107076!5m2!1sja!2sjp"
                 width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -620,8 +748,10 @@
             <li class="footer__li item"><a href="#access">Access</a></li>
           </ul>
           <ul class="footer__sns item appear">
-            <li class="item"><a href="#"><img loading="lazy" src="images/icon-instagram.svg" alt="instagramのアイコン"></a></li>
-            <li class="item"><a href="#"><img loading="lazy" src="images/icon-facebook.svg" alt="facebookのアイコン"></a></li>
+            <li class="item"><a href="#"><img loading="lazy" src="images/icon-instagram.svg" alt="instagramのアイコン"></a>
+            </li>
+            <li class="item"><a href="#"><img loading="lazy" src="images/icon-facebook.svg" alt="facebookのアイコン"></a>
+            </li>
             <li class="item"><a href="#"><img loading="lazy" src="images/icon-x.svg" alt="xのアイコン"></a></li>
           </ul>
         </nav>
