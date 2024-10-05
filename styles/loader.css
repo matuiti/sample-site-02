@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body.pace-running {
   background-color: #782b28 !important;
 }
@@ -12,10 +11,24 @@ body.pace-running {
   opacity: 0;
 }
 
-.pace-running .pace__text {
-  position: relative; /* 必要に応じて位置を調整 */
-  z-index: 1000; /* 他の要素の上に表示するための z-index */
-  color: white; /* 見やすくするための色 */
+.pace__text {
+  opacity: 0;
+}
+
+.pace-running .pace__text,
+.pace-running .pace__text .font-en {
+  opacity: 1;
+  display: inline-block;
+  position: fixed;
+  z-index: 1000;
+  color: white;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: 0.2em;
 }
 
 .pace {
@@ -38,7 +51,7 @@ body.pace-running {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 300px;
+  width: 240px;
   height: 50px;
   overflow: hidden;
 }
@@ -84,7 +97,7 @@ body.pace-running {
   width: 100%;
   height: 28px;
   z-index: 2001;
-  box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
+  box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #fff;
   border-radius: 10px;
 }
 
