@@ -1,6 +1,6 @@
 @use "globals" as *;
 body.pace-running {
-  background-color: $main1!important;
+  background-color: $main1 !important;
 }
 
 .pace-done #global-container {
@@ -11,102 +11,114 @@ body.pace-running {
 #global-container {
   opacity: 0;
 }
-
-.pace-running .pace__text {
-	position: relative; /* 必要に応じて位置を調整 */
-	z-index: 1000; /* 他の要素の上に表示するための z-index */
-	color: white; /* 見やすくするための色 */
-  }
+.pace__text {
+  opacity: 0;
+}
+.pace-running .pace__text,
+.pace-running .pace__text .font-en {
+  opacity: 1;
+  display: inline-block;
+  position: fixed;
+  z-index: 1000;
+  color: white;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: 0.2em;
+}
 
 .pace {
-	-webkit-pointer-events: none;
-	pointer-events: none;
+  -webkit-pointer-events: none;
+  pointer-events: none;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 
-	z-index: 2000;
-	position: fixed;
-	margin: auto;
-	top: 12px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 300px;
-	height: 50px;
-	overflow: hidden;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 240px;
+  height: 50px;
+  overflow: hidden;
 }
 .pace .pace-progress {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 
-	display: block;
-	position: absolute;
-	right: 100%;
-	width: 100%;
-	top: 7px;
-	height: 14px;
-	font-size: 14px;
-	background: #29d;
-	color: #29d;
-	line-height: 60px;
-	font-weight: bold;
-	font-family: "Lato", sans-serif;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  top: 7px;
+  height: 14px;
+  font-size: 14px;
+  background: #29d;
+  color: #29d;
+  line-height: 60px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
 
-	-webkit-box-shadow: 120px 0 #fff, 300px 0 #fff;
-	-ms-box-shadow: 120px 0 #fff, 300px 0 #fff;
-	box-shadow: 120px 0 #fff, 300px 0 #fff;
+  -webkit-box-shadow: 120px 0 #fff, 300px 0 #fff;
+  -ms-box-shadow: 120px 0 #fff, 300px 0 #fff;
+  box-shadow: 120px 0 #fff, 300px 0 #fff;
 }
 
 .pace .pace-progress:after {
-	content: attr(data-progress-text);
-	display: inline-block;
-	position: fixed;
-	width: 30px;
-	text-align: right;
-	right: 12px;
-	padding-right: 16px;
-	top: 6px;
+  content: attr(data-progress-text);
+  display: inline-block;
+  position: fixed;
+  width: 30px;
+  text-align: right;
+  right: 12px;
+  padding-right: 16px;
+  top: 6px;
 }
 
 .pace .pace-activity {
-	position: absolute;
-	width: 100%;
-	height: 28px;
-	z-index: 2001;
-	box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
-	border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 28px;
+  z-index: 2001;
+  box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #fff;
+  border-radius: 10px;
 }
 
 .pace.pace-inactive {
-	display: none;
+  display: none;
 }
