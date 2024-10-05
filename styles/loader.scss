@@ -12,6 +12,12 @@ body.pace-running {
   opacity: 0;
 }
 
+.pace-running .pace__text {
+	position: relative; /* 必要に応じて位置を調整 */
+	z-index: 1000; /* 他の要素の上に表示するための z-index */
+	color: white; /* 見やすくするための色 */
+  }
+
 .pace {
 	-webkit-pointer-events: none;
 	pointer-events: none;

@@ -7,6 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>KUMANOPAN - sample-site</title>
   <script src="scripts/vendors/pace.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const newElement = document.createElement('p');
+      newElement.classList.add('pace__text');
+      newElement.innerHTML = 'これはダミーの<br>文章です。';
+      document.body.prepend(newElement);
+    });
+  </script>
+  
   <style>
     /* 以下、ローディング画面に必要なスタイル */
     /* Lato Regular and Italic */
