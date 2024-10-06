@@ -1,4 +1,6 @@
 @use "globals" as *;
+$progress-top: var(--progress-top);
+
 body.pace-running {
   background-color: $main1 !important;
 }
@@ -21,10 +23,10 @@ body.pace-running {
   position: fixed;
   z-index: 1000;
   color: white;
+  top: calc(#{$progress-top} - 40px);
   left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
+  transform: translateX(-50%);
+  font-size: 14px;
   text-align: center;
   line-height: 1.75;
   letter-spacing: 0.2em;
@@ -59,7 +61,7 @@ body.pace-running {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 240px;
+  width: 200px;
   height: 50px;
   overflow: hidden;
 }
@@ -94,9 +96,9 @@ body.pace-running {
   font-weight: bold;
   font-family: "Lato", sans-serif;
 
-  -webkit-box-shadow: 120px 0 #fff, 300px 0 #fff;
-  -ms-box-shadow: 120px 0 #fff, 300px 0 #fff;
-  box-shadow: 120px 0 #fff, 300px 0 #fff;
+  -webkit-box-shadow: 120px 0 #fff, 200px 0 #fff;
+  -ms-box-shadow: 120px 0 #fff, 200px 0 #fff;
+  box-shadow: 120px 0 #fff, 200px 0 #fff;
 }
 
 .pace .pace-progress:after {
