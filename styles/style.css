@@ -361,11 +361,11 @@
 }
 
 .hero {
-  margin-top: calc(110px - 3rem);
+  margin-top: calc(110px - 2rem);
 }
 @media screen and (max-width: 767px) {
   .hero {
-    margin-top: calc(80px - 3rem);
+    margin-top: calc(80px - 2rem);
   }
 }
 .hero-wrap {

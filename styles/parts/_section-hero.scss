@@ -2,9 +2,9 @@
 @use "../parts/button" as *;
 
 .hero {
-  margin-top: calc(#{$header-h} - 3rem);
+  margin-top: calc(#{$header-h} - 2rem);
   @include mq(sm) {
-    margin-top: calc(#{$header-h--sm} - 3rem);
+    margin-top: calc(#{$header-h--sm} - 2rem);
   }
 
   &-wrap {
