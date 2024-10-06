@@ -20,17 +20,9 @@
     margin: 0 auto;
     display: inline-block;
     overflow: hidden;
-    // margin-top: 5rem;
-    // @include mq(md) {
-    //   margin-top: 0;
-    // }
-    // @include mq(sm) {
-    //   margin-top: 0;
-    // }
 
     & :is(img, source) {
       transform: scale(1.2);
-      // will-change: width,height;
       width: 100%;
       height: calc(   100svh - #{$header-h});
       opacity: 0;
@@ -88,9 +80,6 @@
     transform: translate(-50%, -50%);
     z-index: 10;
     gap: 4rem;
-    // @include mq(md) {
-    //   transform: translate(-50%, -50%);
-    // }
     @include mq(sm) {
       gap: 2.6rem;
     }
