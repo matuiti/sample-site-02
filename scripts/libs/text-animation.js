@@ -29,19 +29,15 @@ class TextAnimation {
         traverseNodes(el); // DOMを走査開始
     }
 }
-
-
 //実際にアニメーションを付与するクラス
 class TweenTextAnimation extends TextAnimation {
     constructor(el) {
         super(el); // htmlを成形
         this.DOM.chars = this.DOM.el.querySelectorAll('.char'); // 整形後の子要素を全て取得
     }
-
     animate() {
         // 親要素に inview クラスを追加
         this.DOM.el.classList.add('inview');
-
         // CSSで最適化をサポートする
         this.DOM.chars.forEach((c) => {
             gsap.set(c, {
@@ -49,7 +45,6 @@ class TweenTextAnimation extends TextAnimation {
                 willChange: 'transform, opacity', // 変更が予測されるプロパティ
             });
         });
-
         // アニメーションの適用
         this.DOM.chars.forEach((c, i) => {
             gsap.to(c, 0.9, {

@@ -9,6 +9,7 @@ class Main {
     #init() {
         new MobileMenu
         Pace.on('done', this.#scrollInit.bind(this));
+        this.#setupBeforeUnload();
     }
     #scrollInit() {
         this.#observers.push(
@@ -47,6 +48,11 @@ class Main {
         } else {
             this.topButton.classList.add('active');
         }
+    }
+    #setupBeforeUnload() {
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
     }
 
 }

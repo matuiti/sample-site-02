@@ -123,24 +123,26 @@
         color: black;
       }
     </style>
+    <link rel="stylesheet" href="/styles/loader.css" />
     <!-- ローディング画面のテキスト -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.onload = function () {
         const newElement = document.createElement("p");
         newElement.classList.add("pace__text");
         newElement.textContent = "Welcome!";
         document.body.prepend(newElement);
         const progressElement = document.querySelector(".pace-progress");
         if (progressElement) {
+          // ページ全体が読み込まれた後に位置を取得
           const progressRect = progressElement.getBoundingClientRect();
           document.documentElement.style.setProperty(
             "--progress-top",
             `${progressRect.top}px`
           );
         }
-      });
+      };
     </script>
-    <link rel="stylesheet" href="/styles/loader.css" />
+    
     <!-- スマホ用Hero画像（スペーサー~2枚目）を事前に読み込む -->
     <link
       rel="preload"
