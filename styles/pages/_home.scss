@@ -79,21 +79,16 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  &__li {
-    &.active a {
-      border-bottom: 2px solid $accent;
-    }
-    & a {
+  &__li a {
       display: block;
       height: 3.2rem;
       color: $color-header-texts;
       transition: color 0.4s;
       font-style: italic;
       &:hover {
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.6);
         border-bottom: 2px solid $accent;
       }
-    }
   }
   &__sns {
     display: flex;
@@ -104,7 +99,7 @@
       height: 31px;
       transition: opacity 0.2s ease-in-out;
       &:hover {
-        opacity: 0.2;
+        opacity: 0.6;
       }
     }
   }
@@ -192,21 +187,6 @@
       line-height: 1;
       font-size: 1.8rem;
     }
-    &.active a {
-      border-bottom: 0.2rem solid $accent;
-    }
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0.8rem;
-    //   left: -2.4rem;
-    //   width: 0.2rem;
-    //   height: 1.6rem;
-    //   background-color: gray;
-    //   @include mq(sm) {
-    //     content: none;
-    //   }
-    // }
     & a {
       display: block;
       height: 3.4rem;
@@ -217,7 +197,7 @@
         height: 2.8rem;
       }
       &:hover {
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.6);
         border-bottom: 0.2rem solid $accent;
       }
     }
@@ -236,7 +216,7 @@
       height: 3.1rem;
       transition: opacity 0.2s ease-in-out;
       &:hover {
-        opacity: 0.2;
+        opacity: 0.6;
       }
       @include mq(sm) {
         height: auto;

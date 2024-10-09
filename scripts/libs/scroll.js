@@ -10,15 +10,23 @@ class ScrollObserver {
         }
         this.options = Object.assign(defaultOptions, options)
         this.once = this.options.once
+        this.observedEls = new Set()  // 一意の値のコレクションで反復可能（一度アニメーションした値が入る）
         this.#init()
     }
     #init() {
         const callback = function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    this.cb(entry.target, true)
-                }else {
-                    this.cb(entry.target, false)
+                    if (!this.observedEls.has(entry.target)) {  // 交差した対象のアニメーションが初回ならtrue
+                        this.cb(entry.target, true)
+                        if (this.once) {
+                            this.observedEls.add(entry.target)
+                        }
+                    }
+                } else {
+                    if (!this.once) {
+                        this.cb(entry.target, false)
+                    }
                 }
             })
         }
