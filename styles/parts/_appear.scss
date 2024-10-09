@@ -59,11 +59,18 @@ $pattern: (
   &>.item {
     transition: all 1.2s;
     opacity: 0;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        transition-delay: 0s!important;
+      }
+    }
   }
   &.inview {
     &>.item {
       opacity: 1;
       transform: none;
+      transition: all 0.3s;
 
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
