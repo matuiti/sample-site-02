@@ -141,7 +141,7 @@
 .scroll-indicator {
   position: absolute;
   z-index: 10;
-  bottom: 4rem;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -150,8 +150,8 @@
 }
 
 .scroll-indicator .circle {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
   border-radius: 50%;
   background-color: white;
   margin: 1em 0;
@@ -169,7 +169,7 @@
 }
 
 .scroll-indicator .circle:nth-child(3) {
-  animation-delay: 2s;
+  animation-delay: 2.2s;
 }
 
 @keyframes fadeInOut {
