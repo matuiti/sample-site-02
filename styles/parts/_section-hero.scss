@@ -141,33 +141,35 @@
 .scroll-indicator {
   position: absolute;
   z-index: 10;
-  bottom: 20px;
+  bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  & .triangle {
-    width: 0;
-    height: 0;
-    border-left: 1.4rem solid transparent;
-    border-right: 1.4rem solid transparent;
-    border-top: 1.8rem solid white;
-    margin: 28% 0;
-    opacity: 0;
-    will-change: opacity, transform;
-    animation: fadeInOut 6s infinite;
+.scroll-indicator .circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: white;
+  margin: 1em 0;
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: fadeInOut 6s infinite;
+}
 
-  &:nth-child(1) {
-    animation-delay: 0s;
-  }
-  &:nth-child(2) {
-    animation-delay: 1s;
-  }
-  &:nth-child(3) {
-    animation-delay: 2s;
-  }
+.scroll-indicator .circle:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.scroll-indicator .circle:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.scroll-indicator .circle:nth-child(3) {
+  animation-delay: 2s;
 }
 
 @keyframes fadeInOut {
@@ -180,5 +182,4 @@
   100% {
     opacity: 0;
   }
-}
 }
