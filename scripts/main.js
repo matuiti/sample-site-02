@@ -2,14 +2,18 @@ class Main {
     #observers = []
 
     constructor() {
-        this.header = document.querySelector('.header')
-        this.topButton = document.querySelector('.top-button')
-        this.#init()
+        this.header = document.querySelector('.header');
+        this.topButton = document.querySelector('.top-button');
+        this.#init();
     }
     #init() {
-        new MobileMenu
+        new MobileMenu();
         Pace.on('done', this.#scrollInit.bind(this));
-        this.#setupBeforeUnload();
+        window.onload = () => {
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 0);
+        };
     }
     #scrollInit() {
         this.#observers.push(
@@ -18,28 +22,28 @@ class Main {
             new ScrollObserver('.appear-slow', this.#inviewAnimation),
             new ScrollObserver('.textAnimation', this.#textAnimation),
             new ScrollObserver('.hero', this.#appearPageTopBtn.bind(this))
-        )
+        );
     }
 
     #toggleSlideAnimation(el, inview) {
-        if(inview) {
-            el.classList.add('inview')
+        if (inview) {
+            el.classList.add('inview');
         } else {
-            el.classList.remove('inview')
+            el.classList.remove('inview');
         }
     }
 
     #inviewAnimation(el, inview) {
-        if(inview) {
-            el.classList.add('inview')
+        if (inview) {
+            el.classList.add('inview');
         } else {
-            el.classList.remove('inview')
+            el.classList.remove('inview');
         }
     }
     #textAnimation(el, inview) {
-        if(inview) {
-            const ta = new TweenTextAnimation(el)
-            ta.animate()
+        if (inview) {
+            const ta = new TweenTextAnimation(el);
+            ta.animate();
         }
     }
     #appearPageTopBtn(el, inview) {
@@ -49,11 +53,6 @@ class Main {
             this.topButton.classList.add('active');
         }
     }
-    #setupBeforeUnload() {
-        window.addEventListener('beforeunload', () => {
-            window.scrollTo(0, 0);
-        });
-    }
-
 }
-const main = new Main
+
+const main = new Main();
