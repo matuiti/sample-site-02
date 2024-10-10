@@ -103,73 +103,45 @@
 }
 
 .appear-slow > .item {
-  transition: all 1.2s;
+  transition: all 0.6s;
   opacity: 0;
 }
 .appear-slow > .item:nth-child(1) {
-  transition-delay: 0s !important;
+  transition-delay: 0.4s;
 }
 .appear-slow > .item:nth-child(2) {
-  transition-delay: 0s !important;
+  transition-delay: 0.8s;
 }
 .appear-slow > .item:nth-child(3) {
-  transition-delay: 0s !important;
+  transition-delay: 1.2s;
 }
 .appear-slow > .item:nth-child(4) {
-  transition-delay: 0s !important;
+  transition-delay: 1.6s;
 }
 .appear-slow > .item:nth-child(5) {
-  transition-delay: 0s !important;
+  transition-delay: 2s;
 }
 .appear-slow > .item:nth-child(6) {
-  transition-delay: 0s !important;
+  transition-delay: 2.4s;
 }
 .appear-slow > .item:nth-child(7) {
-  transition-delay: 0s !important;
+  transition-delay: 2.8s;
 }
 .appear-slow > .item:nth-child(8) {
-  transition-delay: 0s !important;
+  transition-delay: 3.2s;
 }
 .appear-slow > .item:nth-child(9) {
-  transition-delay: 0s !important;
+  transition-delay: 3.6s;
 }
 .appear-slow > .item:nth-child(10) {
-  transition-delay: 0s !important;
+  transition-delay: 4s;
 }
 .appear-slow.inview > .item {
   opacity: 1;
   transform: none;
-  transition: all 0.3s;
 }
-.appear-slow.inview > .item:nth-child(1) {
-  transition-delay: 0.4s;
-}
-.appear-slow.inview > .item:nth-child(2) {
-  transition-delay: 0.8s;
-}
-.appear-slow.inview > .item:nth-child(3) {
-  transition-delay: 1.2s;
-}
-.appear-slow.inview > .item:nth-child(4) {
-  transition-delay: 1.6s;
-}
-.appear-slow.inview > .item:nth-child(5) {
-  transition-delay: 2s;
-}
-.appear-slow.inview > .item:nth-child(6) {
-  transition-delay: 2.4s;
-}
-.appear-slow.inview > .item:nth-child(7) {
-  transition-delay: 2.8s;
-}
-.appear-slow.inview > .item:nth-child(8) {
-  transition-delay: 3.2s;
-}
-.appear-slow.inview > .item:nth-child(9) {
-  transition-delay: 3.6s;
-}
-.appear-slow.inview > .item:nth-child(10) {
-  transition-delay: 4s;
+.appear-slow.inview > .item:hover {
+  transition-delay: 0s !important; /* Hover時のdelayを無効化 */
 }
 
 .mobile-menu {
@@ -332,6 +304,7 @@
 }
 .btn:hover {
   background-color: #782b28;
+  transition: all 0.4s;
 }
 .btn:active {
   transform: translateY(4px);
@@ -541,7 +514,7 @@
 .scroll-indicator {
   position: absolute;
   z-index: 10;
-  bottom: 4rem;
+  bottom: 5.2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -553,8 +526,7 @@
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  background-color: #782b28;
-  box-shadow: 0px 0px 1px 1px #782b28;
+  background-color: white;
   margin: 1em 0;
   opacity: 0;
   will-change: opacity, transform;
