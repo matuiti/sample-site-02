@@ -9,11 +9,11 @@ class Main {
     #init() {
         new MobileMenu();
         Pace.on('done', this.#scrollInit.bind(this));
-        window.onload = () => {
-            setTimeout(() => {
-                window.scrollTo(0, 0);
-            }, 0);
-        };
+        // window.onload = () => {
+        //     setTimeout(() => {
+        //         window.scrollTo(0, 0);
+        //     }, 0);
+        // };
     }
     #scrollInit() {
         this.#observers.push(
@@ -21,7 +21,7 @@ class Main {
             new ScrollObserver('.appear', this.#inviewAnimation),
             new ScrollObserver('.appear-slow', this.#inviewAnimation),
             new ScrollObserver('.textAnimation', this.#textAnimation),
-            new ScrollObserver('.hero', this.#appearPageTopBtn.bind(this))
+            new ScrollObserver('.hero', this.#appearPageTopBtn.bind(this), {once:false})
         );
     }
 

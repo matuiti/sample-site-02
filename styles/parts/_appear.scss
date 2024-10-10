@@ -56,27 +56,24 @@ $pattern: (
 }
 
 .appear-slow {
-  &>.item {
-    transition: all 1.2s;
+  & > .item {
+    transition: all 0.6s;
     opacity: 0;
 
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
-        transition-delay: 0s!important;
+        transition-delay: $i * 0.4s;
       }
     }
   }
   &.inview {
-    &>.item {
+    & > .item {
       opacity: 1;
       transform: none;
-      transition: all 0.3s;
-
-      @for $i from 1 through 10 {
-        &:nth-child(#{$i}) {
-          transition-delay: $i * 0.4s;
-        }
+      &:hover {
+        transition-delay: 0s !important; /* Hover時のdelayを無効化 */
       }
     }
   }
 }
+

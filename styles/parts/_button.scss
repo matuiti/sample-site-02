@@ -43,6 +43,7 @@
 
   &:hover {
     background-color: $main1;
+    transition: all 0.4s;
   }
   &:active {
     transform: translateY(4px);
