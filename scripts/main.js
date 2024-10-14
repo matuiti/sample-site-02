@@ -1,6 +1,5 @@
 class Main {
     #observers = []
-
     constructor() {
         this.header = document.querySelector('.header');
         this.topButton = document.querySelector('.top-button');
@@ -9,11 +8,6 @@ class Main {
     #init() {
         new MobileMenu();
         Pace.on('done', this.#scrollInit.bind(this));
-        // window.onload = () => {
-        //     setTimeout(() => {
-        //         window.scrollTo(0, 0);
-        //     }, 0);
-        // };
     }
     #scrollInit() {
         this.#observers.push(

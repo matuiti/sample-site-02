@@ -1,14 +1,18 @@
 $pattern: (
-  "up": translateY(0.6rem),   //上へ
-  "down": translateY(-0.6rem),//下へ
-  "left": translateX(8rem),   //左へ
-  "right": translateX(-8rem), //右へ
+  "up": translateY(0.6rem),
+  //上へ
+  "down": translateY(-0.6rem),
+  //下へ
+  "left": translateX(8rem),
+  //左へ
+  "right": translateX(-8rem),
+  //右へ
 );
 
 //.appearに方向（クラス名up~right）を指定すると.itemの方向を一括指定
 @each $key, $value in $pattern {
   .appear.#{$key} {
-    &>.item {
+    & > .item {
       transform: $value;
     }
   }
@@ -16,18 +20,18 @@ $pattern: (
 
 //.item個別に方向を指定可能
 @each $key, $value in $pattern {
-  .appear>.item.#{$key} {
-      transform: $value;
+  .appear > .item.#{$key} {
+    transform: $value;
   }
 }
 
 .appear {
-  &>.item {
+  & > .item {
     transition: all 0.8s;
     opacity: 0;
   }
   &.inview {
-    &>.item {
+    & > .item {
       opacity: 1;
       transform: none;
 
@@ -41,17 +45,16 @@ $pattern: (
 }
 
 //ゆっくりと出現パターン
-
 @each $key, $value in $pattern {
   .appear-slow.#{$key} {
-    &>.item {
+    & > .item {
       transform: $value;
     }
   }
 }
 @each $key, $value in $pattern {
-  .appear-slow>.item.#{$key} {
-      transform: $value;
+  .appear-slow > .item.#{$key} {
+    transform: $value;
   }
 }
 
@@ -71,9 +74,8 @@ $pattern: (
       opacity: 1;
       transform: none;
       &:hover {
-        transition-delay: 0s !important; /* Hover時のdelayを無効化 */
+        transition-delay: 0s !important;
       }
     }
   }
 }
-

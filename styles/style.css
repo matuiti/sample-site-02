@@ -141,7 +141,7 @@
   transform: none;
 }
 .appear-slow.inview > .item:hover {
-  transition-delay: 0s !important; /* Hover時のdelayを無効化 */
+  transition-delay: 0s !important;
 }
 
 .mobile-menu {
@@ -1152,6 +1152,10 @@ main {
 }
 .news__item-link a {
   text-decoration: underline;
+  transition: opacity 0.4s;
+}
+.news__item-link a:hover {
+  opacity: 0.6;
 }
 .news__bg-img {
   width: 50%;
