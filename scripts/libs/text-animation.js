@@ -28,6 +28,7 @@ class TextAnimation {
         };
         traverseNodes(el); // DOMを走査開始
     }
+    
 }
 //実際にアニメーションを付与するクラス
 class TweenTextAnimation extends TextAnimation {
